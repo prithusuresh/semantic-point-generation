@@ -5,7 +5,7 @@ OpenPCDet with spconv package **already included** for **one-step** installation
 I noticed that [mmdetection3d](https://github.com/open-mmlab/mmdetection3d) had adopted parts of the [spconv](https://github.com/traveller59/spconv) repository into their cuda operations, allowing simple installation via `python setup.py develop`. In the past, I've had some trouble building spconv from the original repository on machines with scattered CUDA installations (especially when I did not have sudo privilages), so I wanted to try incorporating spconv into [OpenPCDet](https://github.com/open-mmlab/OpenPCDet) like mmdetection3d did. 
 
 ## Changes
-`pcdet/ops/spconv` and `pcdet/ops/voxel` are from the mmdetection3d repository, and `setup.py` was modified to compile the new cuda operations. To adapt calls to spconv & voxelization, `import spconv` was generally changed to `from pcdet.ops import spconv as spconv`, and voxelization usage in `pcdet/datasets/processor/data_processor.py` was slightly adjusted.
+`pcdet/ops/spconv` and `pcdet/ops/voxel` are from the mmdetection3d repository, and `setup.py` was modified to compile the new cuda operations. To adapt calls to spconv & voxelization, `import spconv` was generally changed to `from pcdet.ops import spconv as spconv`, and voxelization usage in `pcdet/datasets/processor/data_processor.py` was slightly adjusted (only the `transform_points_to_voxels` function).
 
 I have tested this repository on a fairly new pytorch version: pytorch 1.8, torchaudio 0.8.0, torchvision 0.9.0, cudatoolkit 11.1.1, which warranted a slight change in distributed training initialization in `common_utils.py`.
 
