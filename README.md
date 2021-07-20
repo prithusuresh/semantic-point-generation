@@ -13,6 +13,7 @@ I have tested this repository on a fairly new pytorch version: pytorch 1.8, torc
 Here is how I setup for my environment:
 ```
 conda create -n spconv-openpcdet python=3.7
+conda activate spconv-openpcdet
 conda install pytorch==1.8.0 torchvision==0.9.0 torchaudio==0.8.0 cudatoolkit=11.1 -c pytorch -c conda-forge
 pip install -r requirements.txt
 python setup.py develop
