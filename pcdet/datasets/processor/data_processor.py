@@ -1,5 +1,6 @@
 from functools import partial
 
+import torch
 import numpy as np
 from skimage import transform
 
@@ -46,10 +47,11 @@ class DataProcessor(object):
 
     def transform_points_to_voxels(self, data_dict=None, config=None, voxel_generator=None):
         if data_dict is None:
-            try:
-                from spconv.utils import VoxelGeneratorV2 as VoxelGenerator
-            except:
-                from spconv.utils import VoxelGenerator
+            # try:
+            #     from spconv.utils import VoxelGeneratorV2 as VoxelGenerator
+            # except:
+            #     from spconv.utils import VoxelGenerator
+            from pcdet.ops.voxel import Voxelization as VoxelGenerator
 
             voxel_generator = VoxelGenerator(
                 voxel_size=config.VOXEL_SIZE,
@@ -63,7 +65,8 @@ class DataProcessor(object):
             return partial(self.transform_points_to_voxels, voxel_generator=voxel_generator)
 
         points = data_dict['points']
-        voxel_output = voxel_generator.generate(points)
+        # voxel_output = voxel_generator.generate(points)
+        voxel_output = voxel_generator.forward(torch.tensor(points)) # mmdet's voxelizer uses torch
         if isinstance(voxel_output, dict):
             voxels, coordinates, num_points = \
                 voxel_output['voxels'], voxel_output['coordinates'], voxel_output['num_points_per_voxel']
@@ -73,9 +76,9 @@ class DataProcessor(object):
         if not data_dict['use_lead_xyz']:
             voxels = voxels[..., 3:]  # remove xyz in voxels(N, 3)
 
-        data_dict['voxels'] = voxels
-        data_dict['voxel_coords'] = coordinates
-        data_dict['voxel_num_points'] = num_points
+        data_dict['voxels'] = voxels.numpy()
+        data_dict['voxel_coords'] = coordinates.numpy()
+        data_dict['voxel_num_points'] = num_points.numpy()
         return data_dict
 
     def sample_points(self, data_dict=None, config=None):
