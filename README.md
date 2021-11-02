@@ -9,6 +9,9 @@ I noticed that [mmdetection3d](https://github.com/open-mmlab/mmdetection3d) had 
 
 I have tested this repository on a fairly new pytorch version: pytorch 1.8, torchaudio 0.8.0, torchvision 0.9.0, cudatoolkit 11.1.1, which warranted a slight change in distributed training initialization in `common_utils.py`.
 
+**Nov. 2 2021:** Now able to train all models in OpenPCDet on 12 GB GPUs (2080 Ti) due to 4096 -> 27 change in `pcdet/ops/spconv/src/indice_cuda.cu`
+However, 3D sparse convolution kernel sizes larger than 3x3x3 do not work with a 27 limit. This does not affect OpenPCDet models, but please change 27 to something higher if you need to implement larger kenels.
+
 ## Installation
 Here is how I setup for my environment:
 ```
@@ -28,10 +31,12 @@ The results are the 3D detection performance of moderate difficulty on the *val*
 
 |                                             | training time | Car@R11 | Pedestrian@R11 | Cyclist@R11 | 
 |---------------------------------------------|----------:|:-------:|:-------:|:-------:|
-| SECOND (OpenPCDet)       |  ~1.7 hours (8 GPUs) | 78.62 | 52.98 | 67.15 |
-| SECOND (Spconv-OpenPCDet) | ~3.0 hours (4 GPUs) | 78.61 | 52.03 | 64.92 |
+| SECOND (OpenPCDet)       |  ~1.7 hours (8 1080Ti) | 78.62 | 52.98 | 67.15 |
+| SECOND (Spconv-OpenPCDet) | ~3.0 hours (4 2080Ti) | 78.61 | 52.03 | 64.92 |
+| PV-RCNN (OpenPCDet)       |  ~5.0 hours (8 1080Ti) | 83.61 | 57.90 | 70.47 |
+| PV-RCNN (Spconv-OpenPCDet) | ~7.0 hours (4 2080Ti) | 82.89 | 59.44 | 70.43 |
 
-I believe this is sufficiently close - Car is basically identical, and Pedestrian & Cyclist are known to be unstable (when evaluating last 10 epochs, Pedestrian varies 51-53 and Cyclist varies 64-67).
+I believe this is sufficiently reproduced as I only trained once. Multiple training runs were done to optimize for Car in the original repository.
 
 ## Acknowledgement
 This repository is basically a copy of OpenPCDet, with some elements of mmdetection3d's usage of spconv within it.
