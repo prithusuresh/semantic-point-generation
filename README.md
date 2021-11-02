@@ -31,10 +31,10 @@ The results are the 3D detection performance of moderate difficulty on the *val*
 
 |                                             | training time | Car@R11 | Pedestrian@R11 | Cyclist@R11 | 
 |---------------------------------------------|----------:|:-------:|:-------:|:-------:|
-| SECOND (OpenPCDet)       |  ~1.7 hours (8 1080Ti) | 78.62 | 52.98 | 67.15 |
-| SECOND (Spconv-OpenPCDet) | ~3.0 hours (4 2080Ti) | 78.61 | 52.03 | 64.92 |
-| PV-RCNN (OpenPCDet)       |  ~5.0 hours (8 1080Ti) | 83.61 | 57.90 | 70.47 |
-| PV-RCNN (Spconv-OpenPCDet) | ~7.0 hours (4 2080Ti) | 82.89 | 59.44 | 70.43 |
+| SECOND (OpenPCDet)       |  1.7 hours (8x1080Ti) | 78.62 | 52.98 | 67.15 |
+| SECOND (Spconv-OpenPCDet) | 3.0 hours (4x2080Ti) | 78.61 | 52.03 | 64.92 |
+| PV-RCNN (OpenPCDet)       |  5.0 hours (8x1080Ti) | 83.61 | 57.90 | 70.47 |
+| PV-RCNN (Spconv-OpenPCDet) | 7.0 hours (4x2080Ti) | 82.89 | 59.44 | 70.43 |
 
 I believe this is sufficiently reproduced as I only trained once. Multiple training runs were done to optimize for Car in the original repository.
 
