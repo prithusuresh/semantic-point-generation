@@ -8,7 +8,7 @@ from ..utils import common_utils
 from .augmentor.data_augmentor import DataAugmentor
 from .processor.data_processor import DataProcessor
 from .processor.point_feature_encoder import PointFeatureEncoder
-
+from ..ops.roiaware_pool3d.roiaware_pool3d_utils import points_in_boxes_cpu
 
 class DatasetTemplate(torch_data.Dataset):
     def __init__(self, dataset_cfg=None, class_names=None, training=True, root_path=None, logger=None):
@@ -134,6 +134,7 @@ class DatasetTemplate(torch_data.Dataset):
             selected = common_utils.keep_arrays_by_name(data_dict['gt_names'], self.class_names)
             data_dict['gt_boxes'] = data_dict['gt_boxes'][selected]
             data_dict['gt_names'] = data_dict['gt_names'][selected]
+            
             gt_classes = np.array([self.class_names.index(n) + 1 for n in data_dict['gt_names']], dtype=np.int32)
             gt_boxes = np.concatenate((data_dict['gt_boxes'], gt_classes.reshape(-1, 1).astype(np.float32)), axis=1)
             data_dict['gt_boxes'] = gt_boxes
@@ -151,9 +152,20 @@ class DatasetTemplate(torch_data.Dataset):
         if self.training and len(data_dict['gt_boxes']) == 0:
             new_index = np.random.randint(self.__len__())
             return self.__getitem__(new_index)
+        if self.training:
+            assert 'gt_boxes' in data_dict, "gt_boxes not in data_dict"
+            assert 'small_voxels' in data_dict, "small voxels not in data_dict"
+            #use the first three small voxels 
 
+            #this generates a function 
+            points_in_boxes = points_in_boxes_cpu(data_dict["small_voxels"][:,0,:-1], data_dict["gt_boxes"][:,:7])
+            data_dict["foreground_or_not"] = points_in_boxes.max(axis = 0)
         data_dict.pop('gt_names', None)
 
+        if self.training:
+            assert 'gt_boxes' in data_dict, "gt_boxes not in data_dict"
+            assert 'small_voxels' in data_dict, "small voxels not in data_dict"
+            assert "foreground_or_not" in data_dict, "no foreground annotation"
         return data_dict
 
     @staticmethod
@@ -167,9 +179,9 @@ class DatasetTemplate(torch_data.Dataset):
 
         for key, val in data_dict.items():
             try:
-                if key in ['voxels', 'voxel_num_points']:
+                if key in ['voxels', 'voxel_num_points', "small_voxels", "small_voxel_num_points","foreground_or_not"]:
                     ret[key] = np.concatenate(val, axis=0)
-                elif key in ['points', 'voxel_coords']:
+                elif key in ['points', 'voxel_coords', 'small_voxel_coords']:
                     coors = []
                     for i, coor in enumerate(val):
                         coor_pad = np.pad(coor, ((0, 0), (1, 0)), mode='constant', constant_values=i)

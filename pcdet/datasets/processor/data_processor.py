@@ -45,6 +45,43 @@ class DataProcessor(object):
 
         return data_dict
 
+    def transform_points_to_smaller_voxels(self, data_dict=None, config=None, voxel_generator=None):
+        if data_dict is None:
+            # try:
+            #     from spconv.utils import VoxelGeneratorV2 as VoxelGenerator
+            # except:
+            #     from spconv.utils import VoxelGenerator
+            from pcdet.ops.voxel import Voxelization as VoxelGenerator
+            pillar_size = config.VOXEL_SIZE
+            pillar_size[-1] = 0.1
+            voxel_generator = VoxelGenerator(
+                voxel_size= pillar_size,
+                point_cloud_range=self.point_cloud_range,
+                max_num_points=config.MAX_POINTS_PER_VOXEL,
+                max_voxels=config.MAX_NUMBER_OF_VOXELS[self.mode]
+            )
+            grid_size = (self.point_cloud_range[3:6] - self.point_cloud_range[0:3]) / np.array(config.VOXEL_SIZE)
+            self.grid_size = np.round(grid_size).astype(np.int64)
+            self.voxel_size = config.VOXEL_SIZE
+            return partial(self.transform_points_to_smaller_voxels, voxel_generator=voxel_generator)
+
+        points = data_dict['points']
+        # voxel_output = voxel_generator.generate(points)
+        voxel_output = voxel_generator.forward(torch.tensor(points)) # mmdet's voxelizer uses torch
+        if isinstance(voxel_output, dict):
+            breakpoint()
+            voxels, coordinates, num_points = \
+                voxel_output['voxels'], voxel_output['coordinates'], voxel_output['num_points_per_voxel']
+        else:
+            voxels, coordinates, num_points = voxel_output
+
+        if not data_dict['use_lead_xyz']:
+            voxels = voxels[..., 3:]  # remove xyz in voxels(N, 3)
+
+        data_dict['small_voxels'] = voxels.numpy()
+        data_dict['small_voxel_coords'] = coordinates.numpy()
+        data_dict['small_voxel_num_points'] = num_points.numpy()
+        return data_dict
     def transform_points_to_voxels(self, data_dict=None, config=None, voxel_generator=None):
         if data_dict is None:
             # try:
@@ -143,7 +180,6 @@ class DataProcessor(object):
 
         Returns:
         """
-
         for cur_processor in self.data_processor_queue:
             data_dict = cur_processor(data_dict=data_dict)
 
