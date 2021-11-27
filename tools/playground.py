@@ -3,6 +3,7 @@ import datetime
 import glob
 import os
 from pathlib import Path
+import pickle
 from test import repeat_eval_ckpt
 
 import torch
@@ -113,17 +114,27 @@ def main():
         merge_all_iters_to_one_epoch=args.merge_all_iters_to_one_epoch,
         total_epochs=args.epochs
     )
-    breakpoint()
-   # model = build_network(model_cfg=cfg.MODEL, num_class=len(cfg.CLASS_NAMES), dataset=train_set)
-   # if args.sync_bn:
-   #     model = torch.nn.SyncBatchNorm.convert_sync_batchnorm(model)
-   # model.cuda()
-   # breakpoint()
-    model = SPG_CLASSIFICATION()
-    model.cuda()
-    for x in train_loader:
-        load_data_to_gpu(x)
-        break
+    from tqdm import tqdm
+    with open("voxelized_train_sample.p", "wb") as f:
+        print (train_set[0]["small_voxels"])
+        for x in tqdm(train_loader):
+            pickle.dump(x, f)
+            break 
+    #model = SPG_CLASSIFICATION()
+    #model.cuda()
+    
+    
+    #for epoch
+    #   for x in train_loader
+    #for x in train_loader:
+    #    load_data_to_gpu(x)
+        #optimizer zero_grad
+        #model_forward
+        #find loss
+        #loss.backward
+        #optimizer.step
+        #model
+    #    break
    # optimizer = build_optimizer(model, cfg.OPTIMIZATION)
 
 

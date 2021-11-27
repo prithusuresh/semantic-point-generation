@@ -155,17 +155,19 @@ class DatasetTemplate(torch_data.Dataset):
         if self.training:
             assert 'gt_boxes' in data_dict, "gt_boxes not in data_dict"
             assert 'small_voxels' in data_dict, "small voxels not in data_dict"
-            #use the first three small voxels 
-
-            #this generates a function 
-            points_in_boxes = points_in_boxes_cpu(data_dict["small_voxels"][:,0,:-1], data_dict["gt_boxes"][:,:7])
-            data_dict["foreground_or_not"] = points_in_boxes.max(axis = 0)
+            
+            # generate voxel centers and voxel coordinates for entire grid 
+            voxel_centers, voxel_coords = common_utils.calculate_voxel_centers(self.point_cloud_range, self.data_processor.small_voxel_size)
+            data_dict["all_voxel_centers"] = voxel_centers
+            data_dict["all_voxel_coords"] = voxel_coords
+        
         data_dict.pop('gt_names', None)
 
         if self.training:
             assert 'gt_boxes' in data_dict, "gt_boxes not in data_dict"
             assert 'small_voxels' in data_dict, "small voxels not in data_dict"
-            assert "foreground_or_not" in data_dict, "no foreground annotation"
+            assert "all_voxel_coords" in data_dict, "all_voxel_coords not in data_dict"
+            assert "all_voxel_centers" in data_dict, "all_voxel_coords not in data_dict"
         return data_dict
 
     @staticmethod
@@ -179,9 +181,9 @@ class DatasetTemplate(torch_data.Dataset):
 
         for key, val in data_dict.items():
             try:
-                if key in ['voxels', 'voxel_num_points', "small_voxels", "small_voxel_num_points","foreground_or_not"]:
+                if key in ['voxels', 'voxel_num_points', "small_voxels", "small_voxel_num_points"]:
                     ret[key] = np.concatenate(val, axis=0)
-                elif key in ['points', 'voxel_coords', 'small_voxel_coords']:
+                elif key in ['points', 'voxel_coords', 'small_voxel_coords','all_voxel_coords']:
                     coors = []
                     for i, coor in enumerate(val):
                         coor_pad = np.pad(coor, ((0, 0), (1, 0)), mode='constant', constant_values=i)

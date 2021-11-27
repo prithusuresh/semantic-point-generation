@@ -30,6 +30,17 @@ def drop_info_with_name(info, name):
         ret_info[key] = info[key][keep_indices]
     return ret_info
 
+def calculate_voxel_centers(point_cloud_range, voxel_size):
+    assert len(point_cloud_range) == 6
+    assert len(voxel_size) == 3
+    centers = []
+    coords = []
+    for i in range(len(voxel_size)):
+        centers.append([(x+voxel_size[i]/2) for x in np.arange(point_cloud_range[i], point_cloud_range[i+3], voxel_size[i])])
+        coords.append(np.arange(0, len(centers[-1])).tolist())
+    centers = np.stack(np.meshgrid(*centers), -1).reshape(-1,3)
+    coords = np.stack(np.meshgrid(*coords), -1).reshape(-1,3)
+    return centers, coords[:,::-1]
 
 def rotate_points_along_z(points, angle):
     """

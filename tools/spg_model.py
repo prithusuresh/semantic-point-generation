@@ -5,6 +5,8 @@ import pickle
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
+from pcdet.utils import common_utils
+from pcdet.ops.roiaware_pool3d.roiaware_pool3d_utils import points_in_boxes_gpu, points_in_boxes_cpu
 
 cfg = cfg_from_yaml_file("cfgs/kitti_models/spg.yaml", cfg)
 model_cfg = cfg.MODEL
@@ -17,10 +19,13 @@ model_info_dict = {'module_list': [],
                    'num_point_features': 4, 
                    'grid_size': np.array([432, 496, 1]), 
                    'point_cloud_range': np.array([  0.  , -39.68,  -3.  ,  69.12,  39.68,   1.  ]), 
-                   'voxel_size': [0.16, 0.16, 4], 
+                   'voxel_size': [0.16, 0.16, 4],
+                   "small_voxel_size": small_voxel_size, 
                    'z_voxel_size': small_voxel_size[-1],
                    'depth_downsample_factor': None}
+
 model_info_dict["out_classes"] = int(abs(cfg.DATA_CONFIG.POINT_CLOUD_RANGE[2] - cfg.DATA_CONFIG.POINT_CLOUD_RANGE[5])/model_info_dict["z_voxel_size"])
+
 class VFETemplate(nn.Module):
     def __init__(self, model_cfg, **kwargs):
         super().__init__()
@@ -357,15 +362,38 @@ if __name__ == "__main__":
     model = SPG_CLASSIFICATION()
     model.cuda()
     train_sample = pickle.load(open("voxelized_train_sample.p", "rb"))
-    print (train_sample.keys())
-    train_sample["gt_classification"] = np.zeros(train_sample["batch_size"], train_sample["voxel_num_points"][0])
-    print (train_sample["batch_size"])
+    
+    #load data to gpu
     load_data_to_gpu(train_sample)
+    #make forward pass
     out_dict = model(train_sample)
-    breakpoint()
-    gt = torch.from_numpy(np.random.randint(low=0, high=2,size = out_dict["output_prob"].shape)).cuda()
+    #find ALL foreground voxels
+    all_voxels_in_foreground = points_in_boxes_gpu(train_sample["all_voxel_centers"], train_sample["gt_boxes"][:,:,:7])
+    #all_voxels_in_foreground = train_sample["all_voxel_coords"][all_voxels_in_foreground != -1] 
+    # 0 -> Unoccupied Background
+    # 1 -> Occupied Background
+    # 2 -> Unoccupied Foreground
+    # 3 -> Occupied Foreground
+    OCCUPIED_FLAG = 1
+    FOREGROUND_FLAG = 2
+    mask = torch.zeros_like(out_dict["output_prob"]).long()
+    occupied = train_sample["small_voxel_coords"].long()
+    b, z, y, x = occupied[:,0], occupied[:,1], occupied[:,2], occupied[:,3]
+    mask[b,z,y,x] += OCCUPIED_FLAG 
+    
+    all_voxel_coords_reshaped = train_sample["all_voxel_coords"].reshape((train_sample["batch_size"], -1, 4))
+    foreground = all_voxel_coords_reshaped[all_voxels_in_foreground != -1].long()
+    b, z, y, x = foreground[:,0], foreground[:,1], foreground[:,2], foreground[:,3]
+    mask[b,z,y,x] += FOREGROUND_FLAG 
+
+    alpha = 0.5
+    ground_truth = (mask > 1).long()
+    weight_mask = mask.float()
+    weight_mask[mask != 2] = 1 #weight is 1
+    weight_mask[mask == 2] = 0.5
+
     pred = out_dict["output_prob"]
     from kornia.losses import BinaryFocalLossWithLogits
-    criterion = BinaryFocalLossWithLogits(alpha = 0.25, gamma = 2.0, reduction = "mean")
-    loss = criterion(pred, gt)
+    criterion = BinaryFocalLossWithLogits(alpha = 0.25, gamma = 2.0, reduction = "none")
+    loss = (weight_mask*criterion(pred, ground_truth)).mean()
     print (loss.item())

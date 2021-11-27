@@ -12,7 +12,7 @@ class DataProcessor(object):
         self.point_cloud_range = point_cloud_range
         self.training = training
         self.mode = 'train' if training else 'test'
-        self.grid_size = self.voxel_size = None
+        self.grid_size = self.voxel_size = self.small_voxel_size = None
         self.data_processor_queue = []
         for cur_cfg in processor_configs:
             cur_processor = getattr(self, cur_cfg.NAME)(config=cur_cfg)
@@ -52,10 +52,12 @@ class DataProcessor(object):
             # except:
             #     from spconv.utils import VoxelGenerator
             from pcdet.ops.voxel import Voxelization as VoxelGenerator
-            pillar_size = config.VOXEL_SIZE
-            pillar_size[-1] = 0.1
+            voxel_size = config.VOXEL_SIZE
+            assert voxel_size == [0.16, 0.16, 0.2]
+            voxel_size[-1] = 0.2
+            self.small_voxel_size = voxel_size
             voxel_generator = VoxelGenerator(
-                voxel_size= pillar_size,
+                voxel_size = voxel_size,
                 point_cloud_range=self.point_cloud_range,
                 max_num_points=config.MAX_POINTS_PER_VOXEL,
                 max_voxels=config.MAX_NUMBER_OF_VOXELS[self.mode]

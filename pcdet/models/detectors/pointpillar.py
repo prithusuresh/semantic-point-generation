@@ -8,7 +8,6 @@ class PointPillar(Detector3DTemplate):
 
     def forward(self, batch_dict):
         for cur_module in self.module_list:
-            breakpoint()
             batch_dict = cur_module(batch_dict)
         if self.training:
             loss, tb_dict, disp_dict = self.get_training_loss()
