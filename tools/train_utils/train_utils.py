@@ -3,11 +3,48 @@ import os
 
 import torch
 import tqdm
+import numpy as np
 from torch.nn.utils import clip_grad_norm_
+from pcdet.ops.roiaware_pool3d.roiaware_pool3d_utils import points_in_boxes_gpu
+from sklearn.metrics import accuracy_score 
+from eval_utils.eval_utils import load_data_to_gpu
+z_min = None
+z_max = None
+z_size = None
+def create_pillar_to_voxel(point_cloud_range, voxel_size):
+    global z_min
+    global z_max
+    global z_size
+    z_min = point_cloud_range[2]
+    z_max = point_cloud_range[2+3]
+    z_size = voxel_size[-1]
+    
 
+def lookup_voxel(point):
+    assert z_min is not None
+    assert z_max is not None
+    assert z_size is not None
+    eps = 1e-10
+    z = point[:, 2]
+    voxel_coord = (z - z_min - eps)//z_size 
+    return voxel_coord.long()
 
+def spg_add_confidence_to_voxel(batch):
+    voxels, voxel_coords = batch["voxels"], batch["voxel_coords"]
+    confidence = batch["output_prob"]
+    voxels = torch.nn.functional.pad(voxels, pad = (0,1))
+    i = 0
+    for v, coords in zip(voxels, voxel_coords):
+        b,z,y,x = coords[0].long(),coords[1].long(),coords[2].long(),coords[3].long()
+        true_points = (v.sum(axis = -1) != 0)
+        z_coords = lookup_voxel(v)
+        pillar = confidence[b,:,y,x]
+        voxels[i][true_points,[-1 for i in range(true_points.sum())]] = pillar[z_coords[true_points]]
+        i+=1
+    batch["voxels"] = voxels
+    return
 def train_one_epoch(model, optimizer, train_loader, model_func, lr_scheduler, accumulated_iter, optim_cfg,
-                    rank, tbar, total_it_each_epoch, dataloader_iter, tb_log=None, leave_pbar=False):
+                    rank, tbar, total_it_each_epoch, dataloader_iter, tb_log=None, leave_pbar=False, spg_model = None):
     if total_it_each_epoch == len(train_loader):
         dataloader_iter = iter(train_loader)
 
@@ -32,6 +69,10 @@ def train_one_epoch(model, optimizer, train_loader, model_func, lr_scheduler, ac
         if tb_log is not None:
             tb_log.add_scalar('meta_data/learning_rate', cur_lr, accumulated_iter)
 
+        if spg_model != None:
+            load_data_to_gpu(batch)
+            batch = spg_model(batch)
+            spg_add_confidence_to_voxel(batch)
         model.train()
         optimizer.zero_grad()
 
@@ -64,7 +105,8 @@ def train_one_epoch(model, optimizer, train_loader, model_func, lr_scheduler, ac
 def train_model(model, optimizer, train_loader, model_func, lr_scheduler, optim_cfg,
                 start_epoch, total_epochs, start_iter, rank, tb_log, ckpt_save_dir, train_sampler=None,
                 lr_warmup_scheduler=None, ckpt_save_interval=1, max_ckpt_save_num=50,
-                merge_all_iters_to_one_epoch=False):
+                merge_all_iters_to_one_epoch=False, spg_model = None):
+    
     accumulated_iter = start_iter
     with tqdm.trange(start_epoch, total_epochs, desc='epochs', dynamic_ncols=True, leave=(rank == 0)) as tbar:
         total_it_each_epoch = len(train_loader)
@@ -90,7 +132,8 @@ def train_model(model, optimizer, train_loader, model_func, lr_scheduler, optim_
                 rank=rank, tbar=tbar, tb_log=tb_log,
                 leave_pbar=(cur_epoch + 1 == total_epochs),
                 total_it_each_epoch=total_it_each_epoch,
-                dataloader_iter=dataloader_iter
+                dataloader_iter=dataloader_iter,
+                spg_model = spg_model
             )
 
             # save trained model
@@ -145,3 +188,56 @@ def save_checkpoint(state, filename='checkpoint'):
 
     filename = '{}.pth'.format(filename)
     torch.save(state, filename)
+
+def calculate_weighted_focal_loss(criterion, pred, gt, weight_mask, threshold, hidden_voxels):
+    loss = criterion(pred, gt)
+    weighted_loss = (weight_mask*loss).sum()
+    pred_detached = pred.detach()
+    pred_detached = torch.sigmoid(pred_detached)
+    pred_detached[pred_detached >= threshold] = 1
+    pred_detached[pred_detached < threshold] = 0
+    hidden = hidden_voxels.long()
+    b,z,y,x = hidden[:,0], hidden[:,1], hidden[:,2], hidden[:,3]
+    gt_cpu_flatten = gt[b,z,y,x].cpu().numpy()
+    pred_detached_cpu = pred_detached[b,z,y,x].cpu().numpy()
+
+    #hidden voxel accuracy
+    report = accuracy_score(gt_cpu_flatten.flatten(), pred_detached_cpu.flatten())
+    
+    return weighted_loss, report
+def prepare_ground_truth_and_weight_mask(train_sample, cfg):
+    # 0 -> Unoccupied Background
+    # 1 -> Occupied Background
+    # 2 -> Unoccupied Foreground
+    # 3 -> Occupied Foreground
+    
+    OCCUPIED_FLAG = 1
+    FOREGROUND_FLAG = 2
+    HIDDEN = 4
+    mask = torch.zeros_like(train_sample["output_prob"]).long()
+    occupied = train_sample["small_voxel_coords"].long()
+    b, z, y, x = occupied[:,0], occupied[:,1], occupied[:,2], occupied[:,3]
+    mask[b,z,y,x] += OCCUPIED_FLAG 
+    
+    all_voxel_coords_reshaped = train_sample["all_voxel_coords"].reshape((train_sample["batch_size"], -1, 4))
+    all_voxels_in_foreground = points_in_boxes_gpu(train_sample["all_voxel_centers"], train_sample["gt_boxes"][:,:,:7])
+    foreground = all_voxel_coords_reshaped[all_voxels_in_foreground != -1].long()
+    b, z, y, x = foreground[:,0], foreground[:,1], foreground[:,2], foreground[:,3]
+    mask[b,z,y,x] += FOREGROUND_FLAG 
+
+    hidden = train_sample["hidden_voxel_coords"].long()
+    b,z,y,x = hidden[:,0], hidden[:,1], hidden[:,2], hidden[:,3]
+
+    ground_truth = (mask > 1).long()
+    weight_mask = mask.float()
+    
+    
+    NUM_HIDDEN = len(hidden)
+    NUM_OCCUPIED_AND_EMPTY_BACKGROUND = (mask != 2).sum() - NUM_HIDDEN
+    NUM_EMPTY = (mask == 2).sum()
+
+    weight_mask[(mask != 2)] = 1/NUM_OCCUPIED_AND_EMPTY_BACKGROUND #weight is 1
+    weight_mask[mask == 2] = cfg.alpha/NUM_EMPTY
+    weight_mask[b,z,y,x] = cfg.beta/NUM_HIDDEN
+
+    return ground_truth, weight_mask

@@ -1,0 +1,1429 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+A	pcdet/models/dense_heads/target_assigner/anchor_generator.py	/^    A = AnchorGenerator($/;"	v	class:AnchorGenerator
+ATSSTargetAssigner	pcdet/models/dense_heads/target_assigner/atss_target_assigner.py	/^class ATSSTargetAssigner(object):$/;"	c
+AnchorGenerator	pcdet/models/dense_heads/target_assigner/anchor_generator.py	/^class AnchorGenerator(object):$/;"	c
+AnchorHeadMulti	pcdet/models/dense_heads/anchor_head_multi.py	/^class AnchorHeadMulti(AnchorHeadTemplate):$/;"	c
+AnchorHeadSingle	pcdet/models/dense_heads/anchor_head_single.py	/^class AnchorHeadSingle(AnchorHeadTemplate):$/;"	c
+AnchorHeadTemplate	pcdet/models/dense_heads/anchor_head_template.py	/^class AnchorHeadTemplate(nn.Module):$/;"	c
+ArrayIndexRowMajor	pcdet/ops/spconv/include/tensorview/tensorview.h	/^struct ArrayIndexRowMajor {$/;"	s	namespace:tv
+ArrayIndexRowMajor	pcdet/ops/spconv/include/tensorview/tensorview.h	/^struct ArrayIndexRowMajor<0> {$/;"	s	namespace:tv
+AxisAlignedTargetAssigner	pcdet/models/dense_heads/target_assigner/axis_aligned_target_assigner.py	/^class AxisAlignedTargetAssigner(object):$/;"	c
+Balancer	pcdet/models/backbones_3d/vfe/image_vfe_modules/ffn/ddn_loss/balancer.py	/^class Balancer(nn.Module):$/;"	c
+BallQuery	pcdet/ops/pointnet2/pointnet2_batch/pointnet2_utils.py	/^class BallQuery(Function):$/;"	c
+BallQuery	pcdet/ops/pointnet2/pointnet2_stack/pointnet2_utils.py	/^class BallQuery(Function):$/;"	c
+BaseBEVBackbone	pcdet/models/backbones_2d/base_bev_backbone.py	/^class BaseBEVBackbone(nn.Module):$/;"	c
+BasicBlock2D	pcdet/models/model_utils/basic_block_2d.py	/^class BasicBlock2D(nn.Module):$/;"	c
+CHECK_CONTIGUOUS	pcdet/ops/iou3d_nms/src/iou3d_cpu.cpp	22;"	d	file:
+CHECK_CONTIGUOUS	pcdet/ops/iou3d_nms/src/iou3d_nms.cpp	20;"	d	file:
+CHECK_CONTIGUOUS	pcdet/ops/pointnet2/pointnet2_batch/src/ball_query.cpp	23;"	d	file:
+CHECK_CONTIGUOUS	pcdet/ops/pointnet2/pointnet2_stack/src/ball_query.cpp	23;"	d	file:
+CHECK_CONTIGUOUS	pcdet/ops/pointnet2/pointnet2_stack/src/group_points.cpp	22;"	d	file:
+CHECK_CONTIGUOUS	pcdet/ops/pointnet2/pointnet2_stack/src/interpolate.cpp	26;"	d	file:
+CHECK_CONTIGUOUS	pcdet/ops/pointnet2/pointnet2_stack/src/sampling.cpp	15;"	d	file:
+CHECK_CONTIGUOUS	pcdet/ops/pointnet2/pointnet2_stack/src/voxel_query.cpp	19;"	d	file:
+CHECK_CONTIGUOUS	pcdet/ops/roipoint_pool3d/src/roipoint_pool3d.cpp	10;"	d	file:
+CHECK_CUDA	pcdet/ops/iou3d_nms/src/iou3d_cpu.cpp	16;"	d	file:
+CHECK_CUDA	pcdet/ops/iou3d_nms/src/iou3d_nms.cpp	14;"	d	file:
+CHECK_CUDA	pcdet/ops/pointnet2/pointnet2_batch/src/ball_query.cpp	17;"	d	file:
+CHECK_CUDA	pcdet/ops/pointnet2/pointnet2_stack/src/ball_query.cpp	17;"	d	file:
+CHECK_CUDA	pcdet/ops/pointnet2/pointnet2_stack/src/group_points.cpp	16;"	d	file:
+CHECK_CUDA	pcdet/ops/pointnet2/pointnet2_stack/src/interpolate.cpp	20;"	d	file:
+CHECK_CUDA	pcdet/ops/pointnet2/pointnet2_stack/src/sampling.cpp	9;"	d	file:
+CHECK_CUDA	pcdet/ops/pointnet2/pointnet2_stack/src/voxel_query.cpp	13;"	d	file:
+CHECK_CUDA	pcdet/ops/roipoint_pool3d/src/roipoint_pool3d.cpp	4;"	d	file:
+CHECK_ERROR	pcdet/ops/iou3d_nms/src/iou3d_nms.cpp	30;"	d	file:
+CHECK_INPUT	pcdet/ops/iou3d_nms/src/iou3d_cpu.cpp	28;"	d	file:
+CHECK_INPUT	pcdet/ops/iou3d_nms/src/iou3d_nms.cpp	26;"	d	file:
+CHECK_INPUT	pcdet/ops/pointnet2/pointnet2_batch/src/ball_query.cpp	29;"	d	file:
+CHECK_INPUT	pcdet/ops/pointnet2/pointnet2_stack/src/ball_query.cpp	29;"	d	file:
+CHECK_INPUT	pcdet/ops/pointnet2/pointnet2_stack/src/group_points.cpp	28;"	d	file:
+CHECK_INPUT	pcdet/ops/pointnet2/pointnet2_stack/src/interpolate.cpp	32;"	d	file:
+CHECK_INPUT	pcdet/ops/pointnet2/pointnet2_stack/src/sampling.cpp	21;"	d	file:
+CHECK_INPUT	pcdet/ops/pointnet2/pointnet2_stack/src/voxel_query.cpp	25;"	d	file:
+CHECK_INPUT	pcdet/ops/roipoint_pool3d/src/roipoint_pool3d.cpp	16;"	d	file:
+CPU	pcdet/ops/spconv/include/tensorview/tensorview.h	/^struct CPU {};$/;"	s	namespace:tv
+CPUTimer	pcdet/ops/spconv/include/utility/timer.h	/^  CPUTimer() { mCurTime = std::chrono::steady_clock::now(); }$/;"	f	struct:spconv::CPUTimer
+CPUTimer	pcdet/ops/spconv/include/utility/timer.h	/^template <typename TimeT = std::chrono::microseconds> struct CPUTimer {$/;"	s	namespace:spconv
+CUDA_NUM_THREADS	pcdet/ops/spconv/include/tensorview/helper_launch.h	/^constexpr int CUDA_NUM_THREADS = 1024;$/;"	m	namespace:tv::launch
+CaDDN	pcdet/models/detectors/caddn.py	/^class CaDDN(Detector3DTemplate):$/;"	c
+Calibration	pcdet/utils/calibration_kitti.py	/^class Calibration(object):$/;"	c
+Conv2DCollapse	pcdet/models/backbones_2d/map_to_bev/conv2d_collapse.py	/^class Conv2DCollapse(nn.Module):$/;"	c
+CosineWarmupLR	tools/train_utils/optimization/learning_schedules_fastai.py	/^class CosineWarmupLR(lr_sched._LRScheduler):$/;"	c
+CreateConvIndicePairFunctor	pcdet/ops/spconv/include/spconv/indice.h	/^struct CreateConvIndicePairFunctor {$/;"	s	namespace:spconv::functor
+CreateConvIndicePairFunctor	pcdet/ops/spconv/src/indice.cc	/^struct CreateConvIndicePairFunctor<tv::CPU, Index, IndexGrid, NDim> {$/;"	s	namespace:spconv::functor	file:
+CreateConvIndicePairFunctorP1	pcdet/ops/spconv/include/spconv/indice.h	/^struct CreateConvIndicePairFunctorP1 {$/;"	s	namespace:spconv::functor
+CreateConvIndicePairFunctorP2	pcdet/ops/spconv/include/spconv/indice.h	/^struct CreateConvIndicePairFunctorP2 {$/;"	s	namespace:spconv::functor
+CreateSubMIndicePairFunctor	pcdet/ops/spconv/include/spconv/indice.h	/^struct CreateSubMIndicePairFunctor {$/;"	s	namespace:spconv::functor
+CreateSubMIndicePairFunctor	pcdet/ops/spconv/src/indice.cc	/^struct CreateSubMIndicePairFunctor<tv::CPU, Index, IndexGrid, NDim> {$/;"	s	namespace:spconv::functor	file:
+CudaContextTimer	pcdet/ops/spconv/include/utility/timer.h	/^  CudaContextTimer() {$/;"	f	struct:spconv::CudaContextTimer
+CudaContextTimer	pcdet/ops/spconv/include/utility/timer.h	/^template <typename TimeT = std::chrono::microseconds> struct CudaContextTimer {$/;"	s	namespace:spconv
+DDNDeepLabV3	pcdet/models/backbones_3d/vfe/image_vfe_modules/ffn/ddn/ddn_deeplabv3.py	/^class DDNDeepLabV3(DDNTemplate):$/;"	c
+DDNLoss	pcdet/models/backbones_3d/vfe/image_vfe_modules/ffn/ddn_loss/ddn_loss.py	/^class DDNLoss(nn.Module):$/;"	c
+DDNTemplate	pcdet/models/backbones_3d/vfe/image_vfe_modules/ffn/ddn/ddn_template.py	/^class DDNTemplate(nn.Module):$/;"	c
+DECLARE_CPU_INDEX	pcdet/ops/spconv/src/indice.cc	73;"	d	file:
+DECLARE_CPU_INDEX	pcdet/ops/spconv/src/indice.cc	82;"	d	file:
+DECLARE_CPU_SPECS	pcdet/ops/spconv/src/maxpool.cc	71;"	d	file:
+DECLARE_CPU_SPECS	pcdet/ops/spconv/src/maxpool.cc	79;"	d	file:
+DECLARE_CPU_SPECS	pcdet/ops/spconv/src/reordering.cc	58;"	d	file:
+DECLARE_CPU_SPECS	pcdet/ops/spconv/src/reordering.cc	66;"	d	file:
+DECLARE_CPU_SPECS_INDEX_NDIM	pcdet/ops/spconv/src/indice.cc	67;"	d	file:
+DECLARE_CPU_SPECS_INDEX_NDIM	pcdet/ops/spconv/src/indice.cc	83;"	d	file:
+DECLARE_CPU_SPECS_T_INDEX	pcdet/ops/spconv/src/maxpool.cc	67;"	d	file:
+DECLARE_CPU_SPECS_T_INDEX	pcdet/ops/spconv/src/maxpool.cc	80;"	d	file:
+DECLARE_CPU_SPECS_T_INDEX	pcdet/ops/spconv/src/reordering.cc	54;"	d	file:
+DECLARE_CPU_SPECS_T_INDEX	pcdet/ops/spconv/src/reordering.cc	67;"	d	file:
+DIVUP	pcdet/ops/iou3d_nms/src/iou3d_nms.cpp	28;"	d	file:
+DIVUP	pcdet/ops/pointnet2/pointnet2_batch/src/cuda_utils.h	8;"	d
+DIVUP	pcdet/ops/pointnet2/pointnet2_stack/src/cuda_utils.h	7;"	d
+DataAugmentor	pcdet/datasets/augmentor/data_augmentor.py	/^class DataAugmentor(object):$/;"	c
+DataBaseSampler	pcdet/datasets/augmentor/database_sampler.py	/^class DataBaseSampler(object):$/;"	c
+DataProcessor	pcdet/datasets/processor/data_processor.py	/^class DataProcessor(object):$/;"	c
+DatasetTemplate	pcdet/datasets/dataset.py	/^class DatasetTemplate(torch_data.Dataset):$/;"	c
+DemoDataset	tools/demo.py	/^class DemoDataset(DatasetTemplate):$/;"	c
+DepthFFN	pcdet/models/backbones_3d/vfe/image_vfe_modules/ffn/depth_ffn.py	/^class DepthFFN(nn.Module):$/;"	c
+Detector3DTemplate	pcdet/models/detectors/detector3d_template.py	/^class Detector3DTemplate(nn.Module):$/;"	c
+DistributedSampler	pcdet/datasets/__init__.py	/^class DistributedSampler(_DistributedSampler):$/;"	c
+DivUp	pcdet/ops/spconv/include/tensorview/helper_launch.h	/^inline int DivUp(const T1 a, const T2 b) { return (a + b - 1) \/ b; }$/;"	f	namespace:tv::launch
+DynamicScatter	pcdet/ops/voxel/scatter_points.py	/^class DynamicScatter(nn.Module):$/;"	c
+EPS	pcdet/ops/iou3d_nms/src/iou3d_cpu.cpp	/^const float EPS = 1e-8;$/;"	v
+FUSED_SPARSE_CONV_OP_H_	pcdet/ops/spconv/include/spconv/fused_spconv_ops.h	16;"	d
+FakeOptim	tools/train_utils/optimization/learning_schedules_fastai.py	/^class FakeOptim:$/;"	c
+FastAIMixedOptim	tools/train_utils/optimization/fastai_optim.py	/^class FastAIMixedOptim(OptimWrapper):$/;"	c
+FrustumGridGenerator	pcdet/models/backbones_3d/vfe/image_vfe_modules/f2v/frustum_grid_generator.py	/^class FrustumGridGenerator(nn.Module):$/;"	c
+FrustumToVoxel	pcdet/models/backbones_3d/vfe/image_vfe_modules/f2v/frustum_to_voxel.py	/^class FrustumToVoxel(nn.Module):$/;"	c
+FurthestPointSampling	pcdet/ops/pointnet2/pointnet2_batch/pointnet2_utils.py	/^class FurthestPointSampling(Function):$/;"	c
+FurthestPointSampling	pcdet/ops/pointnet2/pointnet2_stack/pointnet2_utils.py	/^class FurthestPointSampling(Function):$/;"	c
+GPU	pcdet/ops/spconv/include/tensorview/tensorview.h	/^  GPU(cudaStream_t s = 0) : mStream(s) {}$/;"	f	struct:tv::GPU
+GPU	pcdet/ops/spconv/include/tensorview/tensorview.h	/^struct GPU {$/;"	s	namespace:tv
+GatherOperation	pcdet/ops/pointnet2/pointnet2_batch/pointnet2_utils.py	/^class GatherOperation(Function):$/;"	c
+GroupAll	pcdet/ops/pointnet2/pointnet2_batch/pointnet2_utils.py	/^class GroupAll(nn.Module):$/;"	c
+GroupingOperation	pcdet/ops/pointnet2/pointnet2_batch/pointnet2_utils.py	/^class GroupingOperation(Function):$/;"	c
+GroupingOperation	pcdet/ops/pointnet2/pointnet2_stack/pointnet2_utils.py	/^class GroupingOperation(Function):$/;"	c
+H_PRETTY_PRINT	pcdet/ops/spconv/include/prettyprint.h	12;"	d
+HeightCompression	pcdet/models/backbones_2d/map_to_bev/height_compression.py	/^class HeightCompression(nn.Module):$/;"	c
+INDICE_CU_H_	pcdet/ops/spconv/include/spconv/indice.cu.h	16;"	d
+IOU3D_CPU_H	pcdet/ops/iou3d_nms/src/iou3d_cpu.h	2;"	d
+IOU3D_NMS_H	pcdet/ops/iou3d_nms/src/iou3d_nms.h	2;"	d
+ImageVFE	pcdet/models/backbones_3d/vfe/image_vfe.py	/^class ImageVFE(VFETemplate):$/;"	c
+Int	pcdet/ops/spconv/include/prettyprint.h	/^  struct Int {};$/;"	s	struct:pretty_print::print_container_helper::printer
+Iterator	pcdet/ops/spconv/include/tensorview/helper_kernel.cu.h	/^    __forceinline__ __device__ Iterator(T index, T delta)$/;"	f	struct:tv::detail::KernelLoop::Iterator
+Iterator	pcdet/ops/spconv/include/tensorview/helper_kernel.cu.h	/^  struct Iterator {$/;"	s	class:tv::detail::KernelLoop
+KernelLoop	pcdet/ops/spconv/include/tensorview/helper_kernel.cu.h	/^  __forceinline__ __device__ KernelLoop(T begin, T delta, T end)$/;"	f	class:tv::detail::KernelLoop
+KernelLoop	pcdet/ops/spconv/include/tensorview/helper_kernel.cu.h	/^class KernelLoop {$/;"	c	namespace:tv::detail
+KernelLoopX	pcdet/ops/spconv/include/tensorview/helper_kernel.cu.h	/^__forceinline__ __device__ detail::KernelLoop<T> KernelLoopX(T count) {$/;"	f	namespace:tv
+KernelLoopY	pcdet/ops/spconv/include/tensorview/helper_kernel.cu.h	/^__forceinline__ __device__ detail::KernelLoop<T> KernelLoopY(T count) {$/;"	f	namespace:tv
+KernelLoopZ	pcdet/ops/spconv/include/tensorview/helper_kernel.cu.h	/^__forceinline__ __device__ detail::KernelLoop<T> KernelLoopZ(T count) {$/;"	f	namespace:tv
+KittiDataset	pcdet/datasets/kitti/kitti_dataset.py	/^class KittiDataset(DatasetTemplate):$/;"	c
+LRSchedulerStep	tools/train_utils/optimization/learning_schedules_fastai.py	/^class LRSchedulerStep(object):$/;"	c
+MAX	pcdet/ops/voxel/src/voxelization.h	/^typedef enum { SUM = 0, MEAN = 1, MAX = 2 } reduce_t;$/;"	e	enum:__anon1
+MEAN	pcdet/ops/voxel/src/voxelization.h	/^typedef enum { SUM = 0, MEAN = 1, MAX = 2 } reduce_t;$/;"	e	enum:__anon1
+MP_HELPER_H_	pcdet/ops/spconv/include/spconv/mp_helper.h	2;"	d
+MeanVFE	pcdet/models/backbones_3d/vfe/mean_vfe.py	/^class MeanVFE(VFETemplate):$/;"	c
+NeighborVoxelSAModuleMSG	pcdet/ops/pointnet2/pointnet2_stack/voxel_pool_modules.py	/^class NeighborVoxelSAModuleMSG(nn.Module):$/;"	c
+NuScenesDataset	pcdet/datasets/nuscenes/nuscenes_dataset.py	/^class NuScenesDataset(DatasetTemplate):$/;"	c
+Object3d	pcdet/utils/object3d_kitti.py	/^class Object3d(object):$/;"	c
+OneCycle	tools/train_utils/optimization/learning_schedules_fastai.py	/^class OneCycle(LRSchedulerStep):$/;"	c
+OpenPCDetWaymoDetectionMetricsEstimator	pcdet/datasets/waymo/waymo_eval.py	/^class OpenPCDetWaymoDetectionMetricsEstimator(tf.test.TestCase):$/;"	c
+OptimWrapper	tools/train_utils/optimization/fastai_optim.py	/^class OptimWrapper():$/;"	c
+PARAMS_GRID_H_	pcdet/ops/spconv/include/paramsgrid.h	16;"	d
+PFNLayer	pcdet/models/backbones_3d/vfe/pillar_vfe.py	/^class PFNLayer(nn.Module):$/;"	c
+PVRCNN	pcdet/models/detectors/pv_rcnn.py	/^class PVRCNN(Detector3DTemplate):$/;"	c
+PVRCNNHead	pcdet/models/roi_heads/pvrcnn_head.py	/^class PVRCNNHead(RoIHeadTemplate):$/;"	c
+PYBIND11_MODULE	pcdet/ops/iou3d_nms/src/iou3d_nms_api.cpp	/^PYBIND11_MODULE(TORCH_EXTENSION_NAME, m) {$/;"	f
+PYBIND11_MODULE	pcdet/ops/pointnet2/pointnet2_batch/src/pointnet2_api.cpp	/^PYBIND11_MODULE(TORCH_EXTENSION_NAME, m) {$/;"	f
+PYBIND11_MODULE	pcdet/ops/pointnet2/pointnet2_stack/src/pointnet2_api.cpp	/^PYBIND11_MODULE(TORCH_EXTENSION_NAME, m) {$/;"	f
+PYBIND11_MODULE	pcdet/ops/roiaware_pool3d/src/roiaware_pool3d.cpp	/^PYBIND11_MODULE(TORCH_EXTENSION_NAME, m) {$/;"	f
+PYBIND11_MODULE	pcdet/ops/roipoint_pool3d/src/roipoint_pool3d.cpp	/^PYBIND11_MODULE(TORCH_EXTENSION_NAME, m) {$/;"	f
+PYBIND11_MODULE	pcdet/ops/spconv/src/all.cc	/^PYBIND11_MODULE(TORCH_EXTENSION_NAME, m) {$/;"	f
+PYBIND11_MODULE	pcdet/ops/voxel/src/voxelization.cpp	/^PYBIND11_MODULE(TORCH_EXTENSION_NAME, m) {$/;"	f	namespace:voxelization
+PartA2FCHead	pcdet/models/roi_heads/partA2_head.py	/^class PartA2FCHead(RoIHeadTemplate):$/;"	c
+PartA2Net	pcdet/models/detectors/PartA2_net.py	/^class PartA2Net(Detector3DTemplate):$/;"	c
+PillarVFE	pcdet/models/backbones_3d/vfe/pillar_vfe.py	/^class PillarVFE(VFETemplate):$/;"	c
+Point	pcdet/ops/iou3d_nms/src/iou3d_cpu.cpp	/^    __device__ Point() {}$/;"	f	struct:Point
+Point	pcdet/ops/iou3d_nms/src/iou3d_cpu.cpp	/^    __device__ Point(double _x, double _y){$/;"	f	struct:Point
+Point	pcdet/ops/iou3d_nms/src/iou3d_cpu.cpp	/^struct Point {$/;"	s	file:
+PointFeatureEncoder	pcdet/datasets/processor/point_feature_encoder.py	/^class PointFeatureEncoder(object):$/;"	c
+PointHeadBox	pcdet/models/dense_heads/point_head_box.py	/^class PointHeadBox(PointHeadTemplate):$/;"	c
+PointHeadSimple	pcdet/models/dense_heads/point_head_simple.py	/^class PointHeadSimple(PointHeadTemplate):$/;"	c
+PointHeadTemplate	pcdet/models/dense_heads/point_head_template.py	/^class PointHeadTemplate(nn.Module):$/;"	c
+PointIntraPartOffsetHead	pcdet/models/dense_heads/point_intra_part_head.py	/^class PointIntraPartOffsetHead(PointHeadTemplate):$/;"	c
+PointNet2Backbone	pcdet/models/backbones_3d/pointnet2_backbone.py	/^class PointNet2Backbone(nn.Module):$/;"	c
+PointNet2MSG	pcdet/models/backbones_3d/pointnet2_backbone.py	/^class PointNet2MSG(nn.Module):$/;"	c
+PointPillar	pcdet/models/detectors/pointpillar.py	/^class PointPillar(Detector3DTemplate):$/;"	c
+PointPillarScatter	pcdet/models/backbones_2d/map_to_bev/pointpillar_scatter.py	/^class PointPillarScatter(nn.Module):$/;"	c
+PointRCNN	pcdet/models/detectors/point_rcnn.py	/^class PointRCNN(Detector3DTemplate):$/;"	c
+PointRCNNHead	pcdet/models/roi_heads/pointrcnn_head.py	/^class PointRCNNHead(RoIHeadTemplate):$/;"	c
+PointResidualCoder	pcdet/utils/box_coder_utils.py	/^class PointResidualCoder(object):$/;"	c
+PointnetFPModule	pcdet/ops/pointnet2/pointnet2_batch/pointnet2_modules.py	/^class PointnetFPModule(nn.Module):$/;"	c
+PointnetSAModule	pcdet/ops/pointnet2/pointnet2_batch/pointnet2_modules.py	/^class PointnetSAModule(PointnetSAModuleMSG):$/;"	c
+PointnetSAModuleMSG	pcdet/ops/pointnet2/pointnet2_batch/pointnet2_modules.py	/^class PointnetSAModuleMSG(_PointnetSAModuleBase):$/;"	c
+PostInstallation	setup.py	/^class PostInstallation(install):$/;"	c
+PreviousResidualDecoder	pcdet/utils/box_coder_utils.py	/^class PreviousResidualDecoder(object):$/;"	c
+PreviousResidualRoIDecoder	pcdet/utils/box_coder_utils.py	/^class PreviousResidualRoIDecoder(object):$/;"	c
+ProposalTargetLayer	pcdet/models/roi_heads/target_assigner/proposal_target_layer.py	/^class ProposalTargetLayer(nn.Module):$/;"	c
+QueryAndGroup	pcdet/ops/pointnet2/pointnet2_batch/pointnet2_utils.py	/^class QueryAndGroup(nn.Module):$/;"	c
+QueryAndGroup	pcdet/ops/pointnet2/pointnet2_stack/pointnet2_utils.py	/^class QueryAndGroup(nn.Module):$/;"	c
+REORDERING_CU_H_	pcdet/ops/spconv/include/spconv/reordering.cu.h	16;"	d
+ROOT_DIR	pcdet/datasets/kitti/kitti_dataset.py	/^        ROOT_DIR = (Path(__file__).resolve().parent \/ '..\/..\/..\/').resolve()$/;"	v
+ROOT_DIR	pcdet/datasets/nuscenes/nuscenes_dataset.py	/^        ROOT_DIR = (Path(__file__).resolve().parent \/ '..\/..\/..\/').resolve()$/;"	v
+ROOT_DIR	pcdet/datasets/waymo/waymo_dataset.py	/^        ROOT_DIR = (Path(__file__).resolve().parent \/ '..\/..\/..\/').resolve()$/;"	v
+RemoveGrid	pcdet/ops/spconv/modules.py	/^class RemoveGrid(SparseModule):$/;"	c
+ResidualCoder	pcdet/utils/box_coder_utils.py	/^class ResidualCoder(object):$/;"	c
+RoIAwarePool3d	pcdet/ops/roiaware_pool3d/roiaware_pool3d_utils.py	/^class RoIAwarePool3d(nn.Module):$/;"	c
+RoIAwarePool3dFunction	pcdet/ops/roiaware_pool3d/roiaware_pool3d_utils.py	/^class RoIAwarePool3dFunction(Function):$/;"	c
+RoIHeadTemplate	pcdet/models/roi_heads/roi_head_template.py	/^class RoIHeadTemplate(nn.Module):$/;"	c
+RoIPointPool3d	pcdet/ops/roipoint_pool3d/roipoint_pool3d_utils.py	/^class RoIPointPool3d(nn.Module):$/;"	c
+RoIPointPool3dFunction	pcdet/ops/roipoint_pool3d/roipoint_pool3d_utils.py	/^class RoIPointPool3dFunction(Function):$/;"	c
+SECONDHead	pcdet/models/roi_heads/second_head.py	/^class SECONDHead(RoIHeadTemplate):$/;"	c
+SECONDNet	pcdet/models/detectors/second_net.py	/^class SECONDNet(Detector3DTemplate):$/;"	c
+SECONDNetIoU	pcdet/models/detectors/second_net_iou.py	/^class SECONDNetIoU(Detector3DTemplate):$/;"	c
+SPARSE_CONV_INDICE_FUNCTOR_H_	pcdet/ops/spconv/include/spconv/indice.h	16;"	d
+SPARSE_CONV_OP_H_	pcdet/ops/spconv/include/spconv/spconv_ops.h	16;"	d
+SPARSE_MAXPOOL_FUNCTOR_H_	pcdet/ops/spconv/include/spconv/maxpool.h	16;"	d
+SPARSE_POOL_OP_H_	pcdet/ops/spconv/include/spconv/pool_ops.h	16;"	d
+SPARSE_REORDERING_FUNCTOR_H_	pcdet/ops/spconv/include/spconv/reordering.h	16;"	d
+SPCONV_GEOMETRY_H_	pcdet/ops/spconv/include/spconv/geometry.h	16;"	d
+SUM	pcdet/ops/voxel/src/voxelization.h	/^typedef enum { SUM = 0, MEAN = 1, MAX = 2 } reduce_t;$/;"	e	enum:__anon1
+Sampler	pcdet/models/backbones_3d/vfe/image_vfe_modules/f2v/sampler.py	/^class Sampler(nn.Module):$/;"	c
+ShapeBase	pcdet/ops/spconv/include/tensorview/tensorview.h	/^  ShapeBase(Container<T> shape) : SimpleVector<int, MaxDim>(shape) {}$/;"	f	struct:tv::ShapeBase
+ShapeBase	pcdet/ops/spconv/include/tensorview/tensorview.h	/^  ShapeBase(const std::vector<int> &arr) : SimpleVector<int, MaxDim>(arr) {}$/;"	f	struct:tv::ShapeBase
+ShapeBase	pcdet/ops/spconv/include/tensorview/tensorview.h	/^  TV_HOST_DEVICE_INLINE ShapeBase() : SimpleVector<int, MaxDim>(){};$/;"	f	struct:tv::ShapeBase
+ShapeBase	pcdet/ops/spconv/include/tensorview/tensorview.h	/^  TV_HOST_DEVICE_INLINE ShapeBase(const ShapeBase<MaxDim> &shape)$/;"	f	struct:tv::ShapeBase
+ShapeBase	pcdet/ops/spconv/include/tensorview/tensorview.h	/^  TV_HOST_DEVICE_INLINE ShapeBase(std::initializer_list<int> shape)$/;"	f	struct:tv::ShapeBase
+ShapeBase	pcdet/ops/spconv/include/tensorview/tensorview.h	/^struct ShapeBase : public SimpleVector<int, MaxDim> {$/;"	s	namespace:tv
+SigmoidFocalClassificationLoss	pcdet/utils/loss_utils.py	/^class SigmoidFocalClassificationLoss(nn.Module):$/;"	c
+SimpleVector	pcdet/ops/spconv/include/tensorview/tensorview.h	/^  SimpleVector(const std::vector<T> &arr) {$/;"	f	struct:tv::SimpleVector
+SimpleVector	pcdet/ops/spconv/include/tensorview/tensorview.h	/^  TV_HOST_DEVICE_INLINE SimpleVector(){};$/;"	f	struct:tv::SimpleVector
+SimpleVector	pcdet/ops/spconv/include/tensorview/tensorview.h	/^  TV_HOST_DEVICE_INLINE SimpleVector(const SimpleVector<T, MaxDim> &arr) {$/;"	f	struct:tv::SimpleVector
+SimpleVector	pcdet/ops/spconv/include/tensorview/tensorview.h	/^  TV_HOST_DEVICE_INLINE SimpleVector(std::initializer_list<T> q) {$/;"	f	struct:tv::SimpleVector
+SimpleVector	pcdet/ops/spconv/include/tensorview/tensorview.h	/^struct \/*alignas(calc_align<T>(MaxDim))*\/ SimpleVector {$/;"	s	namespace:tv
+SingleHead	pcdet/models/dense_heads/anchor_head_multi.py	/^class SingleHead(BaseBEVBackbone):$/;"	c
+Slice	pcdet/ops/spconv/include/tensorview/tensorview.h	/^  TV_HOST_DEVICE_INLINE Slice() {$/;"	f	struct:tv::Slice
+Slice	pcdet/ops/spconv/include/tensorview/tensorview.h	/^  TV_HOST_DEVICE_INLINE Slice(Integers... ints) {$/;"	f	struct:tv::Slice
+Slice	pcdet/ops/spconv/include/tensorview/tensorview.h	/^  TV_HOST_DEVICE_INLINE Slice(std::initializer_list<T> slice) {$/;"	f	struct:tv::Slice
+Slice	pcdet/ops/spconv/include/tensorview/tensorview.h	/^struct Slice {$/;"	s	namespace:tv
+SparseBasicBlock	pcdet/models/backbones_3d/spconv_backbone.py	/^class SparseBasicBlock(spconv.SparseModule):$/;"	c
+SparseBasicBlock	pcdet/models/backbones_3d/spconv_unet.py	/^class SparseBasicBlock(spconv.SparseModule):$/;"	c
+SparseConv2d	pcdet/ops/spconv/conv.py	/^class SparseConv2d(SparseConvolution):$/;"	c
+SparseConv3d	pcdet/ops/spconv/conv.py	/^class SparseConv3d(SparseConvolution):$/;"	c
+SparseConv4d	pcdet/ops/spconv/conv.py	/^class SparseConv4d(SparseConvolution):$/;"	c
+SparseConvFunction	pcdet/ops/spconv/functional.py	/^class SparseConvFunction(Function):$/;"	c
+SparseConvTensor	pcdet/ops/spconv/structure.py	/^class SparseConvTensor(object):$/;"	c
+SparseConvTranspose2d	pcdet/ops/spconv/conv.py	/^class SparseConvTranspose2d(SparseConvolution):$/;"	c
+SparseConvTranspose3d	pcdet/ops/spconv/conv.py	/^class SparseConvTranspose3d(SparseConvolution):$/;"	c
+SparseConvolution	pcdet/ops/spconv/conv.py	/^class SparseConvolution(SparseModule):$/;"	c
+SparseGatherFunctor	pcdet/ops/spconv/include/spconv/reordering.h	/^struct SparseGatherFunctor {$/;"	s	namespace:spconv::functor
+SparseGatherFunctor	pcdet/ops/spconv/src/reordering.cc	/^struct SparseGatherFunctor<tv::CPU, T, Index> {$/;"	s	namespace:spconv::functor	file:
+SparseInverseConv2d	pcdet/ops/spconv/conv.py	/^class SparseInverseConv2d(SparseConvolution):$/;"	c
+SparseInverseConv3d	pcdet/ops/spconv/conv.py	/^class SparseInverseConv3d(SparseConvolution):$/;"	c
+SparseInverseConvFunction	pcdet/ops/spconv/functional.py	/^class SparseInverseConvFunction(Function):$/;"	c
+SparseMaxPool	pcdet/ops/spconv/pool.py	/^class SparseMaxPool(SparseModule):$/;"	c
+SparseMaxPool2d	pcdet/ops/spconv/pool.py	/^class SparseMaxPool2d(SparseMaxPool):$/;"	c
+SparseMaxPool3d	pcdet/ops/spconv/pool.py	/^class SparseMaxPool3d(SparseMaxPool):$/;"	c
+SparseMaxPoolBackwardFunctor	pcdet/ops/spconv/include/spconv/maxpool.h	/^struct SparseMaxPoolBackwardFunctor {$/;"	s	namespace:spconv::functor
+SparseMaxPoolBackwardFunctor	pcdet/ops/spconv/src/maxpool.cc	/^struct SparseMaxPoolBackwardFunctor<tv::CPU, T, Index> {$/;"	s	namespace:spconv::functor	file:
+SparseMaxPoolForwardFunctor	pcdet/ops/spconv/include/spconv/maxpool.h	/^struct SparseMaxPoolForwardFunctor {$/;"	s	namespace:spconv::functor
+SparseMaxPoolForwardFunctor	pcdet/ops/spconv/src/maxpool.cc	/^struct SparseMaxPoolForwardFunctor<tv::CPU, T, Index> {$/;"	s	namespace:spconv::functor	file:
+SparseMaxPoolFunction	pcdet/ops/spconv/functional.py	/^class SparseMaxPoolFunction(Function):$/;"	c
+SparseModule	pcdet/ops/spconv/modules.py	/^class SparseModule(nn.Module):$/;"	c
+SparseScatterAddFunctor	pcdet/ops/spconv/include/spconv/reordering.h	/^struct SparseScatterAddFunctor {$/;"	s	namespace:spconv::functor
+SparseScatterAddFunctor	pcdet/ops/spconv/src/reordering.cc	/^struct SparseScatterAddFunctor<tv::CPU, T, Index> {$/;"	s	namespace:spconv::functor	file:
+SparseSequential	pcdet/ops/spconv/modules.py	/^class SparseSequential(SparseModule):$/;"	c
+StackPointnetFPModule	pcdet/ops/pointnet2/pointnet2_stack/pointnet2_modules.py	/^class StackPointnetFPModule(nn.Module):$/;"	c
+StackSAModuleMSG	pcdet/ops/pointnet2/pointnet2_stack/pointnet2_modules.py	/^class StackSAModuleMSG(nn.Module):$/;"	c
+SubMConv2d	pcdet/ops/spconv/conv.py	/^class SubMConv2d(SparseConvolution):$/;"	c
+SubMConv3d	pcdet/ops/spconv/conv.py	/^class SubMConv3d(SparseConvolution):$/;"	c
+SubMConv4d	pcdet/ops/spconv/conv.py	/^class SubMConv4d(SparseConvolution):$/;"	c
+SubMConvFunction	pcdet/ops/spconv/functional.py	/^class SubMConvFunction(Function):$/;"	c
+THREADS_PER_BLOCK	pcdet/ops/pointnet2/pointnet2_batch/src/cuda_utils.h	7;"	d
+THREADS_PER_BLOCK	pcdet/ops/pointnet2/pointnet2_stack/src/cuda_utils.h	6;"	d
+THREADS_PER_BLOCK_NMS	pcdet/ops/iou3d_nms/src/iou3d_nms.cpp	/^const int THREADS_PER_BLOCK_NMS = sizeof(unsigned long long) * 8;$/;"	v
+TOTAL_THREADS	pcdet/ops/pointnet2/pointnet2_batch/src/cuda_utils.h	6;"	d
+TV_ASSERT	pcdet/ops/spconv/include/tensorview/tensorview.h	34;"	d
+TV_ASSERT_INVALID_ARG	pcdet/ops/spconv/include/tensorview/tensorview.h	82;"	d
+TV_ASSERT_RT_ERR	pcdet/ops/spconv/include/tensorview/tensorview.h	71;"	d
+TV_CHECK_CUDA_ERR	pcdet/ops/spconv/include/tensorview/tensorview.h	93;"	d
+TV_DEVICE_INLINE	pcdet/ops/spconv/include/tensorview/tensorview.h	32;"	d
+TV_DEVICE_REQUIRE	pcdet/ops/spconv/include/tensorview/tensorview.h	54;"	d
+TV_HOST_DEVICE	pcdet/ops/spconv/include/tensorview/tensorview.h	33;"	d
+TV_HOST_DEVICE_INLINE	pcdet/ops/spconv/include/tensorview/tensorview.h	31;"	d
+TV_MAX_DIM	pcdet/ops/spconv/include/tensorview/tensorview.h	111;"	d
+TV_REQUIRE	pcdet/ops/spconv/include/tensorview/tensorview.h	46;"	d
+TensorView	pcdet/ops/spconv/include/tensorview/tensorview.h	/^  TV_HOST_DEVICE_INLINE TensorView() {}$/;"	f	struct:tv::TensorView
+TensorView	pcdet/ops/spconv/include/tensorview/tensorview.h	/^  explicit TV_HOST_DEVICE_INLINE TensorView(T *ptr, Integers... shapes)$/;"	f	struct:tv::TensorView
+TensorView	pcdet/ops/spconv/include/tensorview/tensorview.h	/^  explicit TV_HOST_DEVICE_INLINE TensorView(T *ptr, Shape shape)$/;"	f	struct:tv::TensorView
+TensorView	pcdet/ops/spconv/include/tensorview/tensorview.h	/^struct TensorView {$/;"	s	namespace:tv
+TestCase	pcdet/ops/spconv/test_utils.py	/^class TestCase(unittest.TestCase):$/;"	c
+ThreeInterpolate	pcdet/ops/pointnet2/pointnet2_batch/pointnet2_utils.py	/^class ThreeInterpolate(Function):$/;"	c
+ThreeInterpolate	pcdet/ops/pointnet2/pointnet2_stack/pointnet2_utils.py	/^class ThreeInterpolate(Function):$/;"	c
+ThreeNN	pcdet/ops/pointnet2/pointnet2_batch/pointnet2_utils.py	/^class ThreeNN(Function):$/;"	c
+ThreeNN	pcdet/ops/pointnet2/pointnet2_stack/pointnet2_utils.py	/^class ThreeNN(Function):$/;"	c
+ToDense	pcdet/ops/spconv/modules.py	/^class ToDense(SparseModule):$/;"	c
+TorchGPU	pcdet/ops/spconv/include/torch_utils.h	/^struct TorchGPU : public tv::GPU {$/;"	s	namespace:tv
+UNetV2	pcdet/models/backbones_3d/spconv_unet.py	/^class UNetV2(nn.Module):$/;"	c
+UR_block_forward	pcdet/models/backbones_3d/spconv_unet.py	/^    def UR_block_forward(self, x_lateral, x_bottom, conv_t, conv_m, conv_inv):$/;"	m	class:UNetV2
+VFETemplate	pcdet/models/backbones_3d/vfe/vfe_template.py	/^class VFETemplate(nn.Module):$/;"	c
+VoxelBackBone8x	pcdet/models/backbones_3d/spconv_backbone.py	/^class VoxelBackBone8x(nn.Module):$/;"	c
+VoxelQuery	pcdet/ops/pointnet2/pointnet2_stack/voxel_query_utils.py	/^class VoxelQuery(Function):$/;"	c
+VoxelQueryAndGrouping	pcdet/ops/pointnet2/pointnet2_stack/voxel_query_utils.py	/^class VoxelQueryAndGrouping(nn.Module):$/;"	c
+VoxelRCNN	pcdet/models/detectors/voxel_rcnn.py	/^class VoxelRCNN(Detector3DTemplate):$/;"	c
+VoxelRCNNHead	pcdet/models/roi_heads/voxelrcnn_head.py	/^class VoxelRCNNHead(RoIHeadTemplate):$/;"	c
+VoxelResBackBone8x	pcdet/models/backbones_3d/spconv_backbone.py	/^class VoxelResBackBone8x(nn.Module):$/;"	c
+VoxelSetAbstraction	pcdet/models/backbones_3d/pfe/voxel_set_abstraction.py	/^class VoxelSetAbstraction(nn.Module):$/;"	c
+Voxelization	pcdet/ops/voxel/voxelize.py	/^class Voxelization(nn.Module):$/;"	c
+WAYMO_CLASSES	pcdet/datasets/waymo/waymo_eval.py	/^    WAYMO_CLASSES = ['unknown', 'Vehicle', 'Pedestrian', 'Truck', 'Cyclist']$/;"	v	class:OpenPCDetWaymoDetectionMetricsEstimator
+WAYMO_CLASSES	pcdet/datasets/waymo/waymo_utils.py	/^WAYMO_CLASSES = ['unknown', 'Vehicle', 'Pedestrian', 'Sign', 'Cyclist']$/;"	v
+WaymoDataset	pcdet/datasets/waymo/waymo_dataset.py	/^class WaymoDataset(DatasetTemplate):$/;"	c
+WeightedCrossEntropyLoss	pcdet/utils/loss_utils.py	/^class WeightedCrossEntropyLoss(nn.Module):$/;"	c
+WeightedL1Loss	pcdet/utils/loss_utils.py	/^class WeightedL1Loss(nn.Module):$/;"	c
+WeightedSmoothL1Loss	pcdet/utils/loss_utils.py	/^class WeightedSmoothL1Loss(nn.Module):$/;"	c
+_BALL_QUERY_GPU_H	pcdet/ops/pointnet2/pointnet2_batch/src/ball_query_gpu.h	2;"	d
+_CUDA_UTILS_H	pcdet/ops/pointnet2/pointnet2_batch/src/cuda_utils.h	2;"	d
+_GROUP_POINTS_GPU_H	pcdet/ops/pointnet2/pointnet2_batch/src/group_points_gpu.h	2;"	d
+_GetNdArray	pcdet/ops/spconv/test_utils.py	/^    def _GetNdArray(self, a):$/;"	m	class:TestCase
+_INTERPOLATE_GPU_H	pcdet/ops/pointnet2/pointnet2_batch/src/interpolate_gpu.h	2;"	d
+_INTERPOLATE_GPU_H	pcdet/ops/pointnet2/pointnet2_stack/src/interpolate_gpu.h	2;"	d
+_PointnetSAModuleBase	pcdet/ops/pointnet2/pointnet2_batch/pointnet2_modules.py	/^class _PointnetSAModuleBase(nn.Module):$/;"	c
+_SAMPLING_GPU_H	pcdet/ops/pointnet2/pointnet2_batch/src/sampling_gpu.h	2;"	d
+_SAMPLING_GPU_H	pcdet/ops/pointnet2/pointnet2_stack/src/sampling_gpu.h	2;"	d
+_STACK_BALL_QUERY_GPU_H	pcdet/ops/pointnet2/pointnet2_stack/src/ball_query_gpu.h	9;"	d
+_STACK_CUDA_UTILS_H	pcdet/ops/pointnet2/pointnet2_stack/src/cuda_utils.h	2;"	d
+_STACK_GROUP_POINTS_GPU_H	pcdet/ops/pointnet2/pointnet2_stack/src/group_points_gpu.h	9;"	d
+_STACK_VOXEL_QUERY_GPU_H	pcdet/ops/pointnet2/pointnet2_stack/src/voxel_query_gpu.h	2;"	d
+_Voxelization	pcdet/ops/voxel/voxelize.py	/^class _Voxelization(Function):$/;"	c
+__all__	pcdet/__init__.py	/^__all__ = [$/;"	v
+__all__	pcdet/datasets/__init__.py	/^__all__ = {$/;"	v
+__all__	pcdet/models/backbones_2d/__init__.py	/^__all__ = {$/;"	v
+__all__	pcdet/models/backbones_2d/map_to_bev/__init__.py	/^__all__ = {$/;"	v
+__all__	pcdet/models/backbones_3d/__init__.py	/^__all__ = {$/;"	v
+__all__	pcdet/models/backbones_3d/pfe/__init__.py	/^__all__ = {$/;"	v
+__all__	pcdet/models/backbones_3d/vfe/__init__.py	/^__all__ = {$/;"	v
+__all__	pcdet/models/backbones_3d/vfe/image_vfe_modules/f2v/__init__.py	/^__all__ = {$/;"	v
+__all__	pcdet/models/backbones_3d/vfe/image_vfe_modules/ffn/__init__.py	/^__all__ = {$/;"	v
+__all__	pcdet/models/backbones_3d/vfe/image_vfe_modules/ffn/ddn/__init__.py	/^__all__ = {$/;"	v
+__all__	pcdet/models/backbones_3d/vfe/image_vfe_modules/ffn/ddn_loss/__init__.py	/^__all__ = {$/;"	v
+__all__	pcdet/models/dense_heads/__init__.py	/^__all__ = {$/;"	v
+__all__	pcdet/models/detectors/__init__.py	/^__all__ = {$/;"	v
+__all__	pcdet/models/roi_heads/__init__.py	/^__all__ = {$/;"	v
+__all__	pcdet/ops/spconv/__init__.py	/^__all__ = [$/;"	v
+__all__	pcdet/ops/voxel/__init__.py	/^__all__ = ['Voxelization', 'voxelization', 'dynamic_scatter', 'DynamicScatter']$/;"	v
+__call__	pcdet/datasets/augmentor/database_sampler.py	/^    def __call__(self, data_dict):$/;"	m	class:DataBaseSampler	file:
+__getattr__	tools/train_utils/optimization/fastai_optim.py	/^    def __getattr__(self, k: str):$/;"	m	class:OptimWrapper	file:
+__getitem__	pcdet/datasets/dataset.py	/^    def __getitem__(self, index):$/;"	m	class:DatasetTemplate	file:
+__getitem__	pcdet/datasets/kitti/kitti_dataset.py	/^    def __getitem__(self, index):$/;"	m	class:KittiDataset	file:
+__getitem__	pcdet/datasets/nuscenes/nuscenes_dataset.py	/^    def __getitem__(self, index):$/;"	m	class:NuScenesDataset	file:
+__getitem__	pcdet/datasets/waymo/waymo_dataset.py	/^    def __getitem__(self, index):$/;"	m	class:WaymoDataset	file:
+__getitem__	pcdet/ops/spconv/modules.py	/^    def __getitem__(self, idx):$/;"	m	class:SparseSequential	file:
+__getitem__	tools/demo.py	/^    def __getitem__(self, index):$/;"	m	class:DemoDataset	file:
+__getstate__	pcdet/datasets/augmentor/data_augmentor.py	/^    def __getstate__(self):$/;"	m	class:DataAugmentor	file:
+__getstate__	pcdet/datasets/augmentor/database_sampler.py	/^    def __getstate__(self):$/;"	m	class:DataBaseSampler	file:
+__getstate__	pcdet/datasets/dataset.py	/^    def __getstate__(self):$/;"	m	class:DatasetTemplate	file:
+__init__	pcdet/datasets/__init__.py	/^    def __init__(self, dataset, num_replicas=None, rank=None, shuffle=True):$/;"	m	class:DistributedSampler
+__init__	pcdet/datasets/augmentor/data_augmentor.py	/^    def __init__(self, root_path, augmentor_configs, class_names, logger=None):$/;"	m	class:DataAugmentor
+__init__	pcdet/datasets/augmentor/database_sampler.py	/^    def __init__(self, root_path, sampler_cfg, class_names, logger=None):$/;"	m	class:DataBaseSampler
+__init__	pcdet/datasets/dataset.py	/^    def __init__(self, dataset_cfg=None, class_names=None, training=True, root_path=None, logger=None):$/;"	m	class:DatasetTemplate
+__init__	pcdet/datasets/kitti/kitti_dataset.py	/^    def __init__(self, dataset_cfg, class_names, training=True, root_path=None, logger=None):$/;"	m	class:KittiDataset
+__init__	pcdet/datasets/nuscenes/nuscenes_dataset.py	/^    def __init__(self, dataset_cfg, class_names, training=True, root_path=None, logger=None):$/;"	m	class:NuScenesDataset
+__init__	pcdet/datasets/processor/data_processor.py	/^    def __init__(self, processor_configs, point_cloud_range, training):$/;"	m	class:DataProcessor
+__init__	pcdet/datasets/processor/point_feature_encoder.py	/^    def __init__(self, config, point_cloud_range=None):$/;"	m	class:PointFeatureEncoder
+__init__	pcdet/datasets/waymo/waymo_dataset.py	/^    def __init__(self, dataset_cfg, class_names, training=True, root_path=None, logger=None):$/;"	m	class:WaymoDataset
+__init__	pcdet/models/backbones_2d/base_bev_backbone.py	/^    def __init__(self, model_cfg, input_channels):$/;"	m	class:BaseBEVBackbone
+__init__	pcdet/models/backbones_2d/map_to_bev/conv2d_collapse.py	/^    def __init__(self, model_cfg, grid_size):$/;"	m	class:Conv2DCollapse
+__init__	pcdet/models/backbones_2d/map_to_bev/height_compression.py	/^    def __init__(self, model_cfg, **kwargs):$/;"	m	class:HeightCompression
+__init__	pcdet/models/backbones_2d/map_to_bev/pointpillar_scatter.py	/^    def __init__(self, model_cfg, grid_size, **kwargs):$/;"	m	class:PointPillarScatter
+__init__	pcdet/models/backbones_3d/pfe/voxel_set_abstraction.py	/^    def __init__(self, model_cfg, voxel_size, point_cloud_range, num_bev_features=None,$/;"	m	class:VoxelSetAbstraction
+__init__	pcdet/models/backbones_3d/pointnet2_backbone.py	/^    def __init__(self, model_cfg, input_channels, **kwargs):$/;"	m	class:PointNet2Backbone
+__init__	pcdet/models/backbones_3d/pointnet2_backbone.py	/^    def __init__(self, model_cfg, input_channels, **kwargs):$/;"	m	class:PointNet2MSG
+__init__	pcdet/models/backbones_3d/spconv_backbone.py	/^    def __init__(self, inplanes, planes, stride=1, norm_fn=None, downsample=None, indice_key=None):$/;"	m	class:SparseBasicBlock
+__init__	pcdet/models/backbones_3d/spconv_backbone.py	/^    def __init__(self, model_cfg, input_channels, grid_size, **kwargs):$/;"	m	class:VoxelBackBone8x
+__init__	pcdet/models/backbones_3d/spconv_backbone.py	/^    def __init__(self, model_cfg, input_channels, grid_size, **kwargs):$/;"	m	class:VoxelResBackBone8x
+__init__	pcdet/models/backbones_3d/spconv_unet.py	/^    def __init__(self, inplanes, planes, stride=1, downsample=None, indice_key=None, norm_fn=None):$/;"	m	class:SparseBasicBlock
+__init__	pcdet/models/backbones_3d/spconv_unet.py	/^    def __init__(self, model_cfg, input_channels, grid_size, voxel_size, point_cloud_range, **kwargs):$/;"	m	class:UNetV2
+__init__	pcdet/models/backbones_3d/vfe/image_vfe.py	/^    def __init__(self, model_cfg, grid_size, point_cloud_range, depth_downsample_factor, **kwargs):$/;"	m	class:ImageVFE
+__init__	pcdet/models/backbones_3d/vfe/image_vfe_modules/f2v/frustum_grid_generator.py	/^    def __init__(self, grid_size, pc_range, disc_cfg):$/;"	m	class:FrustumGridGenerator
+__init__	pcdet/models/backbones_3d/vfe/image_vfe_modules/f2v/frustum_to_voxel.py	/^    def __init__(self, model_cfg, grid_size, pc_range, disc_cfg):$/;"	m	class:FrustumToVoxel
+__init__	pcdet/models/backbones_3d/vfe/image_vfe_modules/f2v/sampler.py	/^    def __init__(self, mode="bilinear", padding_mode="zeros"):$/;"	m	class:Sampler
+__init__	pcdet/models/backbones_3d/vfe/image_vfe_modules/ffn/ddn/ddn_deeplabv3.py	/^    def __init__(self, backbone_name, **kwargs):$/;"	m	class:DDNDeepLabV3
+__init__	pcdet/models/backbones_3d/vfe/image_vfe_modules/ffn/ddn/ddn_template.py	/^    def __init__(self, constructor, feat_extract_layer, num_classes, pretrained_path=None, aux_loss=None):$/;"	m	class:DDNTemplate
+__init__	pcdet/models/backbones_3d/vfe/image_vfe_modules/ffn/ddn_loss/balancer.py	/^    def __init__(self, fg_weight, bg_weight, downsample_factor=1):$/;"	m	class:Balancer
+__init__	pcdet/models/backbones_3d/vfe/image_vfe_modules/ffn/ddn_loss/ddn_loss.py	/^    def __init__(self,$/;"	m	class:DDNLoss
+__init__	pcdet/models/backbones_3d/vfe/image_vfe_modules/ffn/depth_ffn.py	/^    def __init__(self, model_cfg, downsample_factor):$/;"	m	class:DepthFFN
+__init__	pcdet/models/backbones_3d/vfe/mean_vfe.py	/^    def __init__(self, model_cfg, num_point_features, **kwargs):$/;"	m	class:MeanVFE
+__init__	pcdet/models/backbones_3d/vfe/pillar_vfe.py	/^    def __init__(self, model_cfg, num_point_features, voxel_size, point_cloud_range, **kwargs):$/;"	m	class:PillarVFE
+__init__	pcdet/models/backbones_3d/vfe/pillar_vfe.py	/^    def __init__(self,$/;"	m	class:PFNLayer
+__init__	pcdet/models/backbones_3d/vfe/vfe_template.py	/^    def __init__(self, model_cfg, **kwargs):$/;"	m	class:VFETemplate
+__init__	pcdet/models/dense_heads/anchor_head_multi.py	/^    def __init__(self, model_cfg, input_channels, num_class, class_names, grid_size, point_cloud_range,$/;"	m	class:AnchorHeadMulti
+__init__	pcdet/models/dense_heads/anchor_head_multi.py	/^    def __init__(self, model_cfg, input_channels, num_class, num_anchors_per_location, code_size, rpn_head_cfg=None,$/;"	m	class:SingleHead
+__init__	pcdet/models/dense_heads/anchor_head_single.py	/^    def __init__(self, model_cfg, input_channels, num_class, class_names, grid_size, point_cloud_range,$/;"	m	class:AnchorHeadSingle
+__init__	pcdet/models/dense_heads/anchor_head_template.py	/^    def __init__(self, model_cfg, num_class, class_names, grid_size, point_cloud_range, predict_boxes_when_training):$/;"	m	class:AnchorHeadTemplate
+__init__	pcdet/models/dense_heads/point_head_box.py	/^    def __init__(self, num_class, input_channels, model_cfg, predict_boxes_when_training=False, **kwargs):$/;"	m	class:PointHeadBox
+__init__	pcdet/models/dense_heads/point_head_simple.py	/^    def __init__(self, num_class, input_channels, model_cfg, **kwargs):$/;"	m	class:PointHeadSimple
+__init__	pcdet/models/dense_heads/point_head_template.py	/^    def __init__(self, model_cfg, num_class):$/;"	m	class:PointHeadTemplate
+__init__	pcdet/models/dense_heads/point_intra_part_head.py	/^    def __init__(self, num_class, input_channels, model_cfg, predict_boxes_when_training=False, **kwargs):$/;"	m	class:PointIntraPartOffsetHead
+__init__	pcdet/models/dense_heads/target_assigner/anchor_generator.py	/^    def __init__(self, anchor_range, anchor_generator_config):$/;"	m	class:AnchorGenerator
+__init__	pcdet/models/dense_heads/target_assigner/atss_target_assigner.py	/^    def __init__(self, topk, box_coder, match_height=False):$/;"	m	class:ATSSTargetAssigner
+__init__	pcdet/models/dense_heads/target_assigner/axis_aligned_target_assigner.py	/^    def __init__(self, model_cfg, class_names, box_coder, match_height=False):$/;"	m	class:AxisAlignedTargetAssigner
+__init__	pcdet/models/detectors/PartA2_net.py	/^    def __init__(self, model_cfg, num_class, dataset):$/;"	m	class:PartA2Net
+__init__	pcdet/models/detectors/caddn.py	/^    def __init__(self, model_cfg, num_class, dataset):$/;"	m	class:CaDDN
+__init__	pcdet/models/detectors/detector3d_template.py	/^    def __init__(self, model_cfg, num_class, dataset):$/;"	m	class:Detector3DTemplate
+__init__	pcdet/models/detectors/point_rcnn.py	/^    def __init__(self, model_cfg, num_class, dataset):$/;"	m	class:PointRCNN
+__init__	pcdet/models/detectors/pointpillar.py	/^    def __init__(self, model_cfg, num_class, dataset):$/;"	m	class:PointPillar
+__init__	pcdet/models/detectors/pv_rcnn.py	/^    def __init__(self, model_cfg, num_class, dataset):$/;"	m	class:PVRCNN
+__init__	pcdet/models/detectors/second_net.py	/^    def __init__(self, model_cfg, num_class, dataset):$/;"	m	class:SECONDNet
+__init__	pcdet/models/detectors/second_net_iou.py	/^    def __init__(self, model_cfg, num_class, dataset):$/;"	m	class:SECONDNetIoU
+__init__	pcdet/models/detectors/voxel_rcnn.py	/^    def __init__(self, model_cfg, num_class, dataset):$/;"	m	class:VoxelRCNN
+__init__	pcdet/models/model_utils/basic_block_2d.py	/^    def __init__(self, in_channels, out_channels, **kwargs):$/;"	m	class:BasicBlock2D
+__init__	pcdet/models/roi_heads/partA2_head.py	/^    def __init__(self, input_channels, model_cfg, num_class=1, **kwargs):$/;"	m	class:PartA2FCHead
+__init__	pcdet/models/roi_heads/pointrcnn_head.py	/^    def __init__(self, input_channels, model_cfg, num_class=1, **kwargs):$/;"	m	class:PointRCNNHead
+__init__	pcdet/models/roi_heads/pvrcnn_head.py	/^    def __init__(self, input_channels, model_cfg, num_class=1, **kwargs):$/;"	m	class:PVRCNNHead
+__init__	pcdet/models/roi_heads/roi_head_template.py	/^    def __init__(self, num_class, model_cfg, **kwargs):$/;"	m	class:RoIHeadTemplate
+__init__	pcdet/models/roi_heads/second_head.py	/^    def __init__(self, input_channels, model_cfg, num_class=1, **kwargs):$/;"	m	class:SECONDHead
+__init__	pcdet/models/roi_heads/target_assigner/proposal_target_layer.py	/^    def __init__(self, roi_sampler_cfg):$/;"	m	class:ProposalTargetLayer
+__init__	pcdet/models/roi_heads/voxelrcnn_head.py	/^    def __init__(self, backbone_channels, model_cfg, point_cloud_range, voxel_size, num_class=1, **kwargs):$/;"	m	class:VoxelRCNNHead
+__init__	pcdet/ops/pointnet2/pointnet2_batch/pointnet2_modules.py	/^    def __init__(self):$/;"	m	class:_PointnetSAModuleBase
+__init__	pcdet/ops/pointnet2/pointnet2_batch/pointnet2_modules.py	/^    def __init__(self, *, mlp: List[int], bn: bool = True):$/;"	m	class:PointnetFPModule
+__init__	pcdet/ops/pointnet2/pointnet2_batch/pointnet2_modules.py	/^    def __init__(self, *, mlp: List[int], npoint: int = None, radius: float = None, nsample: int = None,$/;"	m	class:PointnetSAModule
+__init__	pcdet/ops/pointnet2/pointnet2_batch/pointnet2_modules.py	/^    def __init__(self, *, npoint: int, radii: List[float], nsamples: List[int], mlps: List[List[int]], bn: bool = True,$/;"	m	class:PointnetSAModuleMSG
+__init__	pcdet/ops/pointnet2/pointnet2_batch/pointnet2_utils.py	/^    def __init__(self, radius: float, nsample: int, use_xyz: bool = True):$/;"	m	class:QueryAndGroup
+__init__	pcdet/ops/pointnet2/pointnet2_batch/pointnet2_utils.py	/^    def __init__(self, use_xyz: bool = True):$/;"	m	class:GroupAll
+__init__	pcdet/ops/pointnet2/pointnet2_stack/pointnet2_modules.py	/^    def __init__(self, *, mlp: List[int]):$/;"	m	class:StackPointnetFPModule
+__init__	pcdet/ops/pointnet2/pointnet2_stack/pointnet2_modules.py	/^    def __init__(self, *, radii: List[float], nsamples: List[int], mlps: List[List[int]],$/;"	m	class:StackSAModuleMSG
+__init__	pcdet/ops/pointnet2/pointnet2_stack/pointnet2_utils.py	/^    def __init__(self, radius: float, nsample: int, use_xyz: bool = True):$/;"	m	class:QueryAndGroup
+__init__	pcdet/ops/pointnet2/pointnet2_stack/voxel_pool_modules.py	/^    def __init__(self, *, query_ranges: List[List[int]], radii: List[float], $/;"	m	class:NeighborVoxelSAModuleMSG
+__init__	pcdet/ops/pointnet2/pointnet2_stack/voxel_query_utils.py	/^    def __init__(self, max_range: int, radius: float, nsample: int):$/;"	m	class:VoxelQueryAndGrouping
+__init__	pcdet/ops/roiaware_pool3d/roiaware_pool3d_utils.py	/^    def __init__(self, out_size, max_pts_each_voxel=128):$/;"	m	class:RoIAwarePool3d
+__init__	pcdet/ops/roipoint_pool3d/roipoint_pool3d_utils.py	/^    def __init__(self, num_sampled_points=512, pool_extra_width=1.0):$/;"	m	class:RoIPointPool3d
+__init__	pcdet/ops/spconv/conv.py	/^    def __init__(self,$/;"	m	class:SparseConv2d
+__init__	pcdet/ops/spconv/conv.py	/^    def __init__(self,$/;"	m	class:SparseConv3d
+__init__	pcdet/ops/spconv/conv.py	/^    def __init__(self,$/;"	m	class:SparseConv4d
+__init__	pcdet/ops/spconv/conv.py	/^    def __init__(self,$/;"	m	class:SparseConvTranspose2d
+__init__	pcdet/ops/spconv/conv.py	/^    def __init__(self,$/;"	m	class:SparseConvTranspose3d
+__init__	pcdet/ops/spconv/conv.py	/^    def __init__(self,$/;"	m	class:SparseConvolution
+__init__	pcdet/ops/spconv/conv.py	/^    def __init__(self,$/;"	m	class:SparseInverseConv2d
+__init__	pcdet/ops/spconv/conv.py	/^    def __init__(self,$/;"	m	class:SparseInverseConv3d
+__init__	pcdet/ops/spconv/conv.py	/^    def __init__(self,$/;"	m	class:SubMConv2d
+__init__	pcdet/ops/spconv/conv.py	/^    def __init__(self,$/;"	m	class:SubMConv3d
+__init__	pcdet/ops/spconv/conv.py	/^    def __init__(self,$/;"	m	class:SubMConv4d
+__init__	pcdet/ops/spconv/modules.py	/^    def __init__(self, *args, **kwargs):$/;"	m	class:SparseSequential
+__init__	pcdet/ops/spconv/pool.py	/^    def __init__(self, kernel_size, stride=1, padding=0, dilation=1):$/;"	m	class:SparseMaxPool2d
+__init__	pcdet/ops/spconv/pool.py	/^    def __init__(self, kernel_size, stride=1, padding=0, dilation=1):$/;"	m	class:SparseMaxPool3d
+__init__	pcdet/ops/spconv/pool.py	/^    def __init__(self,$/;"	m	class:SparseMaxPool
+__init__	pcdet/ops/spconv/structure.py	/^    def __init__(self,$/;"	m	class:SparseConvTensor
+__init__	pcdet/ops/voxel/scatter_points.py	/^    def __init__(self, voxel_size, point_cloud_range, average_points: bool):$/;"	m	class:DynamicScatter
+__init__	pcdet/ops/voxel/voxelize.py	/^    def __init__(self,$/;"	m	class:Voxelization
+__init__	pcdet/utils/box_coder_utils.py	/^    def __init__(self, code_size=7, **kwargs):$/;"	m	class:PreviousResidualDecoder
+__init__	pcdet/utils/box_coder_utils.py	/^    def __init__(self, code_size=7, **kwargs):$/;"	m	class:PreviousResidualRoIDecoder
+__init__	pcdet/utils/box_coder_utils.py	/^    def __init__(self, code_size=7, encode_angle_by_sincos=False, **kwargs):$/;"	m	class:ResidualCoder
+__init__	pcdet/utils/box_coder_utils.py	/^    def __init__(self, code_size=8, use_mean_size=True, **kwargs):$/;"	m	class:PointResidualCoder
+__init__	pcdet/utils/calibration_kitti.py	/^    def __init__(self, calib_file):$/;"	m	class:Calibration
+__init__	pcdet/utils/loss_utils.py	/^    def __init__(self):$/;"	m	class:WeightedCrossEntropyLoss
+__init__	pcdet/utils/loss_utils.py	/^    def __init__(self, beta: float = 1.0 \/ 9.0, code_weights: list = None):$/;"	m	class:WeightedSmoothL1Loss
+__init__	pcdet/utils/loss_utils.py	/^    def __init__(self, code_weights: list = None):$/;"	m	class:WeightedL1Loss
+__init__	pcdet/utils/loss_utils.py	/^    def __init__(self, gamma: float = 2.0, alpha: float = 0.25):$/;"	m	class:SigmoidFocalClassificationLoss
+__init__	pcdet/utils/object3d_kitti.py	/^    def __init__(self, line):$/;"	m	class:Object3d
+__init__	tools/demo.py	/^    def __init__(self, dataset_cfg, class_names, training=True, root_path=None, logger=None, ext='.bin'):$/;"	m	class:DemoDataset
+__init__	tools/train_utils/optimization/fastai_optim.py	/^    def __init__(self, opt, wd, true_wd: bool = False, bn_wd: bool = True):$/;"	m	class:OptimWrapper
+__init__	tools/train_utils/optimization/learning_schedules_fastai.py	/^    def __init__(self):$/;"	m	class:FakeOptim
+__init__	tools/train_utils/optimization/learning_schedules_fastai.py	/^    def __init__(self, fai_optimizer, total_step, lr_max, moms, div_factor,$/;"	m	class:OneCycle
+__init__	tools/train_utils/optimization/learning_schedules_fastai.py	/^    def __init__(self, fai_optimizer: OptimWrapper, total_step, lr_phases,$/;"	m	class:LRSchedulerStep
+__init__	tools/train_utils/optimization/learning_schedules_fastai.py	/^    def __init__(self, optimizer, T_max, eta_min=0, last_epoch=-1):$/;"	m	class:CosineWarmupLR
+__iter__	pcdet/datasets/__init__.py	/^    def __iter__(self):$/;"	m	class:DistributedSampler	file:
+__len__	pcdet/datasets/dataset.py	/^    def __len__(self):$/;"	m	class:DatasetTemplate	file:
+__len__	pcdet/datasets/kitti/kitti_dataset.py	/^    def __len__(self):$/;"	m	class:KittiDataset	file:
+__len__	pcdet/datasets/nuscenes/nuscenes_dataset.py	/^    def __len__(self):$/;"	m	class:NuScenesDataset	file:
+__len__	pcdet/datasets/waymo/waymo_dataset.py	/^    def __len__(self):$/;"	m	class:WaymoDataset	file:
+__len__	pcdet/ops/spconv/modules.py	/^    def __len__(self):$/;"	m	class:SparseSequential	file:
+__len__	tools/demo.py	/^    def __len__(self):$/;"	m	class:DemoDataset	file:
+__repr__	pcdet/ops/voxel/scatter_points.py	/^    def __repr__(self):$/;"	m	class:DynamicScatter	file:
+__repr__	pcdet/ops/voxel/voxelize.py	/^    def __repr__(self):$/;"	m	class:Voxelization	file:
+__repr__	tools/train_utils/optimization/fastai_optim.py	/^    def __repr__(self) -> str:$/;"	m	class:OptimWrapper	file:
+__setstate__	pcdet/datasets/augmentor/data_augmentor.py	/^    def __setstate__(self, d):$/;"	m	class:DataAugmentor	file:
+__setstate__	pcdet/datasets/augmentor/database_sampler.py	/^    def __setstate__(self, d):$/;"	m	class:DataBaseSampler	file:
+__setstate__	pcdet/datasets/dataset.py	/^    def __setstate__(self, d):$/;"	m	class:DatasetTemplate	file:
+__version__	pcdet/__init__.py	/^    __version__ = __version__ + '+py%s' % script_version$/;"	v
+__version__	pcdet/version.py	/^__version__ = "0.3.0+b6e2be3"$/;"	v
+_array	pcdet/ops/spconv/include/prettyprint.h	/^  const T *const _array;$/;"	m	struct:pretty_print::array_wrapper_n
+_assertArrayLikeAllClose	pcdet/ops/spconv/test_utils.py	/^    def _assertArrayLikeAllClose(self, a, b, rtol=1e-6, atol=1e-6, msg=None):$/;"	m	class:TestCase
+_calculate_fan_in_and_fan_out_hwio	pcdet/ops/spconv/conv.py	/^def _calculate_fan_in_and_fan_out_hwio(tensor):$/;"	f
+_dynamic_scatter	pcdet/ops/voxel/scatter_points.py	/^class _dynamic_scatter(Function):$/;"	c
+_extend_matrix	pcdet/datasets/kitti/kitti_object_eval_python/kitti_common.py	/^def _extend_matrix(mat):$/;"	f
+_mean_update	pcdet/ops/spconv/modules.py	/^def _mean_update(vals, m_vals, t):$/;"	f
+_n	pcdet/ops/spconv/include/prettyprint.h	/^  size_t _n;$/;"	m	struct:pretty_print::array_wrapper_n
+_prepare_data	pcdet/datasets/kitti/kitti_object_eval_python/eval.py	/^def _prepare_data(gt_annos, dt_annos, current_class, difficulty):$/;"	f
+_read_imageset_file	pcdet/datasets/kitti/kitti_object_eval_python/evaluate.py	/^def _read_imageset_file(path):$/;"	f
+_subview	pcdet/ops/spconv/include/tensorview/tensorview.h	/^  TV_HOST_DEVICE_INLINE TensorView<T, Rank> _subview($/;"	f	struct:tv::TensorView
+absolute_coordinates_encoding	pcdet/datasets/processor/point_feature_encoder.py	/^    def absolute_coordinates_encoding(self, points=None):$/;"	m	class:PointFeatureEncoder
+add	pcdet/ops/spconv/modules.py	/^    def add(self, module, name=None):$/;"	m	class:SparseSequential
+add_difficulty_to_annos	pcdet/datasets/kitti/kitti_object_eval_python/kitti_common.py	/^def add_difficulty_to_annos(info):$/;"	f
+add_sampled_boxes_to_scene	pcdet/datasets/augmentor/database_sampler.py	/^    def add_sampled_boxes_to_scene(self, data_dict, sampled_gt_boxes, total_valid_sampled_dict):$/;"	m	class:DataBaseSampler
+add_sin_difference	pcdet/models/dense_heads/anchor_head_template.py	/^    def add_sin_difference(boxes1, boxes2, dim=6):$/;"	m	class:AnchorHeadTemplate
+annealing_cos	tools/train_utils/optimization/learning_schedules_fastai.py	/^def annealing_cos(start, end, pct):$/;"	f
+area	pcdet/datasets/kitti/kitti_object_eval_python/kitti_common.py	/^def area(boxes, add1=False):$/;"	f
+area	pcdet/datasets/kitti/kitti_object_eval_python/rotate_iou.py	/^def area(int_pts, num_of_inter):$/;"	f
+args	pcdet/datasets/nuscenes/nuscenes_dataset.py	/^    args = parser.parse_args()$/;"	v
+args	pcdet/datasets/waymo/waymo_dataset.py	/^    args = parser.parse_args()$/;"	v
+array2TensorView	pcdet/ops/spconv/include/pybind11_utils.h	/^tv::TensorView<T> array2TensorView(TPyObject arr){$/;"	f
+array2Vector	pcdet/ops/spconv/include/pybind11_utils.h	/^std::vector<T> array2Vector(TPyObject arr){$/;"	f
+arrayT2TensorView	pcdet/ops/spconv/include/pybind11_utils.h	/^tv::TensorView<T> arrayT2TensorView(py::array_t<T> arr){$/;"	f
+arrayT2Vector	pcdet/ops/spconv/include/pybind11_utils.h	/^std::vector<T> arrayT2Vector(py::array_t<T> arr)$/;"	f
+array_wrapper_n	pcdet/ops/spconv/include/prettyprint.h	/^  array_wrapper_n(const T *const a, size_t n) : _array(a), _n(n) {}$/;"	f	struct:pretty_print::array_wrapper_n
+array_wrapper_n	pcdet/ops/spconv/include/prettyprint.h	/^struct array_wrapper_n {$/;"	s	namespace:pretty_print
+assertAllClose	pcdet/ops/spconv/test_utils.py	/^    def assertAllClose(self, a, b, rtol=1e-6, atol=1e-6):$/;"	m	class:TestCase
+assertAllEqual	pcdet/ops/spconv/test_utils.py	/^    def assertAllEqual(self, a, b):$/;"	m	class:TestCase
+assign	pcdet/ops/spconv/include/tensorview/tensorview.h	/^  TV_HOST_DEVICE_INLINE TensorView<T, Rank> &assign($/;"	f	struct:tv::TensorView
+assignGridAndIndiceOutKernel	pcdet/ops/spconv/include/spconv/indice.cu.h	/^__global__ void assignGridAndIndiceOutKernel($/;"	f	namespace:spconv
+assignIndicePairsKernel	pcdet/ops/spconv/include/spconv/indice.cu.h	/^__global__ void assignIndicePairsKernel($/;"	f	namespace:spconv
+assign_stack_targets	pcdet/models/dense_heads/point_head_template.py	/^    def assign_stack_targets(self, points, gt_boxes, extend_gt_boxes=None,$/;"	m	class:PointHeadTemplate
+assign_targets	pcdet/models/dense_heads/anchor_head_template.py	/^    def assign_targets(self, gt_boxes):$/;"	m	class:AnchorHeadTemplate
+assign_targets	pcdet/models/dense_heads/point_head_box.py	/^    def assign_targets(self, input_dict):$/;"	m	class:PointHeadBox
+assign_targets	pcdet/models/dense_heads/point_head_simple.py	/^    def assign_targets(self, input_dict):$/;"	m	class:PointHeadSimple
+assign_targets	pcdet/models/dense_heads/point_intra_part_head.py	/^    def assign_targets(self, input_dict):$/;"	m	class:PointIntraPartOffsetHead
+assign_targets	pcdet/models/dense_heads/target_assigner/atss_target_assigner.py	/^    def assign_targets(self, anchors_list, gt_boxes_with_classes, use_multihead=False):$/;"	m	class:ATSSTargetAssigner
+assign_targets	pcdet/models/dense_heads/target_assigner/axis_aligned_target_assigner.py	/^    def assign_targets(self, all_anchors, gt_boxes_with_classes):$/;"	m	class:AxisAlignedTargetAssigner
+assign_targets	pcdet/models/roi_heads/roi_head_template.py	/^    def assign_targets(self, batch_dict):$/;"	m	class:RoIHeadTemplate
+assign_targets_single	pcdet/models/dense_heads/target_assigner/atss_target_assigner.py	/^    def assign_targets_single(self, anchors, gt_boxes, gt_classes):$/;"	m	class:ATSSTargetAssigner
+assign_targets_single	pcdet/models/dense_heads/target_assigner/axis_aligned_target_assigner.py	/^    def assign_targets_single(self, anchors, gt_boxes, gt_classes, matched_threshold=0.6, unmatched_threshold=0.45):$/;"	m	class:AxisAlignedTargetAssigner
+assigner	pcdet/ops/spconv/include/paramsgrid.h	/^void assigner(TT &src, std::vector<int> counter, std::vector<T> &arg) {$/;"	f	namespace:detail
+assigner	pcdet/ops/spconv/include/paramsgrid.h	/^void assigner(TT &src, std::vector<int> counter, std::vector<T> &arg,$/;"	f	namespace:detail
+backward	pcdet/ops/pointnet2/pointnet2_batch/pointnet2_utils.py	/^    def backward(ctx, a=None):$/;"	m	class:BallQuery
+backward	pcdet/ops/pointnet2/pointnet2_batch/pointnet2_utils.py	/^    def backward(ctx, a=None, b=None):$/;"	m	class:ThreeNN
+backward	pcdet/ops/pointnet2/pointnet2_batch/pointnet2_utils.py	/^    def backward(ctx, grad_out):$/;"	m	class:GatherOperation
+backward	pcdet/ops/pointnet2/pointnet2_batch/pointnet2_utils.py	/^    def backward(ctx, grad_out: torch.Tensor) -> Tuple[torch.Tensor, torch.Tensor, torch.Tensor]:$/;"	m	class:ThreeInterpolate
+backward	pcdet/ops/pointnet2/pointnet2_batch/pointnet2_utils.py	/^    def backward(ctx, grad_out: torch.Tensor) -> Tuple[torch.Tensor, torch.Tensor]:$/;"	m	class:GroupingOperation
+backward	pcdet/ops/pointnet2/pointnet2_batch/pointnet2_utils.py	/^    def backward(xyz, a=None):$/;"	m	class:FurthestPointSampling
+backward	pcdet/ops/pointnet2/pointnet2_stack/pointnet2_utils.py	/^    def backward(ctx, a=None):$/;"	m	class:BallQuery
+backward	pcdet/ops/pointnet2/pointnet2_stack/pointnet2_utils.py	/^    def backward(ctx, a=None, b=None):$/;"	m	class:ThreeNN
+backward	pcdet/ops/pointnet2/pointnet2_stack/pointnet2_utils.py	/^    def backward(ctx, grad_out: torch.Tensor):$/;"	m	class:GroupingOperation
+backward	pcdet/ops/pointnet2/pointnet2_stack/pointnet2_utils.py	/^    def backward(ctx, grad_out: torch.Tensor):$/;"	m	class:ThreeInterpolate
+backward	pcdet/ops/pointnet2/pointnet2_stack/pointnet2_utils.py	/^    def backward(xyz, a=None):$/;"	m	class:FurthestPointSampling
+backward	pcdet/ops/pointnet2/pointnet2_stack/voxel_query_utils.py	/^    def backward(ctx, a=None):$/;"	m	class:VoxelQuery
+backward	pcdet/ops/roiaware_pool3d/roiaware_pool3d_utils.py	/^    def backward(ctx, grad_out):$/;"	m	class:RoIAwarePool3dFunction
+backward	pcdet/ops/roipoint_pool3d/roipoint_pool3d_utils.py	/^    def backward(ctx, grad_out):$/;"	m	class:RoIPointPool3dFunction
+backward	pcdet/ops/spconv/functional.py	/^    def backward(ctx, grad_output):$/;"	m	class:SparseConvFunction
+backward	pcdet/ops/spconv/functional.py	/^    def backward(ctx, grad_output):$/;"	m	class:SparseInverseConvFunction
+backward	pcdet/ops/spconv/functional.py	/^    def backward(ctx, grad_output):$/;"	m	class:SparseMaxPoolFunction
+backward	pcdet/ops/spconv/functional.py	/^    def backward(ctx, grad_output):$/;"	m	class:SubMConvFunction
+backward	pcdet/ops/voxel/scatter_points.py	/^    def backward(ctx, grad_voxel_feats, grad_voxel_coors=None):$/;"	m	class:_dynamic_scatter
+balanced_infos_resampling	pcdet/datasets/nuscenes/nuscenes_dataset.py	/^    def balanced_infos_resampling(self, infos):$/;"	m	class:NuScenesDataset
+ball_query	pcdet/ops/pointnet2/pointnet2_batch/pointnet2_utils.py	/^ball_query = BallQuery.apply$/;"	v
+ball_query	pcdet/ops/pointnet2/pointnet2_stack/pointnet2_utils.py	/^ball_query = BallQuery.apply$/;"	v
+ball_query_wrapper_fast	pcdet/ops/pointnet2/pointnet2_batch/src/ball_query.cpp	/^int ball_query_wrapper_fast(int b, int n, int m, float radius, int nsample, $/;"	f
+ball_query_wrapper_stack	pcdet/ops/pointnet2/pointnet2_stack/src/ball_query.cpp	/^int ball_query_wrapper_stack(int B, int M, float radius, int nsample,$/;"	f
+base	pcdet/ops/spconv/include/prettyprint.h	/^  std::unique_ptr<custom_delims_base> base;$/;"	m	struct:pretty_print::custom_delims
+beg_value	pcdet/ops/spconv/include/prettyprint.h	/^  static bool const beg_value = sizeof(f<T>(nullptr)) == sizeof(yes);$/;"	m	struct:pretty_print::detail::has_begin_end
+begin	pcdet/ops/spconv/include/prettyprint.h	/^  const_iterator begin() const { return m_map.cbegin(n); }$/;"	f	struct:pretty_print::bucket_print_wrapper
+begin	pcdet/ops/spconv/include/prettyprint.h	/^  inline const_iterator begin() const { return _array; }$/;"	f	struct:pretty_print::array_wrapper_n
+begin	pcdet/ops/spconv/include/tensorview/helper_kernel.cu.h	/^  __forceinline__ __device__ Iterator begin() const {$/;"	f	class:tv::detail::KernelLoop
+begin	pcdet/ops/spconv/include/tensorview/tensorview.h	/^  TV_HOST_DEVICE_INLINE const_iterator begin() const {$/;"	f	struct:tv::SimpleVector
+begin	pcdet/ops/spconv/include/tensorview/tensorview.h	/^  TV_HOST_DEVICE_INLINE iterator begin() { return iterator(mArray); }$/;"	f	struct:tv::SimpleVector
+begin_	pcdet/ops/spconv/include/tensorview/helper_kernel.cu.h	/^  T begin_;$/;"	m	class:tv::detail::KernelLoop
+beta	tools/train_utils/optimization/fastai_optim.py	/^    def beta(self) -> float:$/;"	m	class:OptimWrapper
+beta	tools/train_utils/optimization/fastai_optim.py	/^    def beta(self, val: float) -> None:$/;"	m	class:OptimWrapper
+bev_box_overlap	pcdet/datasets/kitti/kitti_object_eval_python/eval.py	/^def bev_box_overlap(boxes, qboxes, criterion=-1):$/;"	f
+bilinear_interpolate_torch	pcdet/models/backbones_3d/pfe/voxel_set_abstraction.py	/^def bilinear_interpolate_torch(im, x, y):$/;"	f
+bin_depths	pcdet/utils/transform_utils.py	/^def bin_depths(depth_map, mode, depth_min, depth_max, num_bins, target=False):$/;"	f
+block_filtering	pcdet/ops/spconv/include/spconv/point2voxel.h	/^int block_filtering(py::array_t<DType> points, py::array_t<int> mask,$/;"	f	namespace:spconv
+bn_types	tools/train_utils/optimization/fastai_optim.py	/^bn_types = (nn.BatchNorm1d, nn.BatchNorm2d, nn.BatchNorm3d, nn.SyncBatchNorm)$/;"	v
+box_colormap	tools/visual_utils/visualize_utils.py	/^box_colormap = [$/;"	v
+box_overlap	pcdet/ops/iou3d_nms/src/iou3d_cpu.cpp	/^inline float box_overlap(const float *box_a, const float *box_b){$/;"	f
+boxes3d_kitti_camera_to_imageboxes	pcdet/utils/box_utils.py	/^def boxes3d_kitti_camera_to_imageboxes(boxes3d, calib, image_shape=None):$/;"	f
+boxes3d_kitti_camera_to_lidar	pcdet/utils/box_utils.py	/^def boxes3d_kitti_camera_to_lidar(boxes3d_camera, calib):$/;"	f
+boxes3d_kitti_fakelidar_to_lidar	pcdet/datasets/waymo/waymo_eval.py	/^        def boxes3d_kitti_fakelidar_to_lidar(boxes3d_lidar):$/;"	f	function:OpenPCDetWaymoDetectionMetricsEstimator.generate_waymo_type_results
+boxes3d_kitti_fakelidar_to_lidar	pcdet/utils/box_utils.py	/^def boxes3d_kitti_fakelidar_to_lidar(boxes3d_lidar):$/;"	f
+boxes3d_kitti_lidar_to_fakelidar	pcdet/utils/box_utils.py	/^def boxes3d_kitti_lidar_to_fakelidar(boxes3d_lidar):$/;"	f
+boxes3d_lidar_to_aligned_bev_boxes	pcdet/utils/box_utils.py	/^def boxes3d_lidar_to_aligned_bev_boxes(boxes3d):$/;"	f
+boxes3d_lidar_to_kitti_camera	pcdet/utils/box_utils.py	/^def boxes3d_lidar_to_kitti_camera(boxes3d_lidar, calib):$/;"	f
+boxes3d_nearest_bev_iou	pcdet/utils/box_utils.py	/^def boxes3d_nearest_bev_iou(boxes_a, boxes_b):$/;"	f
+boxes3d_to_corners3d_kitti_camera	pcdet/utils/box_utils.py	/^def boxes3d_to_corners3d_kitti_camera(boxes3d, bottom_center=True):$/;"	f
+boxes_bev_iou_cpu	pcdet/ops/iou3d_nms/iou3d_nms_utils.py	/^def boxes_bev_iou_cpu(boxes_a, boxes_b):$/;"	f
+boxes_iou3d_gpu	pcdet/ops/iou3d_nms/iou3d_nms_utils.py	/^def boxes_iou3d_gpu(boxes_a, boxes_b):$/;"	f
+boxes_iou_bev	pcdet/ops/iou3d_nms/iou3d_nms_utils.py	/^def boxes_iou_bev(boxes_a, boxes_b):$/;"	f
+boxes_iou_bev_cpu	pcdet/ops/iou3d_nms/src/iou3d_cpu.cpp	/^int boxes_iou_bev_cpu(at::Tensor boxes_a_tensor, at::Tensor boxes_b_tensor, at::Tensor ans_iou_tensor){$/;"	f
+boxes_iou_bev_gpu	pcdet/ops/iou3d_nms/src/iou3d_nms.cpp	/^int boxes_iou_bev_gpu(at::Tensor boxes_a, at::Tensor boxes_b, at::Tensor ans_iou){$/;"	f
+boxes_iou_normal	pcdet/utils/box_utils.py	/^def boxes_iou_normal(boxes_a, boxes_b):$/;"	f
+boxes_lidar_to_nusenes	pcdet/datasets/nuscenes/nuscenes_utils.py	/^def boxes_lidar_to_nusenes(det_info):$/;"	f
+boxes_overlap_bev_gpu	pcdet/ops/iou3d_nms/src/iou3d_nms.cpp	/^int boxes_overlap_bev_gpu(at::Tensor boxes_a, at::Tensor boxes_b, at::Tensor ans_overlap){$/;"	f
+boxes_to_corners_3d	pcdet/utils/box_utils.py	/^def boxes_to_corners_3d(boxes3d):$/;"	f
+boxes_to_corners_3d	tools/visual_utils/visualize_utils.py	/^def boxes_to_corners_3d(boxes3d):$/;"	f
+break_up_pc	pcdet/models/backbones_3d/pointnet2_backbone.py	/^    def break_up_pc(self, pc):$/;"	m	class:PointNet2Backbone
+break_up_pc	pcdet/models/backbones_3d/pointnet2_backbone.py	/^    def break_up_pc(self, pc):$/;"	m	class:PointNet2MSG
+bucket_print	pcdet/ops/spconv/include/prettyprint.h	/^pretty_print::bucket_print_wrapper<T> bucket_print(const T &m,$/;"	f
+bucket_print_wrapper	pcdet/ops/spconv/include/prettyprint.h	/^  bucket_print_wrapper(const T &m, size_type bucket) : m_map(m), n(bucket) {}$/;"	f	struct:pretty_print::bucket_print_wrapper
+bucket_print_wrapper	pcdet/ops/spconv/include/prettyprint.h	/^struct bucket_print_wrapper {$/;"	s	namespace:pretty_print
+build_backbone_2d	pcdet/models/detectors/detector3d_template.py	/^    def build_backbone_2d(self, model_info_dict):$/;"	m	class:Detector3DTemplate
+build_backbone_3d	pcdet/models/detectors/detector3d_template.py	/^    def build_backbone_3d(self, model_info_dict):$/;"	m	class:Detector3DTemplate
+build_config	pcdet/datasets/waymo/waymo_eval.py	/^    def build_config(self):$/;"	m	class:OpenPCDetWaymoDetectionMetricsEstimator
+build_dataloader	pcdet/datasets/__init__.py	/^def build_dataloader(dataset_cfg, class_names, batch_size, dist, root_path=None, workers=4,$/;"	f
+build_dense_head	pcdet/models/detectors/detector3d_template.py	/^    def build_dense_head(self, model_info_dict):$/;"	m	class:Detector3DTemplate
+build_detector	pcdet/models/detectors/__init__.py	/^def build_detector(model_cfg, num_class, dataset):$/;"	f
+build_f2v	pcdet/models/backbones_3d/vfe/image_vfe.py	/^    def build_f2v(self):$/;"	m	class:ImageVFE
+build_ffn	pcdet/models/backbones_3d/vfe/image_vfe.py	/^    def build_ffn(self):$/;"	m	class:ImageVFE
+build_graph	pcdet/datasets/waymo/waymo_eval.py	/^    def build_graph(self, graph):$/;"	m	class:OpenPCDetWaymoDetectionMetricsEstimator
+build_losses	pcdet/models/dense_heads/anchor_head_template.py	/^    def build_losses(self, losses_cfg):$/;"	m	class:AnchorHeadTemplate
+build_losses	pcdet/models/dense_heads/point_head_template.py	/^    def build_losses(self, losses_cfg):$/;"	m	class:PointHeadTemplate
+build_losses	pcdet/models/roi_heads/roi_head_template.py	/^    def build_losses(self, losses_cfg):$/;"	m	class:RoIHeadTemplate
+build_map_to_bev_module	pcdet/models/detectors/detector3d_template.py	/^    def build_map_to_bev_module(self, model_info_dict):$/;"	m	class:Detector3DTemplate
+build_modules	pcdet/models/backbones_3d/vfe/image_vfe.py	/^    def build_modules(self):$/;"	m	class:ImageVFE
+build_network	pcdet/models/__init__.py	/^def build_network(model_cfg, num_class, dataset):$/;"	f
+build_networks	pcdet/models/detectors/detector3d_template.py	/^    def build_networks(self):$/;"	m	class:Detector3DTemplate
+build_optimizer	tools/train_utils/optimization/__init__.py	/^def build_optimizer(model, optim_cfg):$/;"	f
+build_pfe	pcdet/models/detectors/detector3d_template.py	/^    def build_pfe(self, model_info_dict):$/;"	m	class:Detector3DTemplate
+build_point_head	pcdet/models/detectors/detector3d_template.py	/^    def build_point_head(self, model_info_dict):$/;"	m	class:Detector3DTemplate
+build_roi_head	pcdet/models/detectors/detector3d_template.py	/^    def build_roi_head(self, model_info_dict):$/;"	m	class:Detector3DTemplate
+build_scheduler	tools/train_utils/optimization/__init__.py	/^def build_scheduler(optimizer, total_iters_each_epoch, total_epochs, last_epoch, optim_cfg):$/;"	f
+build_vfe	pcdet/models/detectors/detector3d_template.py	/^    def build_vfe(self, model_info_dict):$/;"	m	class:Detector3DTemplate
+cal_scores_by_npoints	pcdet/models/detectors/second_net_iou.py	/^    def cal_scores_by_npoints(cls_scores, iou_scores, num_points_in_gt, cls_thresh=10, iou_thresh=100):$/;"	m	class:SECONDNetIoU
+calculate_grid_size	pcdet/datasets/processor/data_processor.py	/^    def calculate_grid_size(self, data_dict=None, config=None):$/;"	m	class:DataProcessor
+calculate_iou_partly	pcdet/datasets/kitti/kitti_object_eval_python/eval.py	/^def calculate_iou_partly(gt_annos, dt_annos, metric, num_parts=50):$/;"	f
+calib_to_matricies	pcdet/datasets/kitti/kitti_utils.py	/^def calib_to_matricies(calib):$/;"	f
+cart_to_hom	pcdet/utils/calibration_kitti.py	/^    def cart_to_hom(self, pts):$/;"	m	class:Calibration
+cbegin	pcdet/ops/spconv/include/tensorview/tensorview.h	/^  TV_HOST_DEVICE_INLINE const_iterator cbegin() const {$/;"	f	struct:tv::SimpleVector
+cend	pcdet/ops/spconv/include/tensorview/tensorview.h	/^  TV_HOST_DEVICE_INLINE const_iterator cend() const {$/;"	f	struct:tv::SimpleVector
+cfg	pcdet/config.py	/^cfg = EasyDict()$/;"	v
+cfg_from_list	pcdet/config.py	/^def cfg_from_list(cfg_list, config):$/;"	f
+cfg_from_yaml_file	pcdet/config.py	/^def cfg_from_yaml_file(cfg_file, config):$/;"	f
+channel_reduction	pcdet/models/backbones_3d/spconv_unet.py	/^    def channel_reduction(x, out_channels):$/;"	m	class:UNetV2
+check_in_box2d	pcdet/ops/iou3d_nms/src/iou3d_cpu.cpp	/^inline int check_in_box2d(const float *box, const Point &p){$/;"	f
+check_numpy_to_torch	pcdet/utils/common_utils.py	/^def check_numpy_to_torch(x):$/;"	f
+check_numpy_to_torch	tools/visual_utils/visualize_utils.py	/^def check_numpy_to_torch(x):$/;"	f
+check_pt_in_box3d_cpu	pcdet/ops/roiaware_pool3d/src/roiaware_pool3d.cpp	/^inline int check_pt_in_box3d_cpu(const float *pt, const float *box3d, float &local_x, float &local_y){$/;"	f
+check_rect_cross	pcdet/ops/iou3d_nms/src/iou3d_cpu.cpp	/^inline int check_rect_cross(const Point &p1, const Point &p2, const Point &q1, const Point &q2){$/;"	f
+check_sequence_name_with_all_version	pcdet/datasets/waymo/waymo_dataset.py	/^    def check_sequence_name_with_all_version(sequence_file):$/;"	m	class:WaymoDataset
+check_torch_dtype	pcdet/ops/spconv/include/torch_utils.h	/^void check_torch_dtype(const torch::Tensor &tensor) {$/;"	f	namespace:tv
+checkpoint_state	tools/train_utils/train_utils.py	/^def checkpoint_state(model=None, optimizer=None, epoch=None, it=None):$/;"	f
+children	tools/train_utils/optimization/__init__.py	/^        def children(m: nn.Module):$/;"	f	function:build_optimizer
+class_agnostic_nms	pcdet/models/model_utils/model_nms_utils.py	/^def class_agnostic_nms(box_scores, box_preds, nms_config, score_thresh=None):$/;"	f
+class_names	pcdet/datasets/kitti/kitti_dataset.py	/^            class_names=['Car', 'Pedestrian', 'Cyclist'],$/;"	v
+class_names	pcdet/datasets/waymo/waymo_dataset.py	/^            class_names=['Vehicle', 'Pedestrian', 'Cyclist'],$/;"	v
+clean_data	pcdet/datasets/kitti/kitti_object_eval_python/eval.py	/^def clean_data(gt_anno, dt_anno, current_class, difficulty):$/;"	f
+clear	tools/train_utils/optimization/fastai_optim.py	/^    def clear(self):$/;"	m	class:OptimWrapper
+cls_attr_dist	pcdet/datasets/nuscenes/nuscenes_utils.py	/^cls_attr_dist = {$/;"	v
+cls_type_to_id	pcdet/utils/object3d_kitti.py	/^def cls_type_to_id(cls_type):$/;"	f
+collate_batch	pcdet/datasets/dataset.py	/^    def collate_batch(batch_list, _unused=False):$/;"	m	class:DatasetTemplate
+compute_fg_mask	pcdet/utils/loss_utils.py	/^def compute_fg_mask(gt_boxes2d, shape, downsample_factor=1, device=torch.device("cpu")):$/;"	f
+compute_statistics_jit	pcdet/datasets/kitti/kitti_object_eval_python/eval.py	/^def compute_statistics_jit(overlaps,$/;"	f
+config	pcdet/models/dense_heads/target_assigner/anchor_generator.py	/^    config = [$/;"	v	class:AnchorGenerator
+const_iterator	pcdet/ops/spconv/include/prettyprint.h	/^  typedef const T *const_iterator;$/;"	t	struct:pretty_print::array_wrapper_n
+const_iterator	pcdet/ops/spconv/include/prettyprint.h	/^  typedef typename T::const_local_iterator const_iterator;$/;"	t	struct:pretty_print::bucket_print_wrapper
+const_iterator	pcdet/ops/spconv/include/tensorview/tensorview.h	/^    TV_HOST_DEVICE_INLINE const_iterator(pointer ptr) : ptr_(ptr) {}$/;"	f	class:tv::SimpleVector::const_iterator
+const_iterator	pcdet/ops/spconv/include/tensorview/tensorview.h	/^  class const_iterator {$/;"	c	struct:tv::SimpleVector
+container_	pcdet/ops/spconv/include/prettyprint.h	/^  const T &container_;$/;"	m	struct:pretty_print::print_container_helper
+convert_range_image_to_point_cloud	pcdet/datasets/waymo/waymo_utils.py	/^def convert_range_image_to_point_cloud(frame, range_images, camera_projections, range_image_top_pose, ri_index=0):$/;"	f
+convert_reduce_type	pcdet/ops/voxel/src/voxelization.h	/^inline reduce_t convert_reduce_type(const std::string &reduce_type) {$/;"	f	namespace:voxelization
+corners3d_to_img_boxes	pcdet/utils/calibration_kitti.py	/^    def corners3d_to_img_boxes(self, corners3d):$/;"	m	class:Calibration
+create	tools/train_utils/optimization/fastai_optim.py	/^    def create(cls, opt_func, lr,$/;"	m	class:FastAIMixedOptim
+create	tools/train_utils/optimization/fastai_optim.py	/^    def create(cls, opt_func, lr,$/;"	m	class:OptimWrapper
+create_frustum_features	pcdet/models/backbones_3d/vfe/image_vfe_modules/ffn/depth_ffn.py	/^    def create_frustum_features(self, image_features, depth_logits):$/;"	m	class:DepthFFN
+create_groundtruth_database	pcdet/datasets/kitti/kitti_dataset.py	/^    def create_groundtruth_database(self, info_path=None, used_classes=None, split='train'):$/;"	m	class:KittiDataset
+create_groundtruth_database	pcdet/datasets/nuscenes/nuscenes_dataset.py	/^    def create_groundtruth_database(self, used_classes=None, max_sweeps=10):$/;"	m	class:NuScenesDataset
+create_groundtruth_database	pcdet/datasets/waymo/waymo_dataset.py	/^    def create_groundtruth_database(self, info_path, save_path, used_classes=None, split='train', sampled_interval=10,$/;"	m	class:WaymoDataset
+create_kitti_infos	pcdet/datasets/kitti/kitti_dataset.py	/^def create_kitti_infos(dataset_cfg, class_names, data_path, save_path, workers=4):$/;"	f
+create_logger	pcdet/utils/common_utils.py	/^def create_logger(log_file=None, rank=0, log_level=logging.INFO):$/;"	f
+create_nuscenes_info	pcdet/datasets/nuscenes/nuscenes_dataset.py	/^def create_nuscenes_info(version, data_path, save_path, max_sweeps=10):$/;"	f
+create_waymo_infos	pcdet/datasets/waymo/waymo_dataset.py	/^def create_waymo_infos(dataset_cfg, class_names, data_path, save_path,$/;"	f
+cross	pcdet/ops/iou3d_nms/src/iou3d_cpu.cpp	/^inline float cross(const Point &a, const Point &b){$/;"	f
+cross	pcdet/ops/iou3d_nms/src/iou3d_cpu.cpp	/^inline float cross(const Point &p1, const Point &p2, const Point &p0){$/;"	f
+custom_delims	pcdet/ops/spconv/include/prettyprint.h	/^  custom_delims(const Container &c)$/;"	f	struct:pretty_print::custom_delims
+custom_delims	pcdet/ops/spconv/include/prettyprint.h	/^struct custom_delims {$/;"	s	namespace:pretty_print
+custom_delims_base	pcdet/ops/spconv/include/prettyprint.h	/^struct custom_delims_base {$/;"	s	namespace:pretty_print
+custom_delims_wrapper	pcdet/ops/spconv/include/prettyprint.h	/^  custom_delims_wrapper(const T &t_) : t(t_) {}$/;"	f	struct:pretty_print::custom_delims_wrapper
+custom_delims_wrapper	pcdet/ops/spconv/include/prettyprint.h	/^struct custom_delims_wrapper : custom_delims_base {$/;"	s	namespace:pretty_print
+d3_box_overlap	pcdet/datasets/kitti/kitti_object_eval_python/eval.py	/^def d3_box_overlap(boxes, qboxes, criterion=-1):$/;"	f
+d3_box_overlap_kernel	pcdet/datasets/kitti/kitti_object_eval_python/eval.py	/^def d3_box_overlap_kernel(boxes, qboxes, rinc, criterion=-1):$/;"	f
+data	pcdet/ops/spconv/include/tensorview/tensorview.h	/^  TV_HOST_DEVICE_INLINE T *data() { return mPtr; }$/;"	f	struct:tv::TensorView
+data	pcdet/ops/spconv/include/tensorview/tensorview.h	/^  TV_HOST_DEVICE_INLINE const T *data() const { return mArray; }$/;"	f	struct:tv::SimpleVector
+data	pcdet/ops/spconv/include/tensorview/tensorview.h	/^  TV_HOST_DEVICE_INLINE const T *data() const { return mPtr; }$/;"	f	struct:tv::TensorView
+data_path	pcdet/datasets/kitti/kitti_dataset.py	/^            data_path=ROOT_DIR \/ 'data' \/ 'kitti',$/;"	v
+data_path	pcdet/datasets/nuscenes/nuscenes_dataset.py	/^            data_path=ROOT_DIR \/ 'data' \/ 'nuscenes',$/;"	v
+data_path	pcdet/datasets/waymo/waymo_dataset.py	/^            data_path=ROOT_DIR \/ 'data' \/ 'waymo',$/;"	v
+dataset_cfg	pcdet/datasets/kitti/kitti_dataset.py	/^            dataset_cfg=dataset_cfg,$/;"	v
+dataset_cfg	pcdet/datasets/kitti/kitti_dataset.py	/^        dataset_cfg = EasyDict(yaml.load(open(sys.argv[2])))$/;"	v
+dataset_cfg	pcdet/datasets/nuscenes/nuscenes_dataset.py	/^        dataset_cfg = EasyDict(yaml.load(open(args.cfg_file)))$/;"	v
+dataset_cfg	pcdet/datasets/waymo/waymo_dataset.py	/^            dataset_cfg=dataset_cfg,$/;"	v
+dataset_cfg	pcdet/datasets/waymo/waymo_dataset.py	/^        dataset_cfg = EasyDict(yaml.load(open(args.cfg_file)))$/;"	v
+decode_torch	pcdet/utils/box_coder_utils.py	/^    def decode_torch(box_encodings, anchors):$/;"	m	class:PreviousResidualDecoder
+decode_torch	pcdet/utils/box_coder_utils.py	/^    def decode_torch(box_encodings, anchors):$/;"	m	class:PreviousResidualRoIDecoder
+decode_torch	pcdet/utils/box_coder_utils.py	/^    def decode_torch(self, box_encodings, anchors):$/;"	m	class:ResidualCoder
+decode_torch	pcdet/utils/box_coder_utils.py	/^    def decode_torch(self, box_encodings, points, pred_classes=None):$/;"	m	class:PointResidualCoder
+delimiter	pcdet/ops/spconv/include/prettyprint.h	/^  const char_type *delimiter;$/;"	m	struct:pretty_print::delimiters_values
+delimiters	pcdet/ops/spconv/include/prettyprint.h	/^struct delimiters {$/;"	s	namespace:pretty_print
+delimiters	pcdet/ops/spconv/include/prettyprint.h	/^struct delimiters<::std::multiset<T, TComp, TAllocator>, char> {$/;"	s	namespace:pretty_print
+delimiters	pcdet/ops/spconv/include/prettyprint.h	/^struct delimiters<::std::multiset<T, TComp, TAllocator>, wchar_t> {$/;"	s	namespace:pretty_print
+delimiters	pcdet/ops/spconv/include/prettyprint.h	/^struct delimiters<::std::pair<T1, T2>, wchar_t> {$/;"	s	namespace:pretty_print
+delimiters	pcdet/ops/spconv/include/prettyprint.h	/^struct delimiters<::std::set<T, TComp, TAllocator>, char> {$/;"	s	namespace:pretty_print
+delimiters	pcdet/ops/spconv/include/prettyprint.h	/^struct delimiters<::std::set<T, TComp, TAllocator>, wchar_t> {$/;"	s	namespace:pretty_print
+delimiters	pcdet/ops/spconv/include/prettyprint.h	/^struct delimiters<::std::tuple<Args...>, wchar_t> {$/;"	s	namespace:pretty_print
+delimiters	pcdet/ops/spconv/include/prettyprint.h	/^struct delimiters<::std::unordered_multiset<T, THash, TEqual, TAllocator>,$/;"	s	namespace:pretty_print
+delimiters	pcdet/ops/spconv/include/prettyprint.h	/^struct delimiters<::std::unordered_set<T, THash, TEqual, TAllocator>, char> {$/;"	s	namespace:pretty_print
+delimiters	pcdet/ops/spconv/include/prettyprint.h	/^struct delimiters<::std::unordered_set<T, THash, TEqual, TAllocator>, wchar_t> {$/;"	s	namespace:pretty_print
+delimiters	pcdet/ops/spconv/include/prettyprint.h	/^struct delimiters<T, char> {$/;"	s	namespace:pretty_print
+delimiters	pcdet/ops/spconv/include/prettyprint.h	/^struct delimiters<T, wchar_t> {$/;"	s	namespace:pretty_print
+delimiters	pcdet/ops/spconv/include/prettyprint.h	/^struct delimiters<std::pair<T1, T2>, char> {$/;"	s	namespace:pretty_print
+delimiters	pcdet/ops/spconv/include/prettyprint.h	/^struct delimiters<std::tuple<Args...>, char> {$/;"	s	namespace:pretty_print
+delimiters_values	pcdet/ops/spconv/include/prettyprint.h	/^struct delimiters_values {$/;"	s	namespace:pretty_print
+delta_	pcdet/ops/spconv/include/tensorview/helper_kernel.cu.h	/^    const T delta_;$/;"	m	struct:tv::detail::KernelLoop::Iterator
+delta_	pcdet/ops/spconv/include/tensorview/helper_kernel.cu.h	/^  T delta_;$/;"	m	class:tv::detail::KernelLoop
+dense	pcdet/ops/spconv/structure.py	/^    def dense(self, channels_first=True):$/;"	m	class:SparseConvTensor
+detail	pcdet/ops/spconv/include/paramsgrid.h	/^namespace detail {$/;"	n
+detail	pcdet/ops/spconv/include/prettyprint.h	/^namespace detail {$/;"	n	namespace:pretty_print
+detail	pcdet/ops/spconv/include/spconv/mp_helper.h	/^namespace detail {$/;"	n	namespace:spconv
+detail	pcdet/ops/spconv/include/tensorview/helper_kernel.cu.h	/^namespace detail {$/;"	n	namespace:tv
+detail	pcdet/ops/spconv/include/tensorview/tensorview.h	/^namespace detail {$/;"	n	namespace:tv
+determin_max_points_kernel	pcdet/ops/voxel/src/scatter_points_cpu.cpp	/^void determin_max_points_kernel($/;"	f	namespace:__anon3
+devRotateIoUEval	pcdet/datasets/kitti/kitti_object_eval_python/rotate_iou.py	/^def devRotateIoUEval(rbox1, rbox2, criterion=-1):$/;"	f
+device	pcdet/datasets/kitti/kitti_object_eval_python/rotate_iou.py	/^    device=True,$/;"	v
+difference_type	pcdet/ops/spconv/include/tensorview/tensorview.h	/^    typedef std::ptrdiff_t difference_type;$/;"	t	class:tv::SimpleVector::const_iterator
+difference_type	pcdet/ops/spconv/include/tensorview/tensorview.h	/^    typedef std::ptrdiff_t difference_type;$/;"	t	class:tv::SimpleVector::iterator
+dim	pcdet/ops/spconv/include/tensorview/tensorview.h	/^  TV_HOST_DEVICE_INLINE int dim(int idx) const { return mShape[idx]; }$/;"	f	struct:tv::TensorView
+div_up	pcdet/datasets/kitti/kitti_object_eval_python/rotate_iou.py	/^def div_up(m, n):$/;"	f
+do_coco_style_eval	pcdet/datasets/kitti/kitti_object_eval_python/eval.py	/^def do_coco_style_eval(gt_annos, dt_annos, current_classes, overlap_ranges,$/;"	f
+do_eval	pcdet/datasets/kitti/kitti_object_eval_python/eval.py	/^def do_eval(gt_annos,$/;"	f
+downsample_depth_map	pcdet/datasets/processor/data_processor.py	/^    def downsample_depth_map(self, data_dict=None, config=None):$/;"	m	class:DataProcessor
+draw_corners3d	tools/visual_utils/visualize_utils.py	/^def draw_corners3d(corners3d, fig, color=(1, 1, 1), line_width=2, cls=None, tag='', max_num=500, tube_radius=None):$/;"	f
+draw_grid	tools/visual_utils/visualize_utils.py	/^def draw_grid(x1, y1, x2, y2, fig, tube_radius=None, color=(0.5, 0.5, 0.5)):$/;"	f
+draw_multi_grid_range	tools/visual_utils/visualize_utils.py	/^def draw_multi_grid_range(fig, grid_size=20, bv_range=(-60, -60, 60, 60)):$/;"	f
+draw_scenes	tools/visual_utils/visualize_utils.py	/^def draw_scenes(points, gt_boxes=None, ref_boxes=None, ref_scores=None, ref_labels=None):$/;"	f
+draw_sphere_pts	tools/visual_utils/visualize_utils.py	/^def draw_sphere_pts(pts, color=(0, 1, 0), fig=None, bgcolor=(0, 0, 0), scale_factor=0.2):$/;"	f
+drop_info_with_name	pcdet/utils/common_utils.py	/^def drop_info_with_name(info, name):$/;"	f
+dynamic_point_to_voxel_backward	pcdet/ops/voxel/src/voxelization.h	/^inline void dynamic_point_to_voxel_backward(torch::Tensor &grad_feats,$/;"	f	namespace:voxelization
+dynamic_point_to_voxel_cpu	pcdet/ops/voxel/src/scatter_points_cpu.cpp	/^std::vector<at::Tensor> dynamic_point_to_voxel_cpu($/;"	f	namespace:voxelization
+dynamic_point_to_voxel_forward	pcdet/ops/voxel/src/voxelization.h	/^inline std::vector<torch::Tensor> dynamic_point_to_voxel_forward(const torch::Tensor &feats,$/;"	f	namespace:voxelization
+dynamic_scatter	pcdet/ops/voxel/scatter_points.py	/^dynamic_scatter = _dynamic_scatter.apply$/;"	v
+dynamic_voxelize	pcdet/ops/voxel/src/voxelization.h	/^inline void dynamic_voxelize(const at::Tensor &points, at::Tensor &coors,$/;"	f	namespace:voxelization
+dynamic_voxelize_cpu	pcdet/ops/voxel/src/voxelization_cpu.cpp	/^void dynamic_voxelize_cpu(const at::Tensor& points, at::Tensor& coors,$/;"	f	namespace:voxelization
+dynamic_voxelize_kernel	pcdet/ops/voxel/src/voxelization_cpu.cpp	/^void dynamic_voxelize_kernel(const torch::TensorAccessor<T, 2> points,$/;"	f	namespace:__anon2
+empty	pcdet/ops/spconv/include/tensorview/tensorview.h	/^  TV_HOST_DEVICE_INLINE bool empty() const { return mPtr == nullptr; }$/;"	f	struct:tv::TensorView
+empty	pcdet/ops/spconv/include/tensorview/tensorview.h	/^  TV_HOST_DEVICE_INLINE size_t empty() const { return mSize == 0; }$/;"	f	struct:tv::SimpleVector
+encode_torch	pcdet/utils/box_coder_utils.py	/^    def encode_torch(self, boxes, anchors):$/;"	m	class:ResidualCoder
+encode_torch	pcdet/utils/box_coder_utils.py	/^    def encode_torch(self, gt_boxes, points, gt_classes=None):$/;"	m	class:PointResidualCoder
+end	pcdet/ops/spconv/include/prettyprint.h	/^  const_iterator end() const { return m_map.cend(n); }$/;"	f	struct:pretty_print::bucket_print_wrapper
+end	pcdet/ops/spconv/include/prettyprint.h	/^  inline const_iterator end() const { return _array + _n; }$/;"	f	struct:pretty_print::array_wrapper_n
+end	pcdet/ops/spconv/include/tensorview/helper_kernel.cu.h	/^  __forceinline__ __device__ Iterator end() const { return Iterator{end_, 0}; }$/;"	f	class:tv::detail::KernelLoop
+end	pcdet/ops/spconv/include/tensorview/tensorview.h	/^  TV_HOST_DEVICE_INLINE const_iterator end() const {$/;"	f	struct:tv::SimpleVector
+end	pcdet/ops/spconv/include/tensorview/tensorview.h	/^  TV_HOST_DEVICE_INLINE iterator end() { return iterator(mArray + mSize); }$/;"	f	struct:tv::SimpleVector
+end_	pcdet/ops/spconv/include/tensorview/helper_kernel.cu.h	/^  T end_;$/;"	m	class:tv::detail::KernelLoop
+end_value	pcdet/ops/spconv/include/prettyprint.h	/^  static bool const end_value = sizeof(g<T>(nullptr)) == sizeof(yes);$/;"	m	struct:pretty_print::detail::has_begin_end
+enlarge_box3d	pcdet/utils/box_utils.py	/^def enlarge_box3d(boxes3d, extra_width=(0, 0, 0)):$/;"	f
+eval_class	pcdet/datasets/kitti/kitti_object_eval_python/eval.py	/^def eval_class(gt_annos,$/;"	f
+eval_one_epoch	tools/eval_utils/eval_utils.py	/^def eval_one_epoch(cfg, model, dataloader, epoch_id, logger, dist_test=False, save_to_file=False, result_dir=None):$/;"	f
+eval_single_ckpt	tools/test.py	/^def eval_single_ckpt(model, test_loader, args, eval_output_dir, logger, epoch_id, dist_test=False):$/;"	f
+eval_value_ops	pcdet/datasets/waymo/waymo_eval.py	/^    def eval_value_ops(self, sess, graph, metrics):$/;"	m	class:OpenPCDetWaymoDetectionMetricsEstimator
+evaluate	pcdet/datasets/kitti/kitti_object_eval_python/evaluate.py	/^def evaluate(label_path,$/;"	f
+evaluation	pcdet/datasets/kitti/kitti_dataset.py	/^    def evaluation(self, det_annos, class_names, **kwargs):$/;"	m	class:KittiDataset
+evaluation	pcdet/datasets/nuscenes/nuscenes_dataset.py	/^    def evaluation(self, det_annos, class_names, **kwargs):$/;"	m	class:NuScenesDataset
+evaluation	pcdet/datasets/waymo/waymo_dataset.py	/^    def evaluation(self, det_annos, class_names, **kwargs):$/;"	m	class:WaymoDataset
+expansion	pcdet/models/backbones_3d/spconv_backbone.py	/^    expansion = 1$/;"	v	class:SparseBasicBlock
+expansion	pcdet/models/backbones_3d/spconv_unet.py	/^    expansion = 1$/;"	v	class:SparseBasicBlock
+fake_sparse_idx	pcdet/models/roi_heads/partA2_head.py	/^    def fake_sparse_idx(sparse_idx, batch_size_rcnn):$/;"	m	class:PartA2FCHead
+fill_trainval_infos	pcdet/datasets/nuscenes/nuscenes_utils.py	/^def fill_trainval_infos(data_path, nusc, train_scenes, val_scenes, test=False, max_sweeps=10):$/;"	f
+filter_annos_low_score	pcdet/datasets/kitti/kitti_object_eval_python/kitti_common.py	/^def filter_annos_low_score(image_annos, thresh):$/;"	f
+filter_by_difficulty	pcdet/datasets/augmentor/database_sampler.py	/^    def filter_by_difficulty(self, db_infos, removed_difficulty):$/;"	m	class:DataBaseSampler
+filter_by_min_points	pcdet/datasets/augmentor/database_sampler.py	/^    def filter_by_min_points(self, db_infos, min_gt_points_list):$/;"	m	class:DataBaseSampler
+filter_kitti_anno	pcdet/datasets/kitti/kitti_object_eval_python/kitti_common.py	/^def filter_kitti_anno(image_anno,$/;"	f
+filter_pretrained_dict	pcdet/models/backbones_3d/vfe/image_vfe_modules/ffn/ddn/ddn_template.py	/^    def filter_pretrained_dict(self, model_dict, pretrained_dict):$/;"	m	class:DDNTemplate
+find_indice_pair	pcdet/ops/spconv/structure.py	/^    def find_indice_pair(self, key):$/;"	m	class:SparseConvTensor
+format_nuscene_results	pcdet/datasets/nuscenes/nuscenes_utils.py	/^def format_nuscene_results(metrics, class_names, version='default'):$/;"	f
+forward	pcdet/datasets/augmentor/data_augmentor.py	/^    def forward(self, data_dict):$/;"	m	class:DataAugmentor
+forward	pcdet/datasets/processor/data_processor.py	/^    def forward(self, data_dict):$/;"	m	class:DataProcessor
+forward	pcdet/datasets/processor/point_feature_encoder.py	/^    def forward(self, data_dict):$/;"	m	class:PointFeatureEncoder
+forward	pcdet/models/backbones_2d/base_bev_backbone.py	/^    def forward(self, data_dict):$/;"	m	class:BaseBEVBackbone
+forward	pcdet/models/backbones_2d/map_to_bev/conv2d_collapse.py	/^    def forward(self, batch_dict):$/;"	m	class:Conv2DCollapse
+forward	pcdet/models/backbones_2d/map_to_bev/height_compression.py	/^    def forward(self, batch_dict):$/;"	m	class:HeightCompression
+forward	pcdet/models/backbones_2d/map_to_bev/pointpillar_scatter.py	/^    def forward(self, batch_dict, **kwargs):$/;"	m	class:PointPillarScatter
+forward	pcdet/models/backbones_3d/pfe/voxel_set_abstraction.py	/^    def forward(self, batch_dict):$/;"	m	class:VoxelSetAbstraction
+forward	pcdet/models/backbones_3d/pointnet2_backbone.py	/^    def forward(self, batch_dict):$/;"	m	class:PointNet2Backbone
+forward	pcdet/models/backbones_3d/pointnet2_backbone.py	/^    def forward(self, batch_dict):$/;"	m	class:PointNet2MSG
+forward	pcdet/models/backbones_3d/spconv_backbone.py	/^    def forward(self, batch_dict):$/;"	m	class:VoxelBackBone8x
+forward	pcdet/models/backbones_3d/spconv_backbone.py	/^    def forward(self, batch_dict):$/;"	m	class:VoxelResBackBone8x
+forward	pcdet/models/backbones_3d/spconv_backbone.py	/^    def forward(self, x):$/;"	m	class:SparseBasicBlock
+forward	pcdet/models/backbones_3d/spconv_unet.py	/^    def forward(self, batch_dict):$/;"	m	class:UNetV2
+forward	pcdet/models/backbones_3d/spconv_unet.py	/^    def forward(self, x):$/;"	m	class:SparseBasicBlock
+forward	pcdet/models/backbones_3d/vfe/image_vfe.py	/^    def forward(self, batch_dict, **kwargs):$/;"	m	class:ImageVFE
+forward	pcdet/models/backbones_3d/vfe/image_vfe_modules/f2v/frustum_grid_generator.py	/^    def forward(self, lidar_to_cam, cam_to_img, image_shape):$/;"	m	class:FrustumGridGenerator
+forward	pcdet/models/backbones_3d/vfe/image_vfe_modules/f2v/frustum_to_voxel.py	/^    def forward(self, batch_dict):$/;"	m	class:FrustumToVoxel
+forward	pcdet/models/backbones_3d/vfe/image_vfe_modules/f2v/sampler.py	/^    def forward(self, input_features, grid):$/;"	m	class:Sampler
+forward	pcdet/models/backbones_3d/vfe/image_vfe_modules/ffn/ddn/ddn_template.py	/^    def forward(self, images):$/;"	m	class:DDNTemplate
+forward	pcdet/models/backbones_3d/vfe/image_vfe_modules/ffn/ddn_loss/balancer.py	/^    def forward(self, loss, gt_boxes2d):$/;"	m	class:Balancer
+forward	pcdet/models/backbones_3d/vfe/image_vfe_modules/ffn/ddn_loss/ddn_loss.py	/^    def forward(self, depth_logits, depth_maps, gt_boxes2d):$/;"	m	class:DDNLoss
+forward	pcdet/models/backbones_3d/vfe/image_vfe_modules/ffn/depth_ffn.py	/^    def forward(self, batch_dict):$/;"	m	class:DepthFFN
+forward	pcdet/models/backbones_3d/vfe/mean_vfe.py	/^    def forward(self, batch_dict, **kwargs):$/;"	m	class:MeanVFE
+forward	pcdet/models/backbones_3d/vfe/pillar_vfe.py	/^    def forward(self, batch_dict, **kwargs):$/;"	m	class:PillarVFE
+forward	pcdet/models/backbones_3d/vfe/pillar_vfe.py	/^    def forward(self, inputs):$/;"	m	class:PFNLayer
+forward	pcdet/models/backbones_3d/vfe/vfe_template.py	/^    def forward(self, **kwargs):$/;"	m	class:VFETemplate
+forward	pcdet/models/dense_heads/anchor_head_multi.py	/^    def forward(self, data_dict):$/;"	m	class:AnchorHeadMulti
+forward	pcdet/models/dense_heads/anchor_head_multi.py	/^    def forward(self, spatial_features_2d):$/;"	m	class:SingleHead
+forward	pcdet/models/dense_heads/anchor_head_single.py	/^    def forward(self, data_dict):$/;"	m	class:AnchorHeadSingle
+forward	pcdet/models/dense_heads/anchor_head_template.py	/^    def forward(self, **kwargs):$/;"	m	class:AnchorHeadTemplate
+forward	pcdet/models/dense_heads/point_head_box.py	/^    def forward(self, batch_dict):$/;"	m	class:PointHeadBox
+forward	pcdet/models/dense_heads/point_head_simple.py	/^    def forward(self, batch_dict):$/;"	m	class:PointHeadSimple
+forward	pcdet/models/dense_heads/point_head_template.py	/^    def forward(self, **kwargs):$/;"	m	class:PointHeadTemplate
+forward	pcdet/models/dense_heads/point_intra_part_head.py	/^    def forward(self, batch_dict):$/;"	m	class:PointIntraPartOffsetHead
+forward	pcdet/models/detectors/PartA2_net.py	/^    def forward(self, batch_dict):$/;"	m	class:PartA2Net
+forward	pcdet/models/detectors/caddn.py	/^    def forward(self, batch_dict):$/;"	m	class:CaDDN
+forward	pcdet/models/detectors/detector3d_template.py	/^    def forward(self, **kwargs):$/;"	m	class:Detector3DTemplate
+forward	pcdet/models/detectors/point_rcnn.py	/^    def forward(self, batch_dict):$/;"	m	class:PointRCNN
+forward	pcdet/models/detectors/pointpillar.py	/^    def forward(self, batch_dict):$/;"	m	class:PointPillar
+forward	pcdet/models/detectors/pv_rcnn.py	/^    def forward(self, batch_dict):$/;"	m	class:PVRCNN
+forward	pcdet/models/detectors/second_net.py	/^    def forward(self, batch_dict):$/;"	m	class:SECONDNet
+forward	pcdet/models/detectors/second_net_iou.py	/^    def forward(self, batch_dict):$/;"	m	class:SECONDNetIoU
+forward	pcdet/models/detectors/voxel_rcnn.py	/^    def forward(self, batch_dict):$/;"	m	class:VoxelRCNN
+forward	pcdet/models/model_utils/basic_block_2d.py	/^    def forward(self, features):$/;"	m	class:BasicBlock2D
+forward	pcdet/models/roi_heads/partA2_head.py	/^    def forward(self, batch_dict):$/;"	m	class:PartA2FCHead
+forward	pcdet/models/roi_heads/pointrcnn_head.py	/^    def forward(self, batch_dict):$/;"	m	class:PointRCNNHead
+forward	pcdet/models/roi_heads/pvrcnn_head.py	/^    def forward(self, batch_dict):$/;"	m	class:PVRCNNHead
+forward	pcdet/models/roi_heads/second_head.py	/^    def forward(self, batch_dict):$/;"	m	class:SECONDHead
+forward	pcdet/models/roi_heads/target_assigner/proposal_target_layer.py	/^    def forward(self, batch_dict):$/;"	m	class:ProposalTargetLayer
+forward	pcdet/models/roi_heads/voxelrcnn_head.py	/^    def forward(self, batch_dict):$/;"	m	class:VoxelRCNNHead
+forward	pcdet/ops/pointnet2/pointnet2_batch/pointnet2_modules.py	/^    def forward($/;"	m	class:PointnetFPModule
+forward	pcdet/ops/pointnet2/pointnet2_batch/pointnet2_modules.py	/^    def forward(self, xyz: torch.Tensor, features: torch.Tensor = None, new_xyz=None) -> (torch.Tensor, torch.Tensor):$/;"	m	class:_PointnetSAModuleBase
+forward	pcdet/ops/pointnet2/pointnet2_batch/pointnet2_utils.py	/^    def forward(ctx, features: torch.Tensor, idx: torch.Tensor) -> torch.Tensor:$/;"	m	class:GatherOperation
+forward	pcdet/ops/pointnet2/pointnet2_batch/pointnet2_utils.py	/^    def forward(ctx, features: torch.Tensor, idx: torch.Tensor) -> torch.Tensor:$/;"	m	class:GroupingOperation
+forward	pcdet/ops/pointnet2/pointnet2_batch/pointnet2_utils.py	/^    def forward(ctx, features: torch.Tensor, idx: torch.Tensor, weight: torch.Tensor) -> torch.Tensor:$/;"	m	class:ThreeInterpolate
+forward	pcdet/ops/pointnet2/pointnet2_batch/pointnet2_utils.py	/^    def forward(ctx, radius: float, nsample: int, xyz: torch.Tensor, new_xyz: torch.Tensor) -> torch.Tensor:$/;"	m	class:BallQuery
+forward	pcdet/ops/pointnet2/pointnet2_batch/pointnet2_utils.py	/^    def forward(ctx, unknown: torch.Tensor, known: torch.Tensor) -> Tuple[torch.Tensor, torch.Tensor]:$/;"	m	class:ThreeNN
+forward	pcdet/ops/pointnet2/pointnet2_batch/pointnet2_utils.py	/^    def forward(ctx, xyz: torch.Tensor, npoint: int) -> torch.Tensor:$/;"	m	class:FurthestPointSampling
+forward	pcdet/ops/pointnet2/pointnet2_batch/pointnet2_utils.py	/^    def forward(self, xyz: torch.Tensor, new_xyz: torch.Tensor, features: torch.Tensor = None) -> Tuple[torch.Tensor]:$/;"	m	class:QueryAndGroup
+forward	pcdet/ops/pointnet2/pointnet2_batch/pointnet2_utils.py	/^    def forward(self, xyz: torch.Tensor, new_xyz: torch.Tensor, features: torch.Tensor = None):$/;"	m	class:GroupAll
+forward	pcdet/ops/pointnet2/pointnet2_stack/pointnet2_modules.py	/^    def forward(self, unknown, unknown_batch_cnt, known, known_batch_cnt, unknown_feats=None, known_feats=None):$/;"	m	class:StackPointnetFPModule
+forward	pcdet/ops/pointnet2/pointnet2_stack/pointnet2_modules.py	/^    def forward(self, xyz, xyz_batch_cnt, new_xyz, new_xyz_batch_cnt, features=None, empty_voxel_set_zeros=True):$/;"	m	class:StackSAModuleMSG
+forward	pcdet/ops/pointnet2/pointnet2_stack/pointnet2_utils.py	/^    def forward(ctx, features: torch.Tensor, features_batch_cnt: torch.Tensor,$/;"	m	class:GroupingOperation
+forward	pcdet/ops/pointnet2/pointnet2_stack/pointnet2_utils.py	/^    def forward(ctx, features: torch.Tensor, idx: torch.Tensor, weight: torch.Tensor):$/;"	m	class:ThreeInterpolate
+forward	pcdet/ops/pointnet2/pointnet2_stack/pointnet2_utils.py	/^    def forward(ctx, radius: float, nsample: int, xyz: torch.Tensor, xyz_batch_cnt: torch.Tensor,$/;"	m	class:BallQuery
+forward	pcdet/ops/pointnet2/pointnet2_stack/pointnet2_utils.py	/^    def forward(ctx, unknown, unknown_batch_cnt, known, known_batch_cnt):$/;"	m	class:ThreeNN
+forward	pcdet/ops/pointnet2/pointnet2_stack/pointnet2_utils.py	/^    def forward(ctx, xyz: torch.Tensor, npoint: int):$/;"	m	class:FurthestPointSampling
+forward	pcdet/ops/pointnet2/pointnet2_stack/pointnet2_utils.py	/^    def forward(self, xyz: torch.Tensor, xyz_batch_cnt: torch.Tensor,$/;"	m	class:QueryAndGroup
+forward	pcdet/ops/pointnet2/pointnet2_stack/voxel_pool_modules.py	/^                                        new_coords, features, voxel2point_indices):$/;"	m	class:NeighborVoxelSAModuleMSG
+forward	pcdet/ops/pointnet2/pointnet2_stack/voxel_query_utils.py	/^                    new_xyz: torch.Tensor, new_coords: torch.Tensor, point_indices: torch.Tensor):$/;"	m	class:VoxelQuery
+forward	pcdet/ops/pointnet2/pointnet2_stack/voxel_query_utils.py	/^    def forward(self, new_coords: torch.Tensor, xyz: torch.Tensor, xyz_batch_cnt: torch.Tensor,$/;"	m	class:VoxelQueryAndGrouping
+forward	pcdet/ops/roiaware_pool3d/roiaware_pool3d_utils.py	/^    def forward(ctx, rois, pts, pts_feature, out_size, max_pts_each_voxel, pool_method):$/;"	m	class:RoIAwarePool3dFunction
+forward	pcdet/ops/roiaware_pool3d/roiaware_pool3d_utils.py	/^    def forward(self, rois, pts, pts_feature, pool_method='max'):$/;"	m	class:RoIAwarePool3d
+forward	pcdet/ops/roipoint_pool3d/roipoint_pool3d_utils.py	/^    def forward(ctx, points, point_features, boxes3d, pool_extra_width, num_sampled_points=512):$/;"	m	class:RoIPointPool3dFunction
+forward	pcdet/ops/roipoint_pool3d/roipoint_pool3d_utils.py	/^    def forward(self, points, point_features, boxes3d):$/;"	m	class:RoIPointPool3d
+forward	pcdet/ops/spconv/conv.py	/^    def forward(self, input):$/;"	m	class:SparseConvolution
+forward	pcdet/ops/spconv/functional.py	/^    def forward(ctx, features, filters, indice_pairs, indice_pair_num,$/;"	m	class:SparseConvFunction
+forward	pcdet/ops/spconv/functional.py	/^    def forward(ctx, features, filters, indice_pairs, indice_pair_num,$/;"	m	class:SparseInverseConvFunction
+forward	pcdet/ops/spconv/functional.py	/^    def forward(ctx, features, filters, indice_pairs, indice_pair_num,$/;"	m	class:SubMConvFunction
+forward	pcdet/ops/spconv/functional.py	/^    def forward(ctx, features, indice_pairs, indice_pair_num,$/;"	m	class:SparseMaxPoolFunction
+forward	pcdet/ops/spconv/modules.py	/^    def forward(self, input):$/;"	m	class:SparseSequential
+forward	pcdet/ops/spconv/modules.py	/^    def forward(self, x: SparseConvTensor):$/;"	m	class:RemoveGrid
+forward	pcdet/ops/spconv/modules.py	/^    def forward(self, x: SparseConvTensor):$/;"	m	class:ToDense
+forward	pcdet/ops/spconv/pool.py	/^    def forward(self, input):$/;"	m	class:SparseMaxPool
+forward	pcdet/ops/voxel/scatter_points.py	/^    def forward(ctx, feats, coors, reduce_type='max'):$/;"	m	class:_dynamic_scatter
+forward	pcdet/ops/voxel/scatter_points.py	/^    def forward(self, points, coors):$/;"	m	class:DynamicScatter
+forward	pcdet/ops/voxel/voxelize.py	/^    def forward(ctx,$/;"	m	class:_Voxelization
+forward	pcdet/ops/voxel/voxelize.py	/^    def forward(self, input):$/;"	m	class:Voxelization
+forward	pcdet/utils/loss_utils.py	/^    def forward(self, input: torch.Tensor, target: torch.Tensor, weights: torch.Tensor = None):$/;"	m	class:WeightedL1Loss
+forward	pcdet/utils/loss_utils.py	/^    def forward(self, input: torch.Tensor, target: torch.Tensor, weights: torch.Tensor = None):$/;"	m	class:WeightedSmoothL1Loss
+forward	pcdet/utils/loss_utils.py	/^    def forward(self, input: torch.Tensor, target: torch.Tensor, weights: torch.Tensor):$/;"	m	class:SigmoidFocalClassificationLoss
+forward	pcdet/utils/loss_utils.py	/^    def forward(self, input: torch.Tensor, target: torch.Tensor, weights: torch.Tensor):$/;"	m	class:WeightedCrossEntropyLoss
+forward_single	pcdet/ops/voxel/scatter_points.py	/^    def forward_single(self, points, coors):$/;"	m	class:DynamicScatter
+functor	pcdet/ops/spconv/include/spconv/indice.h	/^namespace functor {$/;"	n	namespace:spconv
+functor	pcdet/ops/spconv/include/spconv/maxpool.h	/^namespace functor {$/;"	n	namespace:spconv
+functor	pcdet/ops/spconv/include/spconv/reordering.h	/^namespace functor {$/;"	n	namespace:spconv
+functor	pcdet/ops/spconv/src/indice.cc	/^namespace functor {$/;"	n	namespace:spconv	file:
+functor	pcdet/ops/spconv/src/maxpool.cc	/^namespace functor {$/;"	n	namespace:spconv	file:
+functor	pcdet/ops/spconv/src/reordering.cc	/^namespace functor {$/;"	n	namespace:spconv	file:
+furthest_point_sample	pcdet/ops/pointnet2/pointnet2_batch/pointnet2_utils.py	/^furthest_point_sample = FurthestPointSampling.apply$/;"	v
+furthest_point_sample	pcdet/ops/pointnet2/pointnet2_stack/pointnet2_utils.py	/^furthest_point_sample = FurthestPointSampling.apply$/;"	v
+furthest_point_sampling_wrapper	pcdet/ops/pointnet2/pointnet2_batch/src/sampling.cpp	/^int furthest_point_sampling_wrapper(int b, int n, int m, $/;"	f
+furthest_point_sampling_wrapper	pcdet/ops/pointnet2/pointnet2_stack/src/sampling.cpp	/^int furthest_point_sampling_wrapper(int b, int n, int m,$/;"	f
+fused	pcdet/ops/spconv/modules.py	/^    def fused(self):$/;"	m	class:SparseSequential
+fusedIndiceConvBatchNorm	pcdet/ops/spconv/include/spconv/fused_spconv_ops.h	/^torch::Tensor fusedIndiceConvBatchNorm($/;"	f	namespace:spconv
+fused_compute_statistics	pcdet/datasets/kitti/kitti_object_eval_python/eval.py	/^def fused_compute_statistics(overlaps,$/;"	f
+fused_indice_conv	pcdet/ops/spconv/ops.py	/^def fused_indice_conv(features, filters, bias, indice_pairs, indice_pair_num,$/;"	f
+gatherGenericKernel	pcdet/ops/spconv/include/spconv/reordering.cu.h	/^__global__ void gatherGenericKernel(T *buffer, const T *features,$/;"	f	namespace:spconv
+gatherVecBlockKernel	pcdet/ops/spconv/include/spconv/reordering.cu.h	/^__global__ void gatherVecBlockKernel(T *buffer, const T *features,$/;"	f	namespace:spconv
+gatherVecKernel	pcdet/ops/spconv/include/spconv/reordering.cu.h	/^__global__ void gatherVecKernel(T *buffer, const T *features,$/;"	f	namespace:spconv
+gather_operation	pcdet/ops/pointnet2/pointnet2_batch/pointnet2_utils.py	/^gather_operation = GatherOperation.apply$/;"	v
+gather_points_grad_wrapper_fast	pcdet/ops/pointnet2/pointnet2_batch/src/sampling.cpp	/^int gather_points_grad_wrapper_fast(int b, int c, int n, int npoints, $/;"	f
+gather_points_wrapper_fast	pcdet/ops/pointnet2/pointnet2_batch/src/sampling.cpp	/^int gather_points_wrapper_fast(int b, int c, int n, int npoints, $/;"	f
+generate_anchors	pcdet/models/dense_heads/anchor_head_template.py	/^    def generate_anchors(anchor_generator_cfg, grid_size, point_cloud_range, anchor_ndim=7):$/;"	m	class:AnchorHeadTemplate
+generate_anchors	pcdet/models/dense_heads/target_assigner/anchor_generator.py	/^    def generate_anchors(self, grid_sizes):$/;"	m	class:AnchorGenerator
+generate_corners3d	pcdet/utils/object3d_kitti.py	/^    def generate_corners3d(self):$/;"	m	class:Object3d
+generate_labels	pcdet/datasets/waymo/waymo_utils.py	/^def generate_labels(frame):$/;"	f
+generate_predicted_boxes	pcdet/models/dense_heads/anchor_head_template.py	/^    def generate_predicted_boxes(self, batch_size, cls_preds, box_preds, dir_cls_preds=None):$/;"	m	class:AnchorHeadTemplate
+generate_predicted_boxes	pcdet/models/dense_heads/point_head_template.py	/^    def generate_predicted_boxes(self, points, point_cls_preds, point_box_preds):$/;"	m	class:PointHeadTemplate
+generate_predicted_boxes	pcdet/models/roi_heads/roi_head_template.py	/^    def generate_predicted_boxes(self, batch_size, rois, cls_preds, box_preds):$/;"	m	class:RoIHeadTemplate
+generate_prediction_dicts	pcdet/datasets/dataset.py	/^    def generate_prediction_dicts(batch_dict, pred_dicts, class_names, output_path=None):$/;"	m	class:DatasetTemplate
+generate_prediction_dicts	pcdet/datasets/kitti/kitti_dataset.py	/^    def generate_prediction_dicts(batch_dict, pred_dicts, class_names, output_path=None):$/;"	m	class:KittiDataset
+generate_prediction_dicts	pcdet/datasets/nuscenes/nuscenes_dataset.py	/^    def generate_prediction_dicts(batch_dict, pred_dicts, class_names, output_path=None):$/;"	m	class:NuScenesDataset
+generate_prediction_dicts	pcdet/datasets/waymo/waymo_dataset.py	/^    def generate_prediction_dicts(batch_dict, pred_dicts, class_names, output_path=None):$/;"	m	class:WaymoDataset
+generate_recall_record	pcdet/models/detectors/detector3d_template.py	/^    def generate_recall_record(box_preds, recall_dict, batch_index, data_dict=None, thresh_list=None):$/;"	m	class:Detector3DTemplate
+generate_single_sample_dict	pcdet/datasets/kitti/kitti_dataset.py	/^        def generate_single_sample_dict(batch_index, box_dict):$/;"	f	function:KittiDataset.generate_prediction_dicts
+generate_single_sample_dict	pcdet/datasets/nuscenes/nuscenes_dataset.py	/^        def generate_single_sample_dict(box_dict):$/;"	f	function:NuScenesDataset.generate_prediction_dicts
+generate_single_sample_dict	pcdet/datasets/waymo/waymo_dataset.py	/^        def generate_single_sample_dict(box_dict):$/;"	f	function:WaymoDataset.generate_prediction_dicts
+generate_sparse_data	pcdet/ops/spconv/test_utils.py	/^def generate_sparse_data(shape,$/;"	f
+generate_voxel2pinds	pcdet/utils/common_utils.py	/^def generate_voxel2pinds(sparse_tensor):$/;"	f
+generate_waymo_type_results	pcdet/datasets/waymo/waymo_eval.py	/^    def generate_waymo_type_results(self, infos, class_names, is_gt=False, fake_gt_infos=True):$/;"	m	class:OpenPCDetWaymoDetectionMetricsEstimator
+getBlocks	pcdet/ops/spconv/include/tensorview/helper_launch.h	/^inline int getBlocks(const int N)$/;"	f	namespace:tv::launch
+getIndicePair	pcdet/ops/spconv/include/spconv/spconv_ops.h	/^std::vector<torch::Tensor> getIndicePair($/;"	f	namespace:spconv
+getIndicePairPreGrid	pcdet/ops/spconv/include/spconv/spconv_ops.h	/^std::vector<torch::Tensor> getIndicePairPreGrid($/;"	f	namespace:spconv
+getIndicePairsConv	pcdet/ops/spconv/include/spconv/geometry.h	/^Index getIndicePairsConv(tv::TensorView<const Index> indicesIn,$/;"	f	namespace:spconv
+getIndicePairsDeConv	pcdet/ops/spconv/include/spconv/geometry.h	/^Index getIndicePairsDeConv(tv::TensorView<const Index> indicesIn,$/;"	f	namespace:spconv
+getIndicePairsSubM	pcdet/ops/spconv/include/spconv/geometry.h	/^Index getIndicePairsSubM(tv::TensorView<const Index> indicesIn,$/;"	f	namespace:spconv
+getSize	pcdet/ops/spconv/include/paramsgrid.h	/^int getSize(std::vector<T> arg) {$/;"	f	namespace:detail
+getStream	pcdet/ops/spconv/include/tensorview/tensorview.h	/^  virtual cudaStream_t getStream() const { return mStream; }$/;"	f	struct:tv::GPU
+getSubMIndicePairsKernel	pcdet/ops/spconv/include/spconv/indice.cu.h	/^__global__ void getSubMIndicePairsKernel($/;"	f	namespace:spconv
+getTotalSize	pcdet/ops/spconv/include/paramsgrid.h	/^int getTotalSize(std::vector<T> arg) {$/;"	f	namespace:detail
+getTotalSize	pcdet/ops/spconv/include/paramsgrid.h	/^int getTotalSize(std::vector<T> arg, std::vector<TArgs>... args) {$/;"	f	namespace:detail
+getValidOutPos	pcdet/ops/spconv/include/spconv/geometry.h	/^TV_HOST_DEVICE Index getValidOutPos(const Index *input_pos,$/;"	f	namespace:spconv
+getValidOutPosTranspose	pcdet/ops/spconv/include/spconv/geometry.h	/^TV_HOST_DEVICE Index getValidOutPosTranspose($/;"	f	namespace:spconv
+get_available_scenes	pcdet/datasets/nuscenes/nuscenes_utils.py	/^def get_available_scenes(nusc):$/;"	f
+get_box_cls_layer_loss	pcdet/models/roi_heads/roi_head_template.py	/^    def get_box_cls_layer_loss(self, forward_ret_dict):$/;"	m	class:RoIHeadTemplate
+get_box_iou_layer_loss	pcdet/models/roi_heads/second_head.py	/^    def get_box_iou_layer_loss(self, forward_ret_dict):$/;"	m	class:SECONDHead
+get_box_layer_loss	pcdet/models/dense_heads/point_head_template.py	/^    def get_box_layer_loss(self, tb_dict=None):$/;"	m	class:PointHeadTemplate
+get_box_reg_layer_loss	pcdet/models/dense_heads/anchor_head_multi.py	/^    def get_box_reg_layer_loss(self):$/;"	m	class:AnchorHeadMulti
+get_box_reg_layer_loss	pcdet/models/dense_heads/anchor_head_template.py	/^    def get_box_reg_layer_loss(self):$/;"	m	class:AnchorHeadTemplate
+get_box_reg_layer_loss	pcdet/models/roi_heads/roi_head_template.py	/^    def get_box_reg_layer_loss(self, forward_ret_dict):$/;"	m	class:RoIHeadTemplate
+get_calib	pcdet/datasets/kitti/kitti_dataset.py	/^    def get_calib(self, idx):$/;"	m	class:KittiDataset
+get_calib_from_file	pcdet/utils/calibration_kitti.py	/^def get_calib_from_file(calib_file):$/;"	f
+get_calib_path	pcdet/datasets/kitti/kitti_object_eval_python/kitti_common.py	/^def get_calib_path(idx, prefix, training=True, relative_path=True):$/;"	f
+get_cls_layer_loss	pcdet/models/dense_heads/anchor_head_multi.py	/^    def get_cls_layer_loss(self):$/;"	m	class:AnchorHeadMulti
+get_cls_layer_loss	pcdet/models/dense_heads/anchor_head_template.py	/^    def get_cls_layer_loss(self):$/;"	m	class:AnchorHeadTemplate
+get_cls_layer_loss	pcdet/models/dense_heads/point_head_template.py	/^    def get_cls_layer_loss(self, tb_dict=None):$/;"	m	class:PointHeadTemplate
+get_coco_eval_result	pcdet/datasets/kitti/kitti_object_eval_python/eval.py	/^def get_coco_eval_result(gt_annos, dt_annos, current_classes):$/;"	f
+get_conv_output_size	pcdet/ops/spconv/ops.py	/^def get_conv_output_size(input_size, kernel_size, stride, padding, dilation):$/;"	f
+get_corner_loss_lidar	pcdet/utils/loss_utils.py	/^def get_corner_loss_lidar(pred_bbox3d: torch.Tensor, gt_bbox3d: torch.Tensor):$/;"	f
+get_deconv_output_size	pcdet/ops/spconv/ops.py	/^def get_deconv_output_size(input_size, kernel_size, stride, padding, dilation,$/;"	f
+get_dense_grid_points	pcdet/models/roi_heads/pvrcnn_head.py	/^    def get_dense_grid_points(rois, batch_size_rcnn, grid_size):$/;"	m	class:PVRCNNHead
+get_dense_grid_points	pcdet/models/roi_heads/voxelrcnn_head.py	/^    def get_dense_grid_points(rois, batch_size_rcnn, grid_size):$/;"	m	class:VoxelRCNNHead
+get_depth_map	pcdet/datasets/kitti/kitti_dataset.py	/^    def get_depth_map(self, idx):$/;"	m	class:KittiDataset
+get_direction_target	pcdet/models/dense_heads/anchor_head_template.py	/^    def get_direction_target(anchors, reg_targets, one_hot=True, dir_offset=0, num_bins=2):$/;"	m	class:AnchorHeadTemplate
+get_dist_info	pcdet/utils/common_utils.py	/^def get_dist_info():$/;"	f
+get_fov_flag	pcdet/datasets/kitti/kitti_dataset.py	/^    def get_fov_flag(pts_rect, img_shape, calib):$/;"	m	class:KittiDataset
+get_git_commit_number	pcdet/__init__.py	/^def get_git_commit_number():$/;"	f
+get_git_commit_number	setup.py	/^def get_git_commit_number():$/;"	f
+get_global_grid_points_of_roi	pcdet/models/roi_heads/pvrcnn_head.py	/^    def get_global_grid_points_of_roi(self, rois, grid_size):$/;"	m	class:PVRCNNHead
+get_global_grid_points_of_roi	pcdet/models/roi_heads/voxelrcnn_head.py	/^    def get_global_grid_points_of_roi(self, rois, grid_size):$/;"	m	class:VoxelRCNNHead
+get_image	pcdet/datasets/kitti/kitti_dataset.py	/^    def get_image(self, idx):$/;"	m	class:KittiDataset
+get_image_index_str	pcdet/datasets/kitti/kitti_object_eval_python/kitti_common.py	/^def get_image_index_str(img_idx):$/;"	f
+get_image_path	pcdet/datasets/kitti/kitti_object_eval_python/kitti_common.py	/^def get_image_path(idx, prefix, training=True, relative_path=True):$/;"	f
+get_image_shape	pcdet/datasets/kitti/kitti_dataset.py	/^    def get_image_shape(self, idx):$/;"	m	class:KittiDataset
+get_indice_pairs	pcdet/ops/spconv/ops.py	/^def get_indice_pairs(indices,$/;"	f
+get_infos	pcdet/datasets/kitti/kitti_dataset.py	/^    def get_infos(self, num_workers=4, has_label=True, count_inside_pts=True, sample_id_list=None):$/;"	m	class:KittiDataset
+get_infos	pcdet/datasets/waymo/waymo_dataset.py	/^    def get_infos(self, raw_data_path, save_path, num_workers=multiprocessing.cpu_count(), has_label=True, sampled_interval=1):$/;"	m	class:WaymoDataset
+get_kitti_image_info	pcdet/datasets/kitti/kitti_object_eval_python/kitti_common.py	/^def get_kitti_image_info(path,$/;"	f
+get_kitti_info_path	pcdet/datasets/kitti/kitti_object_eval_python/kitti_common.py	/^def get_kitti_info_path(idx,$/;"	f
+get_kitti_obj_level	pcdet/utils/object3d_kitti.py	/^    def get_kitti_obj_level(self):$/;"	m	class:Object3d
+get_label	pcdet/datasets/kitti/kitti_dataset.py	/^    def get_label(self, idx):$/;"	m	class:KittiDataset
+get_label_anno	pcdet/datasets/kitti/kitti_object_eval_python/kitti_common.py	/^def get_label_anno(label_path):$/;"	f
+get_label_annos	pcdet/datasets/kitti/kitti_object_eval_python/kitti_common.py	/^def get_label_annos(label_folder, image_ids=None):$/;"	f
+get_label_path	pcdet/datasets/kitti/kitti_object_eval_python/kitti_common.py	/^def get_label_path(idx, prefix, training=True, relative_path=True):$/;"	f
+get_lidar	pcdet/datasets/kitti/kitti_dataset.py	/^    def get_lidar(self, idx):$/;"	m	class:KittiDataset
+get_lidar	pcdet/datasets/waymo/waymo_dataset.py	/^    def get_lidar(self, sequence_name, sample_idx):$/;"	m	class:WaymoDataset
+get_lidar_with_sweeps	pcdet/datasets/nuscenes/nuscenes_dataset.py	/^    def get_lidar_with_sweeps(self, index, max_sweeps=1):$/;"	m	class:NuScenesDataset
+get_loss	pcdet/models/backbones_3d/vfe/image_vfe.py	/^    def get_loss(self):$/;"	m	class:ImageVFE
+get_loss	pcdet/models/backbones_3d/vfe/image_vfe_modules/ffn/depth_ffn.py	/^    def get_loss(self):$/;"	m	class:DepthFFN
+get_loss	pcdet/models/dense_heads/anchor_head_template.py	/^    def get_loss(self):$/;"	m	class:AnchorHeadTemplate
+get_loss	pcdet/models/dense_heads/point_head_box.py	/^    def get_loss(self, tb_dict=None):$/;"	m	class:PointHeadBox
+get_loss	pcdet/models/dense_heads/point_head_simple.py	/^    def get_loss(self, tb_dict=None):$/;"	m	class:PointHeadSimple
+get_loss	pcdet/models/dense_heads/point_intra_part_head.py	/^    def get_loss(self, tb_dict=None):$/;"	m	class:PointIntraPartOffsetHead
+get_loss	pcdet/models/roi_heads/roi_head_template.py	/^    def get_loss(self, tb_dict=None):$/;"	m	class:RoIHeadTemplate
+get_loss	pcdet/models/roi_heads/second_head.py	/^    def get_loss(self, tb_dict=None):$/;"	m	class:SECONDHead
+get_lr	tools/train_utils/optimization/learning_schedules_fastai.py	/^    def get_lr(self):$/;"	m	class:CosineWarmupLR
+get_mAP	pcdet/datasets/kitti/kitti_object_eval_python/eval.py	/^def get_mAP(prec):$/;"	f
+get_mAP_R40	pcdet/datasets/kitti/kitti_object_eval_python/eval.py	/^def get_mAP_R40(prec):$/;"	f
+get_master	tools/train_utils/optimization/fastai_optim.py	/^def get_master(layer_groups, flat_master: bool = False):$/;"	f
+get_max_iou_with_same_class	pcdet/models/roi_heads/target_assigner/proposal_target_layer.py	/^    def get_max_iou_with_same_class(rois, roi_labels, gt_boxes, gt_labels):$/;"	m	class:ProposalTargetLayer
+get_model	pcdet/models/backbones_3d/vfe/image_vfe_modules/ffn/ddn/ddn_template.py	/^    def get_model(self, constructor):$/;"	m	class:DDNTemplate
+get_no_evaluated_ckpt	tools/test.py	/^def get_no_evaluated_ckpt(ckpt_dir, ckpt_record_file, args):$/;"	f
+get_objects_from_label	pcdet/utils/object3d_kitti.py	/^def get_objects_from_label(label_file):$/;"	f
+get_official_eval_result	pcdet/datasets/kitti/kitti_object_eval_python/eval.py	/^def get_official_eval_result(gt_annos, dt_annos, current_classes, PR_detail_dict=None):$/;"	f
+get_output_feature_dim	pcdet/models/backbones_3d/vfe/image_vfe.py	/^    def get_output_feature_dim(self):$/;"	m	class:ImageVFE
+get_output_feature_dim	pcdet/models/backbones_3d/vfe/image_vfe_modules/ffn/depth_ffn.py	/^    def get_output_feature_dim(self):$/;"	m	class:DepthFFN
+get_output_feature_dim	pcdet/models/backbones_3d/vfe/mean_vfe.py	/^    def get_output_feature_dim(self):$/;"	m	class:MeanVFE
+get_output_feature_dim	pcdet/models/backbones_3d/vfe/pillar_vfe.py	/^    def get_output_feature_dim(self):$/;"	m	class:PillarVFE
+get_output_feature_dim	pcdet/models/backbones_3d/vfe/vfe_template.py	/^    def get_output_feature_dim(self):$/;"	m	class:VFETemplate
+get_pad_params	pcdet/utils/common_utils.py	/^def get_pad_params(desired_size, cur_size):$/;"	f
+get_paddings_indicator	pcdet/models/backbones_3d/vfe/pillar_vfe.py	/^    def get_paddings_indicator(self, actual_num, max_num, axis=0):$/;"	m	class:PillarVFE
+get_part_layer_loss	pcdet/models/dense_heads/point_head_template.py	/^    def get_part_layer_loss(self, tb_dict=None):$/;"	m	class:PointHeadTemplate
+get_road_plane	pcdet/datasets/kitti/kitti_dataset.py	/^    def get_road_plane(self, idx):$/;"	m	class:KittiDataset
+get_sample_data	pcdet/datasets/nuscenes/nuscenes_utils.py	/^def get_sample_data(nusc, sample_data_token, selected_anntokens=None):$/;"	f
+get_sampled_points	pcdet/models/backbones_3d/pfe/voxel_set_abstraction.py	/^    def get_sampled_points(self, batch_dict):$/;"	m	class:VoxelSetAbstraction
+get_split_parts	pcdet/datasets/kitti/kitti_object_eval_python/eval.py	/^def get_split_parts(num, num_part):$/;"	f
+get_sweep	pcdet/datasets/nuscenes/nuscenes_dataset.py	/^    def get_sweep(self, sweep_info):$/;"	m	class:NuScenesDataset
+get_target_assigner	pcdet/models/dense_heads/anchor_head_template.py	/^    def get_target_assigner(self, anchor_target_cfg):$/;"	m	class:AnchorHeadTemplate
+get_template_prediction	pcdet/datasets/kitti/kitti_dataset.py	/^        def get_template_prediction(num_samples):$/;"	f	function:KittiDataset.generate_prediction_dicts
+get_template_prediction	pcdet/datasets/nuscenes/nuscenes_dataset.py	/^        def get_template_prediction(num_samples):$/;"	f	function:NuScenesDataset.generate_prediction_dicts
+get_template_prediction	pcdet/datasets/waymo/waymo_dataset.py	/^        def get_template_prediction(num_samples):$/;"	f	function:WaymoDataset.generate_prediction_dicts
+get_thresholds	pcdet/datasets/kitti/kitti_object_eval_python/eval.py	/^def get_thresholds(scores: np.ndarray, num_gt, num_sample_pts=41):$/;"	f
+get_training_loss	pcdet/models/detectors/PartA2_net.py	/^    def get_training_loss(self):$/;"	m	class:PartA2Net
+get_training_loss	pcdet/models/detectors/caddn.py	/^    def get_training_loss(self):$/;"	m	class:CaDDN
+get_training_loss	pcdet/models/detectors/point_rcnn.py	/^    def get_training_loss(self):$/;"	m	class:PointRCNN
+get_training_loss	pcdet/models/detectors/pointpillar.py	/^    def get_training_loss(self):$/;"	m	class:PointPillar
+get_training_loss	pcdet/models/detectors/pv_rcnn.py	/^    def get_training_loss(self):$/;"	m	class:PVRCNN
+get_training_loss	pcdet/models/detectors/second_net.py	/^    def get_training_loss(self):$/;"	m	class:SECONDNet
+get_training_loss	pcdet/models/detectors/second_net_iou.py	/^    def get_training_loss(self):$/;"	m	class:SECONDNetIoU
+get_training_loss	pcdet/models/detectors/voxel_rcnn.py	/^    def get_training_loss(self):$/;"	m	class:VoxelRCNN
+get_velodyne_path	pcdet/datasets/kitti/kitti_object_eval_python/kitti_common.py	/^def get_velodyne_path(idx, prefix, training=True, relative_path=True):$/;"	f
+get_voxel_centers	pcdet/utils/common_utils.py	/^def get_voxel_centers(voxel_coords, downsample_times, voxel_size, point_cloud_range):$/;"	f
+global_rotation	pcdet/datasets/augmentor/augmentor_utils.py	/^def global_rotation(gt_boxes, points, rot_range):$/;"	f
+global_scaling	pcdet/datasets/augmentor/augmentor_utils.py	/^def global_scaling(gt_boxes, points, scale_range):$/;"	f
+gpuAssert	pcdet/ops/iou3d_nms/src/iou3d_nms.cpp	/^inline void gpuAssert(cudaError_t code, const char *file, int line, bool abort=true)$/;"	f
+grid_to_lidar_unproject	pcdet/models/backbones_3d/vfe/image_vfe_modules/f2v/frustum_grid_generator.py	/^    def grid_to_lidar_unproject(self, pc_min, voxel_size):$/;"	m	class:FrustumGridGenerator
+group_points_grad_wrapper_fast	pcdet/ops/pointnet2/pointnet2_batch/src/group_points.cpp	/^int group_points_grad_wrapper_fast(int b, int c, int n, int npoints, int nsample, $/;"	f
+group_points_grad_wrapper_stack	pcdet/ops/pointnet2/pointnet2_stack/src/group_points.cpp	/^int group_points_grad_wrapper_stack(int B, int M, int C, int N, int nsample,$/;"	f
+group_points_wrapper_fast	pcdet/ops/pointnet2/pointnet2_batch/src/group_points.cpp	/^int group_points_wrapper_fast(int b, int c, int n, int npoints, int nsample, $/;"	f
+group_points_wrapper_stack	pcdet/ops/pointnet2/pointnet2_stack/src/group_points.cpp	/^int group_points_wrapper_stack(int B, int M, int C, int nsample,$/;"	f
+grouping_operation	pcdet/ops/pointnet2/pointnet2_batch/pointnet2_utils.py	/^grouping_operation = GroupingOperation.apply$/;"	v
+grouping_operation	pcdet/ops/pointnet2/pointnet2_stack/pointnet2_utils.py	/^grouping_operation = GroupingOperation.apply$/;"	v
+gt_sampling	pcdet/datasets/augmentor/data_augmentor.py	/^    def gt_sampling(self, config=None):$/;"	m	class:DataAugmentor
+hard_voxelize	pcdet/ops/voxel/src/voxelization.h	/^inline int hard_voxelize(const at::Tensor &points, at::Tensor &voxels,$/;"	f	namespace:voxelization
+hard_voxelize_cpu	pcdet/ops/voxel/src/voxelization_cpu.cpp	/^int hard_voxelize_cpu(const at::Tensor& points, at::Tensor& voxels,$/;"	f	namespace:voxelization
+hard_voxelize_kernel	pcdet/ops/voxel/src/voxelization_cpu.cpp	/^void hard_voxelize_kernel(const torch::TensorAccessor<T, 2> points,$/;"	f	namespace:__anon2
+has_begin_end	pcdet/ops/spconv/include/prettyprint.h	/^struct has_begin_end : private sfinae_base {$/;"	s	namespace:pretty_print::detail
+has_const_iterator	pcdet/ops/spconv/include/prettyprint.h	/^struct has_const_iterator : private sfinae_base {$/;"	s	namespace:pretty_print::detail
+image_box_overlap	pcdet/datasets/kitti/kitti_object_eval_python/eval.py	/^def image_box_overlap(boxes, query_boxes, criterion=-1):$/;"	f
+img_to_rect	pcdet/utils/calibration_kitti.py	/^    def img_to_rect(self, u, v, depth_rect):$/;"	m	class:Calibration
+in_hull	pcdet/utils/box_utils.py	/^def in_hull(p, hull):$/;"	f
+include_kitti_data	pcdet/datasets/kitti/kitti_dataset.py	/^    def include_kitti_data(self, mode):$/;"	m	class:KittiDataset
+include_nuscenes_data	pcdet/datasets/nuscenes/nuscenes_dataset.py	/^    def include_nuscenes_data(self, mode):$/;"	m	class:NuScenesDataset
+include_waymo_data	pcdet/datasets/waymo/waymo_dataset.py	/^    def include_waymo_data(self, mode):$/;"	m	class:WaymoDataset
+index_	pcdet/ops/spconv/include/tensorview/helper_kernel.cu.h	/^    T index_;$/;"	m	struct:tv::detail::KernelLoop::Iterator
+indiceConv	pcdet/ops/spconv/include/spconv/spconv_ops.h	/^torch::Tensor indiceConv(torch::Tensor features, torch::Tensor filters,$/;"	f	namespace:spconv
+indiceConvBackward	pcdet/ops/spconv/include/spconv/spconv_ops.h	/^std::vector<torch::Tensor> indiceConvBackward(torch::Tensor features,$/;"	f	namespace:spconv
+indiceConvDevelopDontUse	pcdet/ops/spconv/include/spconv/spconv_ops.h	/^torch::Tensor indiceConvDevelopDontUse(torch::Tensor features,$/;"	f	namespace:spconv
+indiceMaxPool	pcdet/ops/spconv/include/spconv/pool_ops.h	/^torch::Tensor indiceMaxPool(torch::Tensor features, torch::Tensor indicePairs,$/;"	f	namespace:spconv
+indiceMaxPoolBackward	pcdet/ops/spconv/include/spconv/pool_ops.h	/^torch::Tensor indiceMaxPoolBackward(torch::Tensor features,$/;"	f	namespace:spconv
+indice_conv	pcdet/ops/spconv/functional.py	/^indice_conv = SparseConvFunction.apply$/;"	v
+indice_conv	pcdet/ops/spconv/ops.py	/^def indice_conv(features,$/;"	f
+indice_conv_backward	pcdet/ops/spconv/ops.py	/^def indice_conv_backward(features,$/;"	f
+indice_inverse_conv	pcdet/ops/spconv/functional.py	/^indice_inverse_conv = SparseInverseConvFunction.apply$/;"	v
+indice_maxpool	pcdet/ops/spconv/functional.py	/^indice_maxpool = SparseMaxPoolFunction.apply$/;"	v
+indice_maxpool	pcdet/ops/spconv/ops.py	/^def indice_maxpool(features, indice_pairs, indice_pair_num, num_activate_out):$/;"	f
+indice_maxpool_backward	pcdet/ops/spconv/ops.py	/^def indice_maxpool_backward(features, out_features, out_bp, indice_pairs,$/;"	f
+indice_subm_conv	pcdet/ops/spconv/functional.py	/^indice_subm_conv = SubMConvFunction.apply$/;"	v
+init_dist_pytorch	pcdet/utils/common_utils.py	/^def init_dist_pytorch(tcp_port, local_rank, backend='nccl'):$/;"	f
+init_dist_slurm	pcdet/utils/common_utils.py	/^def init_dist_slurm(tcp_port, local_rank, backend='nccl'):$/;"	f
+init_weights	pcdet/models/dense_heads/anchor_head_multi.py	/^    def init_weights(self):$/;"	m	class:SingleHead
+init_weights	pcdet/models/dense_heads/anchor_head_single.py	/^    def init_weights(self):$/;"	m	class:AnchorHeadSingle
+init_weights	pcdet/models/roi_heads/partA2_head.py	/^    def init_weights(self, weight_init='xavier'):$/;"	m	class:PartA2FCHead
+init_weights	pcdet/models/roi_heads/pointrcnn_head.py	/^    def init_weights(self, weight_init='xavier'):$/;"	m	class:PointRCNNHead
+init_weights	pcdet/models/roi_heads/pvrcnn_head.py	/^    def init_weights(self, weight_init='xavier'):$/;"	m	class:PVRCNNHead
+init_weights	pcdet/models/roi_heads/second_head.py	/^    def init_weights(self, weight_init='xavier'):$/;"	m	class:SECONDHead
+init_weights	pcdet/models/roi_heads/voxelrcnn_head.py	/^    def init_weights(self):$/;"	m	class:VoxelRCNNHead
+init_weights	pcdet/ops/pointnet2/pointnet2_stack/pointnet2_modules.py	/^    def init_weights(self):$/;"	m	class:StackSAModuleMSG
+init_weights	pcdet/ops/pointnet2/pointnet2_stack/voxel_pool_modules.py	/^    def init_weights(self):$/;"	m	class:NeighborVoxelSAModuleMSG
+inline	pcdet/datasets/kitti/kitti_object_eval_python/rotate_iou.py	/^    inline=True)$/;"	v
+inter	pcdet/datasets/kitti/kitti_object_eval_python/rotate_iou.py	/^def inter(rbbox1, rbbox2):$/;"	f
+interpolate_from_bev_features	pcdet/models/backbones_3d/pfe/voxel_set_abstraction.py	/^    def interpolate_from_bev_features(self, keypoints, bev_features, batch_size, bev_stride):$/;"	m	class:VoxelSetAbstraction
+intersection	pcdet/datasets/kitti/kitti_object_eval_python/kitti_common.py	/^def intersection(boxes1, boxes2, add1=False):$/;"	f
+intersection	pcdet/ops/iou3d_nms/src/iou3d_cpu.cpp	/^inline int intersection(const Point &p1, const Point &p0, const Point &q1, const Point &q0, Point &ans){$/;"	f
+iou	pcdet/datasets/kitti/kitti_object_eval_python/kitti_common.py	/^def iou(boxes1, boxes2, add1=False):$/;"	f
+iou_bev	pcdet/ops/iou3d_nms/src/iou3d_cpu.cpp	/^inline float iou_bev(const float *box_a, const float *box_b){$/;"	f
+is_container	pcdet/ops/spconv/include/prettyprint.h	/^struct is_container$/;"	s	namespace:pretty_print
+is_container	pcdet/ops/spconv/include/prettyprint.h	/^struct is_container<T[N]> : std::true_type {};$/;"	s	namespace:pretty_print
+is_container	pcdet/ops/spconv/include/prettyprint.h	/^struct is_container<char[N]> : std::false_type {};$/;"	s	namespace:pretty_print
+is_container	pcdet/ops/spconv/include/prettyprint.h	/^struct is_container<std::pair<T1, T2>> : std::true_type {};$/;"	s	namespace:pretty_print
+is_container	pcdet/ops/spconv/include/prettyprint.h	/^struct is_container<std::tuple<Args...>> : std::true_type {};$/;"	s	namespace:pretty_print
+is_container	pcdet/ops/spconv/include/prettyprint.h	/^struct is_container<std::valarray<T>> : std::true_type {};$/;"	s	namespace:pretty_print
+is_sparse_conv	pcdet/ops/spconv/modules.py	/^def is_sparse_conv(module):$/;"	f
+is_spconv_module	pcdet/ops/spconv/modules.py	/^def is_spconv_module(module):$/;"	f
+is_tuple	tools/train_utils/optimization/fastai_optim.py	/^def is_tuple(x) -> bool: return isinstance(x, tuple)$/;"	f
+iterator	pcdet/ops/spconv/include/tensorview/tensorview.h	/^    TV_HOST_DEVICE_INLINE iterator(pointer ptr) : ptr_(ptr) {}$/;"	f	class:tv::SimpleVector::iterator
+iterator	pcdet/ops/spconv/include/tensorview/tensorview.h	/^  class iterator {$/;"	c	struct:tv::SimpleVector
+iterator_category	pcdet/ops/spconv/include/tensorview/tensorview.h	/^    typedef std::forward_iterator_tag iterator_category;$/;"	t	class:tv::SimpleVector::const_iterator
+iterator_category	pcdet/ops/spconv/include/tensorview/tensorview.h	/^    typedef std::forward_iterator_tag iterator_category;$/;"	t	class:tv::SimpleVector::iterator
+keep_arrays_by_name	pcdet/utils/common_utils.py	/^def keep_arrays_by_name(gt_names, used_classes):$/;"	f
+kitti_eval	pcdet/datasets/waymo/waymo_dataset.py	/^        def kitti_eval(eval_det_annos, eval_gt_annos):$/;"	f	function:WaymoDataset.evaluation
+kitti_result_line	pcdet/datasets/kitti/kitti_object_eval_python/kitti_common.py	/^def kitti_result_line(result_dict, precision=4):$/;"	f
+launch	pcdet/ops/spconv/include/tensorview/helper_launch.h	/^namespace launch$/;"	n	namespace:tv
+lidar_nusc_box_to_global	pcdet/datasets/nuscenes/nuscenes_utils.py	/^def lidar_nusc_box_to_global(nusc, boxes, sample_token):$/;"	f
+lidar_to_img	pcdet/utils/calibration_kitti.py	/^    def lidar_to_img(self, pts_lidar):$/;"	m	class:Calibration
+lidar_to_local_coords_cpu	pcdet/ops/roiaware_pool3d/src/roiaware_pool3d.cpp	/^inline void lidar_to_local_coords_cpu(float shift_x, float shift_y, float rot_angle, float &local_x, float &local_y){$/;"	f
+lidar_to_rect	pcdet/utils/calibration_kitti.py	/^    def lidar_to_rect(self, pts_lidar):$/;"	m	class:Calibration
+limit_period	pcdet/datasets/waymo/waymo_eval.py	/^def limit_period(val, offset=0.5, period=np.pi):$/;"	f
+limit_period	pcdet/utils/common_utils.py	/^def limit_period(val, offset=0.5, period=np.pi):$/;"	f
+line_segment_intersection	pcdet/datasets/kitti/kitti_object_eval_python/rotate_iou.py	/^def line_segment_intersection(pts1, pts2, i, j, temp_pts):$/;"	f
+line_segment_intersection_v1	pcdet/datasets/kitti/kitti_object_eval_python/rotate_iou.py	/^def line_segment_intersection_v1(pts1, pts2, i, j, temp_pts):$/;"	f
+listify	tools/train_utils/optimization/fastai_optim.py	/^def listify(p=None, q=None):$/;"	f
+load_data_to_gpu	pcdet/models/__init__.py	/^def load_data_to_gpu(batch_dict):$/;"	f
+load_params_from_file	pcdet/models/detectors/detector3d_template.py	/^    def load_params_from_file(self, filename, logger, to_cpu=False):$/;"	m	class:Detector3DTemplate
+load_params_with_optimizer	pcdet/models/detectors/detector3d_template.py	/^    def load_params_with_optimizer(self, filename, to_cpu=False, optimizer=None, logger=None):$/;"	m	class:Detector3DTemplate
+log_config_to_file	pcdet/config.py	/^def log_config_to_file(cfg, pre='cfg', logger=None):$/;"	f
+logger	pcdet/datasets/nuscenes/nuscenes_dataset.py	/^            logger=common_utils.create_logger(), training=True$/;"	v
+lr	tools/train_utils/optimization/fastai_optim.py	/^    def lr(self) -> float:$/;"	m	class:OptimWrapper
+lr	tools/train_utils/optimization/fastai_optim.py	/^    def lr(self, val: float) -> None:$/;"	m	class:OptimWrapper
+lr_lbmd	tools/train_utils/optimization/__init__.py	/^    def lr_lbmd(cur_epoch):$/;"	f	function:build_scheduler
+lrs	tools/train_utils/optimization/learning_schedules_fastai.py	/^    lrs = []$/;"	v
+mArray	pcdet/ops/spconv/include/tensorview/tensorview.h	/^  T mArray[MaxDim];$/;"	m	struct:tv::SimpleVector
+mCurTime	pcdet/ops/spconv/include/utility/timer.h	/^  std::chrono::time_point<std::chrono::steady_clock> mCurTime;$/;"	m	struct:spconv::CPUTimer
+mCurTime	pcdet/ops/spconv/include/utility/timer.h	/^  std::chrono::time_point<std::chrono::steady_clock> mCurTime;$/;"	m	struct:spconv::CudaContextTimer
+mPtr	pcdet/ops/spconv/include/tensorview/tensorview.h	/^  T *mPtr = nullptr;$/;"	m	struct:tv::TensorView
+mShape	pcdet/ops/spconv/include/tensorview/tensorview.h	/^  Shape mShape;$/;"	m	struct:tv::TensorView
+mSize	pcdet/ops/spconv/include/tensorview/tensorview.h	/^  size_t mSize = 0;$/;"	m	struct:tv::SimpleVector
+mSlices	pcdet/ops/spconv/include/tensorview/tensorview.h	/^  int mSlices[3];$/;"	m	struct:tv::Slice
+mStream	pcdet/ops/spconv/include/tensorview/tensorview.h	/^  cudaStream_t mStream = 0;$/;"	m	struct:tv::GPU
+m_map	pcdet/ops/spconv/include/prettyprint.h	/^  const T &m_map;$/;"	m	struct:pretty_print::bucket_print_wrapper
+main	pcdet/datasets/waymo/waymo_eval.py	/^def main():$/;"	f
+main	tools/demo.py	/^def main():$/;"	f
+main	tools/playground.py	/^def main():$/;"	f
+main	tools/test.py	/^def main():$/;"	f
+main	tools/train.py	/^def main():$/;"	f
+make_cuda_ext	setup.py	/^def make_cuda_ext(name,$/;"	f
+make_fc_layers	pcdet/models/dense_heads/point_head_template.py	/^    def make_fc_layers(fc_cfg, input_channels, output_channels):$/;"	m	class:PointHeadTemplate
+make_fc_layers	pcdet/models/roi_heads/roi_head_template.py	/^    def make_fc_layers(self, input_channels, output_channels, fc_list):$/;"	m	class:RoIHeadTemplate
+make_multihead	pcdet/models/dense_heads/anchor_head_multi.py	/^    def make_multihead(self, input_channels):$/;"	m	class:AnchorHeadMulti
+map_func	pcdet/datasets/kitti/kitti_object_eval_python/kitti_common.py	/^    def map_func(idx):$/;"	f	function:get_kitti_image_info
+map_name_from_general_to_detection	pcdet/datasets/nuscenes/nuscenes_utils.py	/^map_name_from_general_to_detection = {$/;"	v
+mask_boxes_outside_range_numpy	pcdet/utils/box_utils.py	/^def mask_boxes_outside_range_numpy(boxes, limit_range, min_num_corners=1):$/;"	f
+mask_by_distance	pcdet/datasets/waymo/waymo_eval.py	/^    def mask_by_distance(self, distance_thresh, boxes_3d, *args):$/;"	m	class:OpenPCDetWaymoDetectionMetricsEstimator
+mask_points_and_boxes_outside_range	pcdet/datasets/processor/data_processor.py	/^    def mask_points_and_boxes_outside_range(self, data_dict=None, config=None):$/;"	m	class:DataProcessor
+mask_points_by_range	pcdet/utils/common_utils.py	/^def mask_points_by_range(points, limit_range):$/;"	f
+master2model	tools/train_utils/optimization/fastai_optim.py	/^def master2model(model_params, master_params, flat_master: bool = False) -> None:$/;"	f
+max	pcdet/ops/iou3d_nms/src/iou3d_cpu.cpp	/^inline float max(float a, float b){$/;"	f
+max_sweeps	pcdet/datasets/nuscenes/nuscenes_dataset.py	/^            max_sweeps=dataset_cfg.MAX_SWEEPS,$/;"	v
+merge_all_iters_to_one_epoch	pcdet/datasets/dataset.py	/^    def merge_all_iters_to_one_epoch(self, merge=True, epochs=None):$/;"	m	class:DatasetTemplate
+merge_new_config	pcdet/config.py	/^def merge_new_config(config, new_config):$/;"	f
+merge_results_dist	pcdet/utils/common_utils.py	/^def merge_results_dist(result_part, size, tmpdir):$/;"	f
+min	pcdet/ops/iou3d_nms/src/iou3d_cpu.cpp	/^inline float min(float a, float b){$/;"	f
+mode	pcdet/datasets/dataset.py	/^    def mode(self):$/;"	m	class:DatasetTemplate
+mode	pcdet/models/detectors/detector3d_template.py	/^    def mode(self):$/;"	m	class:Detector3DTemplate
+model_fn_decorator	pcdet/models/__init__.py	/^def model_fn_decorator():$/;"	f
+model_func	pcdet/models/__init__.py	/^    def model_func(model, batch_dict):$/;"	f	function:model_fn_decorator
+model_g2master_g	tools/train_utils/optimization/fastai_optim.py	/^def model_g2master_g(model_params, master_params, flat_master: bool = False) -> None:$/;"	f
+model_state_to_cpu	tools/train_utils/train_utils.py	/^def model_state_to_cpu(model_state):$/;"	f
+mom	tools/train_utils/optimization/fastai_optim.py	/^    def mom(self) -> float:$/;"	m	class:OptimWrapper
+mom	tools/train_utils/optimization/fastai_optim.py	/^    def mom(self, val: float) -> None:$/;"	m	class:OptimWrapper
+moms	tools/train_utils/optimization/learning_schedules_fastai.py	/^    moms = []$/;"	v
+mp_for_each	pcdet/ops/spconv/include/spconv/mp_helper.h	/^constexpr F mp_for_each(F &&f) {$/;"	f	namespace:spconv
+mp_for_each_impl	pcdet/ops/spconv/include/spconv/mp_helper.h	/^constexpr F mp_for_each_impl(mp_list<>, F &&f) {$/;"	f	namespace:spconv::detail
+mp_for_each_impl	pcdet/ops/spconv/include/spconv/mp_helper.h	/^constexpr F mp_for_each_impl(mp_list<T...>, F &&f) {$/;"	f	namespace:spconv::detail
+mp_list	pcdet/ops/spconv/include/spconv/mp_helper.h	/^struct mp_list {};$/;"	s	namespace:spconv
+mp_rename_impl	pcdet/ops/spconv/include/spconv/mp_helper.h	/^struct mp_rename_impl {$/;"	s	namespace:spconv::detail
+mp_rename_impl	pcdet/ops/spconv/include/spconv/mp_helper.h	/^struct mp_rename_impl<A<T...>, B> {$/;"	s	namespace:spconv::detail
+multi_classes_nms	pcdet/models/model_utils/model_nms_utils.py	/^def multi_classes_nms(cls_scores, box_preds, nms_config, score_thresh=None):$/;"	f
+n	pcdet/ops/spconv/include/prettyprint.h	/^  const size_type n;$/;"	m	struct:pretty_print::bucket_print_wrapper
+ndim	pcdet/ops/spconv/include/tensorview/tensorview.h	/^  TV_HOST_DEVICE_INLINE int ndim() const { return mShape.ndim(); }$/;"	f	struct:tv::TensorView
+ndim	pcdet/ops/spconv/include/tensorview/tensorview.h	/^  TV_HOST_DEVICE_INLINE size_t ndim() const { return this->mSize; }$/;"	f	struct:tv::ShapeBase
+new	tools/train_utils/optimization/fastai_optim.py	/^    def new(self, layer_groups):$/;"	m	class:OptimWrapper
+nms_gpu	pcdet/ops/iou3d_nms/iou3d_nms_utils.py	/^def nms_gpu(boxes, scores, thresh, pre_maxsize=None, **kwargs):$/;"	f
+nms_gpu	pcdet/ops/iou3d_nms/src/iou3d_nms.cpp	/^int nms_gpu(at::Tensor boxes, at::Tensor keep, float nms_overlap_thresh){$/;"	f
+nms_normal_gpu	pcdet/ops/iou3d_nms/iou3d_nms_utils.py	/^def nms_normal_gpu(boxes, scores, thresh, **kwargs):$/;"	f
+nms_normal_gpu	pcdet/ops/iou3d_nms/src/iou3d_nms.cpp	/^int nms_normal_gpu(at::Tensor boxes, at::Tensor keep, float nms_overlap_thresh){$/;"	f
+normalize_coords	pcdet/utils/transform_utils.py	/^def normalize_coords(coords, shape):$/;"	f
+num_children	tools/train_utils/optimization/__init__.py	/^        def num_children(m: nn.Module) -> int:$/;"	f	function:build_optimizer
+num_point_features	pcdet/datasets/processor/point_feature_encoder.py	/^    def num_point_features(self):$/;"	m	class:PointFeatureEncoder
+nuscenes_dataset	pcdet/datasets/nuscenes/nuscenes_dataset.py	/^        nuscenes_dataset = NuScenesDataset($/;"	v
+operator !=	pcdet/ops/spconv/include/tensorview/helper_kernel.cu.h	/^    __forceinline__ __device__ bool operator!=(const Iterator &other) const {$/;"	f	struct:tv::detail::KernelLoop::Iterator
+operator !=	pcdet/ops/spconv/include/tensorview/tensorview.h	/^    TV_HOST_DEVICE_INLINE bool operator!=(const self_type &rhs) {$/;"	f	class:tv::SimpleVector::const_iterator
+operator !=	pcdet/ops/spconv/include/tensorview/tensorview.h	/^    TV_HOST_DEVICE_INLINE bool operator!=(const self_type &rhs) {$/;"	f	class:tv::SimpleVector::iterator
+operator !=	pcdet/ops/spconv/include/tensorview/tensorview.h	/^bool operator!=(const SimpleVector<T, MaxDim> &lfs,$/;"	f	namespace:tv
+operator ()	pcdet/ops/spconv/include/prettyprint.h	/^  inline void operator()(ostream_type &stream) const {$/;"	f	struct:pretty_print::print_container_helper
+operator ()	pcdet/ops/spconv/include/tensorview/tensorview.h	/^  TV_HOST_DEVICE_INLINE T &operator()() {$/;"	f	struct:tv::TensorView
+operator ()	pcdet/ops/spconv/include/tensorview/tensorview.h	/^  TV_HOST_DEVICE_INLINE T &operator()(Inds... inds) {$/;"	f	struct:tv::TensorView
+operator ()	pcdet/ops/spconv/include/tensorview/tensorview.h	/^  TV_HOST_DEVICE_INLINE T &operator()(T1 i1) {$/;"	f	struct:tv::TensorView
+operator ()	pcdet/ops/spconv/include/tensorview/tensorview.h	/^  TV_HOST_DEVICE_INLINE T &operator()(T1 i1, T2 i2) {$/;"	f	struct:tv::TensorView
+operator ()	pcdet/ops/spconv/include/tensorview/tensorview.h	/^  TV_HOST_DEVICE_INLINE T &operator()(T1 i1, T2 i2, T3 i3) {$/;"	f	struct:tv::TensorView
+operator ()	pcdet/ops/spconv/include/tensorview/tensorview.h	/^  TV_HOST_DEVICE_INLINE T &operator()(T1 i1, T2 i2, T3 i3, T4 i4) {$/;"	f	struct:tv::TensorView
+operator ()	pcdet/ops/spconv/include/tensorview/tensorview.h	/^  TV_HOST_DEVICE_INLINE const T &operator()() const {$/;"	f	struct:tv::TensorView
+operator ()	pcdet/ops/spconv/include/tensorview/tensorview.h	/^  TV_HOST_DEVICE_INLINE const T &operator()(Inds... inds) const {$/;"	f	struct:tv::TensorView
+operator ()	pcdet/ops/spconv/include/tensorview/tensorview.h	/^  TV_HOST_DEVICE_INLINE const T &operator()(T1 i1) const {$/;"	f	struct:tv::TensorView
+operator ()	pcdet/ops/spconv/include/tensorview/tensorview.h	/^  TV_HOST_DEVICE_INLINE const T &operator()(T1 i1, T2 i2) const {$/;"	f	struct:tv::TensorView
+operator ()	pcdet/ops/spconv/include/tensorview/tensorview.h	/^  TV_HOST_DEVICE_INLINE const T &operator()(T1 i1, T2 i2, T3 i3) const {$/;"	f	struct:tv::TensorView
+operator ()	pcdet/ops/spconv/include/tensorview/tensorview.h	/^  TV_HOST_DEVICE_INLINE const T &operator()(T1 i1, T2 i2, T3 i3, T4 i4) const {$/;"	f	struct:tv::TensorView
+operator ()	pcdet/ops/spconv/src/indice.cc	/^  Index operator()(const tv::CPU& d, tv::TensorView<const Index> indicesIn,$/;"	f	struct:spconv::functor::CreateConvIndicePairFunctor
+operator ()	pcdet/ops/spconv/src/indice.cc	/^  Index operator()(const tv::CPU& d, tv::TensorView<const Index> indicesIn,$/;"	f	struct:spconv::functor::CreateSubMIndicePairFunctor
+operator ()	pcdet/ops/spconv/src/maxpool.cc	/^  void operator()(const tv::CPU &d, tv::TensorView<T> outFeatures,$/;"	f	struct:spconv::functor::SparseMaxPoolForwardFunctor
+operator ()	pcdet/ops/spconv/src/maxpool.cc	/^  void operator()(const tv::CPU &d, tv::TensorView<const T> outFeatures,$/;"	f	struct:spconv::functor::SparseMaxPoolBackwardFunctor
+operator ()	pcdet/ops/spconv/src/reordering.cc	/^  void operator()(const tv::CPU& d, tv::TensorView<T> buffer,$/;"	f	struct:spconv::functor::SparseGatherFunctor
+operator ()	pcdet/ops/spconv/src/reordering.cc	/^  void operator()(const tv::CPU& d, tv::TensorView<T> outFeatures,$/;"	f	struct:spconv::functor::SparseScatterAddFunctor
+operator *	pcdet/ops/spconv/include/tensorview/helper_kernel.cu.h	/^    __forceinline__ __device__ T operator*() const { return index_; }$/;"	f	struct:tv::detail::KernelLoop::Iterator
+operator *	pcdet/ops/spconv/include/tensorview/tensorview.h	/^    TV_HOST_DEVICE_INLINE reference operator*() { return *ptr_; }$/;"	f	class:tv::SimpleVector::const_iterator
+operator *	pcdet/ops/spconv/include/tensorview/tensorview.h	/^    TV_HOST_DEVICE_INLINE reference operator*() { return *ptr_; }$/;"	f	class:tv::SimpleVector::iterator
+operator +	pcdet/ops/iou3d_nms/src/iou3d_cpu.cpp	/^    __device__ Point operator +(const Point &b)const{$/;"	f	struct:Point
+operator ++	pcdet/ops/spconv/include/tensorview/helper_kernel.cu.h	/^    __forceinline__ __device__ Iterator &operator++() {$/;"	f	struct:tv::detail::KernelLoop::Iterator
+operator ++	pcdet/ops/spconv/include/tensorview/tensorview.h	/^    TV_HOST_DEVICE_INLINE self_type operator++() {$/;"	f	class:tv::SimpleVector::const_iterator
+operator ++	pcdet/ops/spconv/include/tensorview/tensorview.h	/^    TV_HOST_DEVICE_INLINE self_type operator++() {$/;"	f	class:tv::SimpleVector::iterator
+operator ++	pcdet/ops/spconv/include/tensorview/tensorview.h	/^    TV_HOST_DEVICE_INLINE self_type operator++(int junk) {$/;"	f	class:tv::SimpleVector::const_iterator
+operator ++	pcdet/ops/spconv/include/tensorview/tensorview.h	/^    TV_HOST_DEVICE_INLINE self_type operator++(int junk) {$/;"	f	class:tv::SimpleVector::iterator
+operator -	pcdet/ops/iou3d_nms/src/iou3d_cpu.cpp	/^    __device__ Point operator -(const Point &b)const{$/;"	f	struct:Point
+operator ->	pcdet/ops/spconv/include/tensorview/tensorview.h	/^    TV_HOST_DEVICE_INLINE pointer operator->() { return ptr_; }$/;"	f	class:tv::SimpleVector::const_iterator
+operator ->	pcdet/ops/spconv/include/tensorview/tensorview.h	/^    TV_HOST_DEVICE_INLINE pointer operator->() { return ptr_; }$/;"	f	class:tv::SimpleVector::iterator
+operator <<	pcdet/ops/spconv/include/prettyprint.h	/^inline std::basic_ostream<TChar, TCharTraits> &operator<<($/;"	f	namespace:pretty_print
+operator <<	pcdet/ops/spconv/include/prettyprint.h	/^operator<<(basic_ostream<TChar, TCharTraits> &stream, const T &container) {$/;"	f	namespace:std
+operator <<	pcdet/ops/spconv/include/tensorview/tensorview.h	/^Os &operator<<(Os &os, const TensorView<T, Rank> &dt) {$/;"	f	namespace:tv
+operator <<	pcdet/ops/spconv/include/tensorview/tensorview.h	/^Os &operator<<(Os &os, const TensorView<const T, Rank> &dt) {$/;"	f	namespace:tv
+operator ==	pcdet/ops/spconv/include/tensorview/tensorview.h	/^    TV_HOST_DEVICE_INLINE bool operator==(const self_type &rhs) {$/;"	f	class:tv::SimpleVector::const_iterator
+operator ==	pcdet/ops/spconv/include/tensorview/tensorview.h	/^    TV_HOST_DEVICE_INLINE bool operator==(const self_type &rhs) {$/;"	f	class:tv::SimpleVector::iterator
+operator ==	pcdet/ops/spconv/include/tensorview/tensorview.h	/^bool operator==(const SimpleVector<T, MaxDim> &lfs,$/;"	f	namespace:tv
+operator []	pcdet/ops/spconv/include/tensorview/tensorview.h	/^  TV_HOST_DEVICE_INLINE T &operator[](int idx) {$/;"	f	struct:tv::SimpleVector
+operator []	pcdet/ops/spconv/include/tensorview/tensorview.h	/^  TV_HOST_DEVICE_INLINE T &operator[](int idx) {$/;"	f	struct:tv::TensorView
+operator []	pcdet/ops/spconv/include/tensorview/tensorview.h	/^  TV_HOST_DEVICE_INLINE TensorView<T, Rank> operator[]($/;"	f	struct:tv::TensorView
+operator []	pcdet/ops/spconv/include/tensorview/tensorview.h	/^  TV_HOST_DEVICE_INLINE const T &operator[](int idx) const {$/;"	f	struct:tv::SimpleVector
+operator []	pcdet/ops/spconv/include/tensorview/tensorview.h	/^  TV_HOST_DEVICE_INLINE const TensorView<T, Rank> operator[]($/;"	f	struct:tv::TensorView
+operator []	pcdet/ops/spconv/include/tensorview/tensorview.h	/^  TV_HOST_DEVICE_INLINE const int &operator[](int idx) const {$/;"	f	struct:tv::Slice
+operator []	pcdet/ops/spconv/include/tensorview/tensorview.h	/^  TV_HOST_DEVICE_INLINE int &operator[](int idx) {$/;"	f	struct:tv::Slice
+opt	tools/train_utils/optimization/learning_schedules_fastai.py	/^    opt = FakeOptim()  # 3e-3, wd=0.4, div_factor=10$/;"	v
+opt_n_threads	pcdet/ops/pointnet2/pointnet2_batch/src/cuda_utils.h	/^inline int opt_n_threads(int work_size) {$/;"	f
+paramsGrid	pcdet/ops/spconv/include/paramsgrid.h	/^std::vector<std::tuple<TArgs...>> paramsGrid(std::vector<TArgs>... args) {$/;"	f
+params_grid	pcdet/ops/spconv/test_utils.py	/^def params_grid(*params):$/;"	f
+parse_config	tools/demo.py	/^def parse_config():$/;"	f
+parse_config	tools/playground.py	/^def parse_config():$/;"	f
+parse_config	tools/test.py	/^def parse_config():$/;"	f
+parse_config	tools/train.py	/^def parse_config():$/;"	f
+parser	pcdet/datasets/nuscenes/nuscenes_dataset.py	/^    parser = argparse.ArgumentParser(description='arg parser')$/;"	v
+parser	pcdet/datasets/waymo/waymo_dataset.py	/^    parser = argparse.ArgumentParser(description='arg parser')$/;"	v
+point_cmp	pcdet/ops/iou3d_nms/src/iou3d_cpu.cpp	/^inline int point_cmp(const Point &a, const Point &b, const Point &center){$/;"	f
+point_in_quadrilateral	pcdet/datasets/kitti/kitti_object_eval_python/rotate_iou.py	/^def point_in_quadrilateral(pt_x, pt_y, corners):$/;"	f
+pointer	pcdet/ops/spconv/include/tensorview/tensorview.h	/^    typedef T *pointer;$/;"	t	class:tv::SimpleVector::iterator
+pointer	pcdet/ops/spconv/include/tensorview/tensorview.h	/^    typedef const T *pointer;$/;"	t	class:tv::SimpleVector::const_iterator
+points_in_boxes_cpu	pcdet/ops/roiaware_pool3d/roiaware_pool3d_utils.py	/^def points_in_boxes_cpu(points, boxes):$/;"	f
+points_in_boxes_cpu	pcdet/ops/roiaware_pool3d/src/roiaware_pool3d.cpp	/^int points_in_boxes_cpu(at::Tensor boxes_tensor, at::Tensor pts_tensor, at::Tensor pts_indices_tensor){$/;"	f
+points_in_boxes_gpu	pcdet/ops/roiaware_pool3d/roiaware_pool3d_utils.py	/^def points_in_boxes_gpu(points, boxes):$/;"	f
+points_in_boxes_gpu	pcdet/ops/roiaware_pool3d/src/roiaware_pool3d.cpp	/^int points_in_boxes_gpu(at::Tensor boxes_tensor, at::Tensor pts_tensor, at::Tensor box_idx_of_points_tensor){$/;"	f
+points_to_voxel_3d_np	pcdet/ops/spconv/include/spconv/point2voxel.h	/^int points_to_voxel_3d_np(py::array_t<DType> points, py::array_t<DType> voxels,$/;"	f	namespace:spconv
+points_to_voxel_3d_np_height	pcdet/ops/spconv/include/spconv/point2voxel.h	/^int points_to_voxel_3d_np_height($/;"	f	namespace:spconv
+points_to_voxel_3d_np_mean	pcdet/ops/spconv/include/spconv/point2voxel.h	/^int points_to_voxel_3d_np_mean(py::array_t<DType> points,$/;"	f	namespace:spconv
+points_to_voxel_3d_with_filtering	pcdet/ops/spconv/include/spconv/point2voxel.h	/^int points_to_voxel_3d_with_filtering($/;"	f	namespace:spconv
+pop_back	pcdet/ops/spconv/include/tensorview/tensorview.h	/^  TV_HOST_DEVICE_INLINE void pop_back() {$/;"	f	struct:tv::SimpleVector
+post_act_block	pcdet/models/backbones_3d/spconv_backbone.py	/^def post_act_block(in_channels, out_channels, kernel_size, indice_key=None, stride=1, padding=0,$/;"	f
+post_act_block	pcdet/models/roi_heads/partA2_head.py	/^    def post_act_block(self, in_channels, out_channels, kernel_size, indice_key, stride=1, padding=0, conv_type='subm'):$/;"	m	class:PartA2FCHead
+post_processing	pcdet/models/detectors/detector3d_template.py	/^    def post_processing(self, batch_dict):$/;"	m	class:Detector3DTemplate
+post_processing	pcdet/models/detectors/second_net_iou.py	/^    def post_processing(self, batch_dict):$/;"	m	class:SECONDNetIoU
+postfix	pcdet/ops/spconv/include/prettyprint.h	/^  const char_type *postfix;$/;"	m	struct:pretty_print::delimiters_values
+prefix	pcdet/ops/spconv/include/prettyprint.h	/^  const char_type *prefix;$/;"	m	struct:pretty_print::delimiters_values
+prepareDeConvIndicePairsKernel	pcdet/ops/spconv/include/spconv/indice.cu.h	/^__global__ void prepareDeConvIndicePairsKernel($/;"	f	namespace:spconv
+prepareIndicePairsKernel	pcdet/ops/spconv/include/spconv/indice.cu.h	/^__global__ void prepareIndicePairsKernel($/;"	f	namespace:spconv
+prepareSubMGridKernel	pcdet/ops/spconv/include/spconv/indice.cu.h	/^__global__ void prepareSubMGridKernel($/;"	f	namespace:spconv
+prepare_data	pcdet/datasets/dataset.py	/^    def prepare_data(self, data_dict):$/;"	m	class:DatasetTemplate
+preprocess	pcdet/models/backbones_3d/vfe/image_vfe_modules/ffn/ddn/ddn_template.py	/^    def preprocess(self, images):$/;"	m	class:DDNTemplate
+pretty_print	pcdet/ops/spconv/include/prettyprint.h	/^namespace pretty_print {$/;"	n
+pretty_print_array	pcdet/ops/spconv/include/prettyprint.h	/^inline pretty_print::array_wrapper_n<T> pretty_print_array(const T *const a,$/;"	f
+printTensorView	pcdet/ops/spconv/include/tensorview/tensorview.h	/^TV_HOST_DEVICE void printTensorView(TensorView<T> tensor) {$/;"	f	namespace:tv
+printTensorView	pcdet/ops/spconv/include/tensorview/tensorview.h	/^TV_HOST_DEVICE void printTensorView(const T *ptr, Shape shape) {$/;"	f	namespace:tv
+printTensorView	pcdet/ops/spconv/include/tensorview/tensorview.h	/^TV_HOST_DEVICE void printTensorView(const T *ptr, Shape shape,$/;"	f	namespace:tv
+printTensorView	pcdet/ops/spconv/include/tensorview/tensorview.h	/^TV_HOST_DEVICE void printTensorView(const TensorView<T> tensor,$/;"	f	namespace:tv
+print_body	pcdet/ops/spconv/include/prettyprint.h	/^    static void print_body(const U &c, ostream_type &stream) {$/;"	f	struct:pretty_print::print_container_helper::printer
+print_body	pcdet/ops/spconv/include/prettyprint.h	/^  static void print_body(const element_type &c, ostream_type &stream) {$/;"	f	struct:pretty_print::print_container_helper::printer
+print_body	pcdet/ops/spconv/include/prettyprint.h	/^  static void print_body(const std::pair<T1, T2> &c, ostream_type &stream) {$/;"	f	struct:pretty_print::print_container_helper::printer
+print_container_helper	pcdet/ops/spconv/include/prettyprint.h	/^  print_container_helper(const T &container) : container_(container) {}$/;"	f	struct:pretty_print::print_container_helper
+print_container_helper	pcdet/ops/spconv/include/prettyprint.h	/^struct print_container_helper {$/;"	s	namespace:pretty_print
+print_str	pcdet/datasets/kitti/kitti_object_eval_python/eval.py	/^def print_str(value, *arg, sstream=None):$/;"	f
+printer	pcdet/ops/spconv/include/prettyprint.h	/^                              TDelimiters>::printer<std::pair<T1, T2>> {$/;"	s	class:pretty_print::print_container_helper
+printer	pcdet/ops/spconv/include/prettyprint.h	/^                              TDelimiters>::printer<std::tuple<Args...>> {$/;"	s	class:pretty_print::print_container_helper
+printer	pcdet/ops/spconv/include/prettyprint.h	/^  struct printer {$/;"	s	struct:pretty_print::print_container_helper
+printfTypeFormat	pcdet/ops/spconv/include/tensorview/tensorview.h	/^constexpr const char *printfTypeFormat(double val) {$/;"	f	namespace:tv::detail
+printfTypeFormat	pcdet/ops/spconv/include/tensorview/tensorview.h	/^constexpr const char *printfTypeFormat(float val) {$/;"	f	namespace:tv::detail
+printfTypeFormat	pcdet/ops/spconv/include/tensorview/tensorview.h	/^constexpr const char *printfTypeFormat(int val) {$/;"	f	namespace:tv::detail
+printfTypeFormat	pcdet/ops/spconv/include/tensorview/tensorview.h	/^constexpr const char *printfTypeFormat(long val) {$/;"	f	namespace:tv::detail
+printfTypeFormat	pcdet/ops/spconv/include/tensorview/tensorview.h	/^constexpr const char *printfTypeFormat(unsigned long val) {$/;"	f	namespace:tv::detail
+printfTypeFormat	pcdet/ops/spconv/include/tensorview/tensorview.h	/^constexpr const char *printfTypeFormat(unsigned val) {$/;"	f	namespace:tv::detail
+process_single_scene	pcdet/datasets/kitti/kitti_dataset.py	/^        def process_single_scene(sample_idx):$/;"	f	function:KittiDataset.get_infos
+process_single_sequence	pcdet/datasets/waymo/waymo_utils.py	/^def process_single_sequence(sequence_file, save_path, sampled_interval, has_label=True):$/;"	f
+processed_data_tag	pcdet/datasets/waymo/waymo_dataset.py	/^            processed_data_tag=dataset_cfg.PROCESSED_DATA_TAG$/;"	v
+project_to_image	pcdet/utils/transform_utils.py	/^def project_to_image(project, points):$/;"	f
+proposal_layer	pcdet/models/roi_heads/roi_head_template.py	/^    def proposal_layer(self, batch_dict, nms_config):$/;"	m	class:RoIHeadTemplate
+ptr_	pcdet/ops/spconv/include/tensorview/tensorview.h	/^    pointer ptr_;$/;"	m	class:tv::SimpleVector::const_iterator
+ptr_	pcdet/ops/spconv/include/tensorview/tensorview.h	/^    pointer ptr_;$/;"	m	class:tv::SimpleVector::iterator
+push_back	pcdet/ops/spconv/include/tensorview/tensorview.h	/^  TV_HOST_DEVICE_INLINE void push_back(T s) {$/;"	f	struct:tv::SimpleVector
+put_boxes_on_road_planes	pcdet/datasets/augmentor/database_sampler.py	/^    def put_boxes_on_road_planes(gt_boxes, road_planes, calib):$/;"	m	class:DataBaseSampler
+quadrilateral_intersection	pcdet/datasets/kitti/kitti_object_eval_python/rotate_iou.py	/^def quadrilateral_intersection(pts1, pts2, int_pts):$/;"	f
+quaternion_yaw	pcdet/datasets/nuscenes/nuscenes_utils.py	/^def quaternion_yaw(q: Quaternion) -> float:$/;"	f
+random_flip_along_x	pcdet/datasets/augmentor/augmentor_utils.py	/^def random_flip_along_x(gt_boxes, points):$/;"	f
+random_flip_along_y	pcdet/datasets/augmentor/augmentor_utils.py	/^def random_flip_along_y(gt_boxes, points):$/;"	f
+random_image_flip	pcdet/datasets/augmentor/data_augmentor.py	/^    def random_image_flip(self, data_dict=None, config=None):$/;"	m	class:DataAugmentor
+random_image_flip_horizontal	pcdet/datasets/augmentor/augmentor_utils.py	/^def random_image_flip_horizontal(image, depth_map, gt_boxes, calib):$/;"	f
+random_world_flip	pcdet/datasets/augmentor/data_augmentor.py	/^    def random_world_flip(self, data_dict=None, config=None):$/;"	m	class:DataAugmentor
+random_world_rotation	pcdet/datasets/augmentor/data_augmentor.py	/^    def random_world_rotation(self, data_dict=None, config=None):$/;"	m	class:DataAugmentor
+random_world_scaling	pcdet/datasets/augmentor/data_augmentor.py	/^    def random_world_scaling(self, data_dict=None, config=None):$/;"	m	class:DataAugmentor
+raw_data_tag	pcdet/datasets/waymo/waymo_dataset.py	/^            raw_data_tag='raw_data',$/;"	v
+rbbox_to_corners	pcdet/datasets/kitti/kitti_object_eval_python/rotate_iou.py	/^def rbbox_to_corners(corners, rbbox):$/;"	f
+read_defaults	tools/train_utils/optimization/fastai_optim.py	/^    def read_defaults(self) -> None:$/;"	m	class:OptimWrapper
+read_val	tools/train_utils/optimization/fastai_optim.py	/^    def read_val(self, key: str):$/;"	m	class:OptimWrapper
+rect_to_img	pcdet/utils/calibration_kitti.py	/^    def rect_to_img(self, pts_rect):$/;"	m	class:Calibration
+rect_to_lidar	pcdet/utils/calibration_kitti.py	/^    def rect_to_lidar(self, pts_rect):$/;"	m	class:Calibration
+reduce_t	pcdet/ops/voxel/src/voxelization.h	/^typedef enum { SUM = 0, MEAN = 1, MAX = 2 } reduce_t;$/;"	t	typeref:enum:__anon1
+reference	pcdet/ops/spconv/include/tensorview/tensorview.h	/^    typedef T &reference;$/;"	t	class:tv::SimpleVector::iterator
+reference	pcdet/ops/spconv/include/tensorview/tensorview.h	/^    typedef const T &reference;$/;"	t	class:tv::SimpleVector::const_iterator
+remove_ego_points	pcdet/datasets/nuscenes/nuscenes_dataset.py	/^        def remove_ego_points(points, center_radius=1.0):$/;"	f	function:NuScenesDataset.get_sweep
+remove_points_in_boxes3d	pcdet/utils/box_utils.py	/^def remove_points_in_boxes3d(points, boxes3d):$/;"	f
+repeat_eval_ckpt	tools/test.py	/^def repeat_eval_ckpt(model, test_loader, args, eval_output_dir, logger, ckpt_dir, dist_test=False):$/;"	f
+report	pcdet/ops/spconv/include/utility/timer.h	/^  typename TimeT::rep report() {$/;"	f	struct:spconv::CPUTimer
+report	pcdet/ops/spconv/include/utility/timer.h	/^  typename TimeT::rep report() {$/;"	f	struct:spconv::CudaContextTimer
+repr	pcdet/ops/spconv/include/tensorview/tensorview.h	/^  std::string repr() const {$/;"	f	struct:tv::TensorView
+resetGridKernel	pcdet/ops/spconv/include/spconv/indice.cu.h	/^__global__ void resetGridKernel(const Index *indicePairUnique,$/;"	f	namespace:spconv
+resetGridSubMKernel	pcdet/ops/spconv/include/spconv/indice.cu.h	/^__global__ void resetGridSubMKernel($/;"	f	namespace:spconv
+reset_parameters	pcdet/ops/spconv/conv.py	/^    def reset_parameters(self):$/;"	m	class:SparseConvolution
+reshape	pcdet/ops/spconv/include/tensorview/tensorview.h	/^  TV_HOST_DEVICE_INLINE TensorView<T, Rank> &reshape(Inds... newShapes) {$/;"	f	struct:tv::TensorView
+reshape	pcdet/ops/spconv/include/tensorview/tensorview.h	/^  TV_HOST_DEVICE_INLINE TensorView<T, Rank> &reshape(Shape shapes) {$/;"	f	struct:tv::TensorView
+roi_grid_pool	pcdet/models/roi_heads/pvrcnn_head.py	/^    def roi_grid_pool(self, batch_dict):$/;"	m	class:PVRCNNHead
+roi_grid_pool	pcdet/models/roi_heads/second_head.py	/^    def roi_grid_pool(self, batch_dict):$/;"	m	class:SECONDHead
+roi_grid_pool	pcdet/models/roi_heads/voxelrcnn_head.py	/^    def roi_grid_pool(self, batch_dict):$/;"	m	class:VoxelRCNNHead
+roiaware_pool	pcdet/models/roi_heads/partA2_head.py	/^    def roiaware_pool(self, batch_dict):$/;"	m	class:PartA2FCHead
+roiaware_pool3d_gpu	pcdet/ops/roiaware_pool3d/src/roiaware_pool3d.cpp	/^int roiaware_pool3d_gpu(at::Tensor rois, at::Tensor pts, at::Tensor pts_feature, at::Tensor argmax,$/;"	f
+roiaware_pool3d_gpu_backward	pcdet/ops/roiaware_pool3d/src/roiaware_pool3d.cpp	/^int roiaware_pool3d_gpu_backward(at::Tensor pts_idx_of_voxels, at::Tensor argmax, at::Tensor grad_out, at::Tensor grad_in, int pool_method){$/;"	f
+roipool3d_gpu	pcdet/models/roi_heads/pointrcnn_head.py	/^    def roipool3d_gpu(self, batch_dict):$/;"	m	class:PointRCNNHead
+roipool3d_gpu	pcdet/ops/roipoint_pool3d/src/roipoint_pool3d.cpp	/^int roipool3d_gpu(at::Tensor xyz, at::Tensor boxes3d, at::Tensor pts_feature, at::Tensor pooled_features, at::Tensor pooled_empty_flag){$/;"	f
+root_path	pcdet/datasets/nuscenes/nuscenes_dataset.py	/^            root_path=ROOT_DIR \/ 'data' \/ 'nuscenes',$/;"	v
+rotate_around_center	pcdet/ops/iou3d_nms/src/iou3d_cpu.cpp	/^inline void rotate_around_center(const Point &center, const float angle_cos, const float angle_sin, Point &p){$/;"	f
+rotate_iou_gpu_eval	pcdet/datasets/kitti/kitti_object_eval_python/rotate_iou.py	/^def rotate_iou_gpu_eval(boxes, query_boxes, criterion=-1, device_id=0):$/;"	f
+rotate_iou_kernel_eval	pcdet/datasets/kitti/kitti_object_eval_python/rotate_iou.py	/^def rotate_iou_kernel_eval(N, K, dev_boxes, dev_query_boxes, dev_iou, criterion=-1):$/;"	f
+rotate_points_along_z	pcdet/utils/common_utils.py	/^def rotate_points_along_z(points, angle):$/;"	f
+rotate_points_along_z	tools/visual_utils/visualize_utils.py	/^def rotate_points_along_z(points, angle):$/;"	f
+rowArrayIdx	pcdet/ops/spconv/include/tensorview/tensorview.h	/^TV_HOST_DEVICE_INLINE unsigned rowArrayIdx(const Index *indexes,$/;"	f	namespace:tv
+rowArrayIdx	pcdet/ops/spconv/include/tensorview/tensorview.h	/^TV_HOST_DEVICE_INLINE unsigned rowArrayIdx(const Shape &shape,$/;"	f	namespace:tv
+rowArrayIdx	pcdet/ops/spconv/include/tensorview/tensorview.h	/^TV_HOST_DEVICE_INLINE unsigned rowArrayIdx(std::vector<int> &shape,$/;"	f	namespace:tv
+rowArrayIdxInv	pcdet/ops/spconv/include/tensorview/tensorview.h	/^TV_HOST_DEVICE_INLINE Index rowArrayIdxInv(Index index, Index *output,$/;"	f	namespace:tv
+run	pcdet/ops/spconv/include/tensorview/tensorview.h	/^  TV_HOST_DEVICE_INLINE static unsigned run(const Shape &shape,$/;"	f	struct:tv::ArrayIndexRowMajor
+run	setup.py	/^    def run(self):$/;"	m	class:PostInstallation
+run_eval_ops	pcdet/datasets/waymo/waymo_eval.py	/^    def run_eval_ops($/;"	m	class:OpenPCDetWaymoDetectionMetricsEstimator
+sample_bg_inds	pcdet/models/roi_heads/target_assigner/proposal_target_layer.py	/^    def sample_bg_inds(hard_bg_inds, easy_bg_inds, bg_rois_per_this_image, hard_bg_ratio):$/;"	m	class:ProposalTargetLayer
+sample_points	pcdet/datasets/processor/data_processor.py	/^    def sample_points(self, data_dict=None, config=None):$/;"	m	class:DataProcessor
+sample_rois_for_rcnn	pcdet/models/roi_heads/target_assigner/proposal_target_layer.py	/^    def sample_rois_for_rcnn(self, batch_dict):$/;"	m	class:ProposalTargetLayer
+sample_with_fixed_number	pcdet/datasets/augmentor/database_sampler.py	/^    def sample_with_fixed_number(self, class_name, sample_group):$/;"	m	class:DataBaseSampler
+save_checkpoint	tools/train_utils/train_utils.py	/^def save_checkpoint(state, filename='checkpoint'):$/;"	f
+save_lidar_points	pcdet/datasets/waymo/waymo_utils.py	/^def save_lidar_points(frame, cur_save_path):$/;"	f
+save_path	pcdet/datasets/kitti/kitti_dataset.py	/^            save_path=ROOT_DIR \/ 'data' \/ 'kitti'$/;"	v
+save_path	pcdet/datasets/nuscenes/nuscenes_dataset.py	/^            save_path=ROOT_DIR \/ 'data' \/ 'nuscenes',$/;"	v
+save_path	pcdet/datasets/waymo/waymo_dataset.py	/^            save_path=ROOT_DIR \/ 'data' \/ 'waymo',$/;"	v
+scatterAddGenericKernel	pcdet/ops/spconv/include/spconv/reordering.cu.h	/^__global__ void scatterAddGenericKernel(T *outFeatures, const T *buffer,$/;"	f	namespace:spconv
+scatterAddVecBlockKernel	pcdet/ops/spconv/include/spconv/reordering.cu.h	/^__global__ void scatterAddVecBlockKernel(T *outFeatures, const T *buffer,$/;"	f	namespace:spconv
+scatter_nd	pcdet/ops/spconv/structure.py	/^def scatter_nd(indices, updates, shape):$/;"	f
+scatter_point_inds	pcdet/utils/common_utils.py	/^def scatter_point_inds(indices, point_inds, shape):$/;"	f
+scatter_point_to_voxel_kernel	pcdet/ops/voxel/src/scatter_points_cpu.cpp	/^void scatter_point_to_voxel_kernel($/;"	f	namespace:__anon3
+schd	tools/train_utils/optimization/learning_schedules_fastai.py	/^    schd = OneCycle(opt, 100, 3e-3, (0.95, 0.85), 10.0, 0.1)$/;"	v
+script_version	pcdet/__init__.py	/^script_version = get_git_commit_number()$/;"	v
+self_type	pcdet/ops/spconv/include/tensorview/tensorview.h	/^    typedef const_iterator self_type;$/;"	t	class:tv::SimpleVector::const_iterator
+self_type	pcdet/ops/spconv/include/tensorview/tensorview.h	/^    typedef iterator self_type;$/;"	t	class:tv::SimpleVector::iterator
+set	pcdet/ops/iou3d_nms/src/iou3d_cpu.cpp	/^    __device__ void set(float _x, float _y){$/;"	f	struct:Point
+set_nms_score_by_class	pcdet/models/detectors/second_net_iou.py	/^    def set_nms_score_by_class(self, iou_preds, cls_preds, label_preds, score_by_class):$/;"	m	class:SECONDNetIoU
+set_random_seed	pcdet/utils/common_utils.py	/^def set_random_seed(seed):$/;"	f
+set_split	pcdet/datasets/kitti/kitti_dataset.py	/^    def set_split(self, split):$/;"	m	class:KittiDataset
+set_split	pcdet/datasets/waymo/waymo_dataset.py	/^    def set_split(self, split):$/;"	m	class:WaymoDataset
+set_val	tools/train_utils/optimization/fastai_optim.py	/^    def set_val(self, key: str, val, bn_groups: bool = True):$/;"	m	class:OptimWrapper
+sfinae_base	pcdet/ops/spconv/include/prettyprint.h	/^struct sfinae_base {$/;"	s	namespace:pretty_print::detail
+shape	pcdet/ops/spconv/include/tensorview/tensorview.h	/^  ShapeBase<MaxDim> &operator=(const ShapeBase<MaxDim> &shape) = default;$/;"	m	struct:tv::ShapeBase
+shape	pcdet/ops/spconv/include/tensorview/tensorview.h	/^  TV_HOST_DEVICE_INLINE const Shape &shape() const { return mShape; }$/;"	f	struct:tv::TensorView
+shuffle_points	pcdet/datasets/processor/data_processor.py	/^    def shuffle_points(self, data_dict=None, config=None):$/;"	m	class:DataProcessor
+sigmoid_cross_entropy_with_logits	pcdet/utils/loss_utils.py	/^    def sigmoid_cross_entropy_with_logits(input: torch.Tensor, target: torch.Tensor):$/;"	m	class:SigmoidFocalClassificationLoss
+simpleTypeName	pcdet/ops/spconv/include/tensorview/tensorview.h	/^constexpr const char *simpleTypeName(double val) {$/;"	f	namespace:tv::detail
+simpleTypeName	pcdet/ops/spconv/include/tensorview/tensorview.h	/^constexpr const char *simpleTypeName(float val) {$/;"	f	namespace:tv::detail
+simpleTypeName	pcdet/ops/spconv/include/tensorview/tensorview.h	/^constexpr const char *simpleTypeName(int val) {$/;"	f	namespace:tv::detail
+simpleTypeName	pcdet/ops/spconv/include/tensorview/tensorview.h	/^constexpr const char *simpleTypeName(long val) {$/;"	f	namespace:tv::detail
+simpleTypeName	pcdet/ops/spconv/include/tensorview/tensorview.h	/^constexpr const char *simpleTypeName(unsigned long val) {$/;"	f	namespace:tv::detail
+simpleTypeName	pcdet/ops/spconv/include/tensorview/tensorview.h	/^constexpr const char *simpleTypeName(unsigned val) {$/;"	f	namespace:tv::detail
+size	pcdet/ops/spconv/include/tensorview/tensorview.h	/^  TV_HOST_DEVICE_INLINE size_t size() const { return mShape.size(); }$/;"	f	struct:tv::TensorView
+size	pcdet/ops/spconv/include/tensorview/tensorview.h	/^  TV_HOST_DEVICE_INLINE size_t size() const { return mSize; }$/;"	f	struct:tv::SimpleVector
+size	pcdet/ops/spconv/include/tensorview/tensorview.h	/^  TV_HOST_DEVICE_INLINE size_t size() const {$/;"	f	struct:tv::ShapeBase
+size_type	pcdet/ops/spconv/include/prettyprint.h	/^  typedef typename T::size_type size_type;$/;"	t	struct:pretty_print::bucket_print_wrapper
+size_type	pcdet/ops/spconv/include/tensorview/tensorview.h	/^  typedef size_t size_type;$/;"	t	struct:tv::SimpleVector
+smooth_l1_loss	pcdet/utils/loss_utils.py	/^    def smooth_l1_loss(diff, beta):$/;"	m	class:WeightedSmoothL1Loss
+sort_vertex_in_convex_polygon	pcdet/datasets/kitti/kitti_object_eval_python/rotate_iou.py	/^def sort_vertex_in_convex_polygon(int_pts, num_of_inter):$/;"	f
+sparity	pcdet/ops/spconv/structure.py	/^    def sparity(self):$/;"	m	class:SparseConvTensor
+sparity_dict	pcdet/ops/spconv/modules.py	/^    def sparity_dict(self):$/;"	m	class:SparseSequential
+spatial_size	pcdet/ops/spconv/structure.py	/^    def spatial_size(self):$/;"	m	class:SparseConvTensor
+spconv	pcdet/ops/spconv/include/spconv/fused_spconv_ops.h	/^namespace spconv {$/;"	n
+spconv	pcdet/ops/spconv/include/spconv/geometry.h	/^namespace spconv {$/;"	n
+spconv	pcdet/ops/spconv/include/spconv/indice.cu.h	/^namespace spconv {$/;"	n
+spconv	pcdet/ops/spconv/include/spconv/indice.h	/^namespace spconv {$/;"	n
+spconv	pcdet/ops/spconv/include/spconv/maxpool.h	/^namespace spconv {$/;"	n
+spconv	pcdet/ops/spconv/include/spconv/mp_helper.h	/^namespace spconv {$/;"	n
+spconv	pcdet/ops/spconv/include/spconv/point2voxel.h	/^namespace spconv {$/;"	n
+spconv	pcdet/ops/spconv/include/spconv/pool_ops.h	/^namespace spconv {$/;"	n
+spconv	pcdet/ops/spconv/include/spconv/reordering.cu.h	/^namespace spconv {$/;"	n
+spconv	pcdet/ops/spconv/include/spconv/reordering.h	/^namespace spconv {$/;"	n
+spconv	pcdet/ops/spconv/include/spconv/spconv_ops.h	/^namespace spconv {$/;"	n
+spconv	pcdet/ops/spconv/include/utility/timer.h	/^namespace spconv {$/;"	n
+spconv	pcdet/ops/spconv/src/indice.cc	/^namespace spconv {$/;"	n	file:
+spconv	pcdet/ops/spconv/src/maxpool.cc	/^namespace spconv {$/;"	n	file:
+spconv	pcdet/ops/spconv/src/reordering.cc	/^namespace spconv {$/;"	n	file:
+split_bn_bias	tools/train_utils/optimization/fastai_optim.py	/^def split_bn_bias(layer_groups):$/;"	f
+squeeze	pcdet/ops/spconv/include/tensorview/tensorview.h	/^  TV_HOST_DEVICE_INLINE ShapeBase<MaxDim> squeeze() const {$/;"	f	struct:tv::ShapeBase
+squeeze	pcdet/ops/spconv/include/tensorview/tensorview.h	/^  TV_HOST_DEVICE_INLINE ShapeBase<MaxDim> squeeze(int dim) const {$/;"	f	struct:tv::ShapeBase
+squeeze	pcdet/ops/spconv/include/tensorview/tensorview.h	/^  TV_HOST_DEVICE_INLINE TensorView<T, Rank> squeeze() const {$/;"	f	struct:tv::TensorView
+squeeze	pcdet/ops/spconv/include/tensorview/tensorview.h	/^  TV_HOST_DEVICE_INLINE TensorView<T, Rank> squeeze(int dim) const {$/;"	f	struct:tv::TensorView
+sstream_print	pcdet/ops/spconv/include/tensorview/tensorview.h	/^void sstream_print(SStream &ss, T val) {$/;"	f	namespace:tv
+sstream_print	pcdet/ops/spconv/include/tensorview/tensorview.h	/^void sstream_print(SStream &ss, T val, TArgs... args) {$/;"	f	namespace:tv
+statistics_info	tools/eval_utils/eval_utils.py	/^def statistics_info(cfg, ret_dict, metric, disp_dict):$/;"	f
+std	pcdet/ops/spconv/include/prettyprint.h	/^namespace std {$/;"	n
+step	tools/train_utils/optimization/fastai_optim.py	/^    def step(self) -> None:$/;"	m	class:OptimWrapper
+step	tools/train_utils/optimization/fastai_optim.py	/^    def step(self):$/;"	m	class:FastAIMixedOptim
+step	tools/train_utils/optimization/learning_schedules_fastai.py	/^    def step(self, step):$/;"	m	class:LRSchedulerStep
+stream	pcdet/ops/spconv/include/prettyprint.h	/^  std::ostream &stream(std::ostream &s) {$/;"	f	struct:pretty_print::custom_delims_wrapper
+stream	pcdet/ops/spconv/include/prettyprint.h	/^  std::wostream &stream(std::wostream &s) {$/;"	f	struct:pretty_print::custom_delims_wrapper
+subsample_rois	pcdet/models/roi_heads/target_assigner/proposal_target_layer.py	/^    def subsample_rois(self, max_overlaps):$/;"	m	class:ProposalTargetLayer
+subshape	pcdet/ops/spconv/include/tensorview/tensorview.h	/^  TV_HOST_DEVICE_INLINE ShapeBase<MaxDim> subshape(int start) const {$/;"	f	struct:tv::ShapeBase
+subshape	pcdet/ops/spconv/include/tensorview/tensorview.h	/^  TV_HOST_DEVICE_INLINE ShapeBase<MaxDim> subshape(int start, int end) const {$/;"	f	struct:tv::ShapeBase
+subview	pcdet/ops/spconv/include/tensorview/tensorview.h	/^  TV_HOST_DEVICE_INLINE TensorView<T, Rank> subview(Slice slice,$/;"	f	struct:tv::TensorView
+subview	pcdet/ops/spconv/include/tensorview/tensorview.h	/^  TV_HOST_DEVICE_INLINE TensorView<T, Rank> subview(Slices... slices) const {$/;"	f	struct:tv::TensorView
+subview	pcdet/ops/spconv/include/tensorview/tensorview.h	/^  TV_HOST_DEVICE_INLINE TensorView<T, Rank> subview(int id, Integers... ints) {$/;"	f	struct:tv::TensorView
+t	pcdet/ops/spconv/include/prettyprint.h	/^  const T &t;$/;"	m	struct:pretty_print::custom_delims_wrapper
+three_interpolate	pcdet/ops/pointnet2/pointnet2_batch/pointnet2_utils.py	/^three_interpolate = ThreeInterpolate.apply$/;"	v
+three_interpolate	pcdet/ops/pointnet2/pointnet2_stack/pointnet2_utils.py	/^three_interpolate = ThreeInterpolate.apply$/;"	v
+three_interpolate_grad_wrapper_fast	pcdet/ops/pointnet2/pointnet2_batch/src/interpolate.cpp	/^void three_interpolate_grad_wrapper_fast(int b, int c, int n, int m,$/;"	f
+three_interpolate_grad_wrapper_stack	pcdet/ops/pointnet2/pointnet2_stack/src/interpolate.cpp	/^void three_interpolate_grad_wrapper_stack(at::Tensor grad_out_tensor, at::Tensor idx_tensor,$/;"	f
+three_interpolate_wrapper_fast	pcdet/ops/pointnet2/pointnet2_batch/src/interpolate.cpp	/^void three_interpolate_wrapper_fast(int b, int c, int m, int n,$/;"	f
+three_interpolate_wrapper_stack	pcdet/ops/pointnet2/pointnet2_stack/src/interpolate.cpp	/^void three_interpolate_wrapper_stack(at::Tensor features_tensor, $/;"	f
+three_nn	pcdet/ops/pointnet2/pointnet2_batch/pointnet2_utils.py	/^three_nn = ThreeNN.apply$/;"	v
+three_nn	pcdet/ops/pointnet2/pointnet2_stack/pointnet2_utils.py	/^three_nn = ThreeNN.apply$/;"	v
+three_nn_wrapper_fast	pcdet/ops/pointnet2/pointnet2_batch/src/interpolate.cpp	/^void three_nn_wrapper_fast(int b, int n, int m, at::Tensor unknown_tensor, $/;"	f
+three_nn_wrapper_stack	pcdet/ops/pointnet2/pointnet2_stack/src/interpolate.cpp	/^void three_nn_wrapper_stack(at::Tensor unknown_tensor, $/;"	f
+to_kitti_format	pcdet/utils/object3d_kitti.py	/^    def to_kitti_format(self):$/;"	m	class:Object3d
+to_slice	pcdet/ops/spconv/include/tensorview/tensorview.h	/^  TV_HOST_DEVICE_INLINE Slice to_slice(Slice s) const { return Slice(s); }$/;"	f	struct:tv::TensorView
+to_slice	pcdet/ops/spconv/include/tensorview/tensorview.h	/^  TV_HOST_DEVICE_INLINE Slice to_slice(T1 s) const {$/;"	f	struct:tv::TensorView
+to_str	pcdet/utils/object3d_kitti.py	/^    def to_str(self):$/;"	m	class:Object3d
+torch2tv	pcdet/ops/spconv/include/torch_utils.h	/^tv::TensorView<T> torch2tv(const torch::Tensor &tensor) {$/;"	f	namespace:tv
+train_model	tools/train_utils/train_utils.py	/^def train_model(model, optimizer, train_loader, model_func, lr_scheduler, optim_cfg,$/;"	f
+train_one_epoch	tools/train_utils/train_utils.py	/^def train_one_epoch(model, optimizer, train_loader, model_func, lr_scheduler, accumulated_iter, optim_cfg,$/;"	f
+trainable_params	tools/train_utils/optimization/fastai_optim.py	/^def trainable_params(m: nn.Module):$/;"	f
+trangle_area	pcdet/datasets/kitti/kitti_object_eval_python/rotate_iou.py	/^def trangle_area(a, b, c):$/;"	f
+transform_annotations_to_kitti_format	pcdet/datasets/kitti/kitti_utils.py	/^def transform_annotations_to_kitti_format(annos, map_name_to_kitti=None, info_with_fakelidar=False):$/;"	f
+transform_det_annos_to_nusc_annos	pcdet/datasets/nuscenes/nuscenes_utils.py	/^def transform_det_annos_to_nusc_annos(det_annos, nusc):$/;"	f
+transform_grid	pcdet/models/backbones_3d/vfe/image_vfe_modules/f2v/frustum_grid_generator.py	/^    def transform_grid(self, voxel_grid, grid_to_lidar, lidar_to_cam, cam_to_img):$/;"	m	class:FrustumGridGenerator
+transform_points_to_voxels	pcdet/datasets/processor/data_processor.py	/^    def transform_points_to_voxels(self, data_dict=None, config=None, voxel_generator=None):$/;"	m	class:DataProcessor
+tuple_print	pcdet/ops/spconv/include/prettyprint.h	/^  static void tuple_print($/;"	f	struct:pretty_print::print_container_helper::printer
+tuple_print	pcdet/ops/spconv/include/prettyprint.h	/^  static void tuple_print(const element_type &, ostream_type &,$/;"	f	struct:pretty_print::print_container_helper::printer
+tuple_print	pcdet/ops/spconv/include/prettyprint.h	/^  static void tuple_print(const element_type &c, ostream_type &stream, Int<N>) {$/;"	f	struct:pretty_print::print_container_helper::printer
+tv	pcdet/ops/spconv/include/tensorview/helper_kernel.cu.h	/^namespace tv {$/;"	n
+tv	pcdet/ops/spconv/include/tensorview/helper_launch.h	/^namespace tv$/;"	n
+tv	pcdet/ops/spconv/include/tensorview/tensorview.h	/^namespace tv {$/;"	n
+tv	pcdet/ops/spconv/include/torch_utils.h	/^namespace tv {$/;"	n
+update_global_step	pcdet/models/detectors/detector3d_template.py	/^    def update_global_step(self):$/;"	m	class:Detector3DTemplate
+value	pcdet/ops/spconv/include/prettyprint.h	/^  static const bool value = sizeof(test<T>(nullptr)) == sizeof(yes);$/;"	m	struct:pretty_print::detail::has_const_iterator
+value_type	pcdet/ops/spconv/include/prettyprint.h	/^  typedef T value_type;$/;"	t	struct:pretty_print::array_wrapper_n
+value_type	pcdet/ops/spconv/include/tensorview/tensorview.h	/^    typedef T value_type;$/;"	t	class:tv::SimpleVector::const_iterator
+value_type	pcdet/ops/spconv/include/tensorview/tensorview.h	/^    typedef T value_type;$/;"	t	class:tv::SimpleVector::iterator
+values	pcdet/ops/spconv/include/prettyprint.h	/^               wchar_t>::values = {L"{", L", ", L"}"};$/;"	m	class:pretty_print::delimiters
+values	pcdet/ops/spconv/include/prettyprint.h	/^    ::std::unordered_multiset<T, THash, TEqual, TAllocator>, char>::values = {$/;"	m	class:pretty_print::delimiters
+values	pcdet/ops/spconv/include/prettyprint.h	/^    ::std::unordered_set<T, THash, TEqual, TAllocator>, char>::values = {$/;"	m	class:pretty_print::delimiters
+values	pcdet/ops/spconv/include/prettyprint.h	/^    ::std::unordered_set<T, THash, TEqual, TAllocator>, wchar_t>::values = {$/;"	m	class:pretty_print::delimiters
+values	pcdet/ops/spconv/include/prettyprint.h	/^    delimiters<::std::multiset<T, TComp, TAllocator>, char>::values = {$/;"	m	class:pretty_print::delimiters
+values	pcdet/ops/spconv/include/prettyprint.h	/^    delimiters<::std::multiset<T, TComp, TAllocator>, wchar_t>::values = {$/;"	m	class:pretty_print::delimiters
+values	pcdet/ops/spconv/include/prettyprint.h	/^    delimiters<::std::pair<T1, T2>, wchar_t>::values = {L"(", L", ", L")"};$/;"	m	class:pretty_print::delimiters
+values	pcdet/ops/spconv/include/prettyprint.h	/^    delimiters<::std::set<T, TComp, TAllocator>, char>::values = {"{", ", ",$/;"	m	class:pretty_print::delimiters
+values	pcdet/ops/spconv/include/prettyprint.h	/^    delimiters<::std::set<T, TComp, TAllocator>, wchar_t>::values = {$/;"	m	class:pretty_print::delimiters
+values	pcdet/ops/spconv/include/prettyprint.h	/^    delimiters<::std::tuple<Args...>, wchar_t>::values = {L"(", L", ", L")"};$/;"	m	class:pretty_print::delimiters
+values	pcdet/ops/spconv/include/prettyprint.h	/^  static const delimiters_values<char> values;$/;"	m	struct:pretty_print::delimiters
+values	pcdet/ops/spconv/include/prettyprint.h	/^  static const delimiters_values<wchar_t> values;$/;"	m	struct:pretty_print::delimiters
+values	pcdet/ops/spconv/include/prettyprint.h	/^  static const type values;$/;"	m	struct:pretty_print::delimiters
+values	pcdet/ops/spconv/include/prettyprint.h	/^const delimiters_values<char> delimiters<T, char>::values = {"[", ", ", "]"};$/;"	m	class:pretty_print::delimiters
+values	pcdet/ops/spconv/include/prettyprint.h	/^const delimiters_values<char> delimiters<std::pair<T1, T2>, char>::values = {$/;"	m	class:pretty_print::delimiters
+values	pcdet/ops/spconv/include/prettyprint.h	/^const delimiters_values<char> delimiters<std::tuple<Args...>, char>::values = {$/;"	m	class:pretty_print::delimiters
+values	pcdet/ops/spconv/include/prettyprint.h	/^const delimiters_values<wchar_t> delimiters<T, wchar_t>::values = {L"[", L", ",$/;"	m	class:pretty_print::delimiters
+version	pcdet/datasets/nuscenes/nuscenes_dataset.py	/^            version=dataset_cfg.VERSION,$/;"	v
+version	setup.py	/^    version = '0.3.0+%s' % get_git_commit_number()$/;"	v
+view	pcdet/ops/spconv/include/tensorview/tensorview.h	/^  TV_HOST_DEVICE_INLINE TensorView<T, Rank> view(Inds... newShapes) const {$/;"	f	struct:tv::TensorView
+view	pcdet/ops/spconv/include/tensorview/tensorview.h	/^  TV_HOST_DEVICE_INLINE TensorView<T, Rank> view(Shape shapes) const {$/;"	f	struct:tv::TensorView
+visualize_pts	tools/visual_utils/visualize_utils.py	/^def visualize_pts(pts, fig=None, bgcolor=(0, 0, 0), fgcolor=(1.0, 1.0, 1.0),$/;"	f
+voxel_query	pcdet/ops/pointnet2/pointnet2_stack/voxel_query_utils.py	/^voxel_query = VoxelQuery.apply$/;"	v
+voxel_query_wrapper_stack	pcdet/ops/pointnet2/pointnet2_stack/src/voxel_query.cpp	/^int voxel_query_wrapper_stack(int M, int R1, int R2, int R3, int nsample, float radius, $/;"	f
+voxelization	pcdet/ops/voxel/src/scatter_points_cpu.cpp	/^namespace voxelization {$/;"	n	file:
+voxelization	pcdet/ops/voxel/src/voxelization.cpp	/^namespace voxelization {$/;"	n	file:
+voxelization	pcdet/ops/voxel/src/voxelization.h	/^namespace voxelization {$/;"	n
+voxelization	pcdet/ops/voxel/src/voxelization_cpu.cpp	/^namespace voxelization {$/;"	n	file:
+voxelization	pcdet/ops/voxel/voxelize.py	/^voxelization = _Voxelization.apply$/;"	v
+waymo_eval	pcdet/datasets/waymo/waymo_dataset.py	/^        def waymo_eval(eval_det_annos, eval_gt_annos):$/;"	f	function:WaymoDataset.evaluation
+waymo_evaluation	pcdet/datasets/waymo/waymo_eval.py	/^    def waymo_evaluation(self, prediction_infos, gt_infos, class_name, distance_thresh=100, fake_gt_infos=True):$/;"	m	class:OpenPCDetWaymoDetectionMetricsEstimator
+wd	tools/train_utils/optimization/fastai_optim.py	/^    def wd(self) -> float:$/;"	m	class:OptimWrapper
+wd	tools/train_utils/optimization/fastai_optim.py	/^    def wd(self, val: float) -> None:$/;"	m	class:OptimWrapper
+write_version_to_file	setup.py	/^def write_version_to_file(version, target_file):$/;"	f
+x	pcdet/ops/iou3d_nms/src/iou3d_cpu.cpp	/^    float x, y;$/;"	m	struct:Point	file:
+y	pcdet/ops/iou3d_nms/src/iou3d_cpu.cpp	/^    float x, y;$/;"	m	struct:Point	file:
+zero_grad	tools/train_utils/optimization/fastai_optim.py	/^    def zero_grad(self) -> None:$/;"	m	class:OptimWrapper
+~custom_delims_base	pcdet/ops/spconv/include/prettyprint.h	/^  virtual ~custom_delims_base() {}$/;"	f	struct:pretty_print::custom_delims_base

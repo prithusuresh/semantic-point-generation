@@ -7,6 +7,8 @@ import torch.nn as nn
 import torch.nn.functional as F
 from pcdet.utils import common_utils
 from pcdet.ops.roiaware_pool3d.roiaware_pool3d_utils import points_in_boxes_gpu, points_in_boxes_cpu
+import plotvoxel
+import sys
 
 cfg = cfg_from_yaml_file("cfgs/kitti_models/spg.yaml", cfg)
 model_cfg = cfg.MODEL
@@ -357,43 +359,78 @@ class SPG_CLASSIFICATION(nn.Module):
         batch_dict = self.classification_head(batch_dict)
         return batch_dict
 
-        
+from train_utils import train_utils
+import pandas as pd
+
 if __name__ == "__main__":
     model = SPG_CLASSIFICATION()
     model.cuda()
     train_sample = pickle.load(open("voxelized_train_sample.p", "rb"))
-    
+    print("Train Sample = ", train_sample["points"].shape)
     #load data to gpu
     load_data_to_gpu(train_sample)
+    ckpt = torch.load(sys.argv[1], map_location = "cuda")
+    model.load_state_dict(ckpt["model_state"])
     #make forward pass
+    # breakpoint()
+    model.eval()
     out_dict = model(train_sample)
-    #find ALL foreground voxels
-    all_voxels_in_foreground = points_in_boxes_gpu(train_sample["all_voxel_centers"], train_sample["gt_boxes"][:,:,:7])
-    #all_voxels_in_foreground = train_sample["all_voxel_coords"][all_voxels_in_foreground != -1] 
-    # 0 -> Unoccupied Background
-    # 1 -> Occupied Background
-    # 2 -> Unoccupied Foreground
-    # 3 -> Occupied Foreground
-    OCCUPIED_FLAG = 1
-    FOREGROUND_FLAG = 2
-    mask = torch.zeros_like(out_dict["output_prob"]).long()
-    occupied = train_sample["small_voxel_coords"].long()
-    b, z, y, x = occupied[:,0], occupied[:,1], occupied[:,2], occupied[:,3]
-    mask[b,z,y,x] += OCCUPIED_FLAG 
-    
-    all_voxel_coords_reshaped = train_sample["all_voxel_coords"].reshape((train_sample["batch_size"], -1, 4))
-    foreground = all_voxel_coords_reshaped[all_voxels_in_foreground != -1].long()
-    b, z, y, x = foreground[:,0], foreground[:,1], foreground[:,2], foreground[:,3]
-    mask[b,z,y,x] += FOREGROUND_FLAG 
-
-    alpha = 0.5
-    ground_truth = (mask > 1).long()
-    weight_mask = mask.float()
-    weight_mask[mask != 2] = 1 #weight is 1
-    weight_mask[mask == 2] = 0.5
-
+    gt,b = train_utils.prepare_ground_truth_and_weight_mask(out_dict,cfg.OPTIMIZATION)
+    a_coords = torch.where(gt[0]>0.5)
+    # print("a0 = = ",a.shape
+    # breakpoint()
+    gt_dict = {
+        "z": a_coords[0].cpu().numpy(),
+        "y": a_coords[1].cpu().numpy(),
+        "x": a_coords[2].cpu().numpy(),
+        "v": np.ones(a_coords[0].shape)
+    }
+    # print("GT ===== ",gt_dict["v"])
+    # breakpoint()
+    df_ground_truth = pd.DataFrame(gt_dict)
+    print("GT ===== ",df_ground_truth.head())
+    # breakpoint()
+    df_ground_truth.to_csv("groundtruth.csv", index = False) 
+    breakpoint()
+    print("Ground Truth = ",a.shape)
+    print("Weight Mask  = ",b.shape)
+    # breakpoint()
     pred = out_dict["output_prob"]
-    from kornia.losses import BinaryFocalLossWithLogits
-    criterion = BinaryFocalLossWithLogits(alpha = 0.25, gamma = 2.0, reduction = "none")
-    loss = (weight_mask*criterion(pred, ground_truth)).mean()
-    print (loss.item())
+    print("Pred shape = ",pred.shape)
+    coords = torch.where(pred[0] > 0.5)
+    print("Coords shape =",coords)
+    breakpoint()
+    df = {
+        "z": coords[0].cpu().numpy(),
+        "y": coords[1].cpu().numpy(),
+        "x": coords[2].cpu().numpy(),
+        "p": pred[0,coords[0], coords[1], coords[2]].detach().cpu().numpy()
+    }
+    print("DF ===== ",df.keys())
+    df = pd.DataFrame(df)
+    print("DF ===== ",df.head())
+
+    breakpoint()
+
+    df.to_csv("occupied_voxels.csv", index = False) 
+    print("Keys = ",out_dict.keys())
+    hidden_voxel = out_dict["hidden_voxel_coords"]
+    
+    
+    
+    
+    plotvoxel.visualizeVoxels(hidden_voxel)
+    print("Hidden Voxels Shape = ",hidden_voxel[0].shape)
+
+    print("Hidden Voxels[0] Shape = ",hidden_voxel[1000])
+
+    # plotvoxel.visualizeVoxels(out_dict["hidden_voxel_coords"][0])
+    # breakpoint()
+
+    # #find ALL foreground voxels
+    # plotvoxel.visualizeVoxels(pred)
+
+    # from kornia.losses import BinaryFocalLossWithLogits
+    # criterion = BinaryFocalLossWithLogits(alpha = 0.25, gamma = 2.0, reduction = "none")
+    # loss = (weight_mask*criterion(pred, ground_truth)).mean()
+    # print (loss.item())

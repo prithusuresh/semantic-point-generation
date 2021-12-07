@@ -1,4 +1,5 @@
 import pickle
+from re import L
 import time
 
 import numpy as np
@@ -7,7 +8,59 @@ import tqdm
 
 from pcdet.models import load_data_to_gpu
 from pcdet.utils import common_utils
+from sklearn.metrics import classification_report, accuracy_score, roc_curve, precision_recall_curve
+from pprint import pprint
+import matplotlib.pyplot as plt
+import copy
 
+def unpack_report_dict(d):
+    for k,v in d.items():
+        if isinstance(v, dict):
+            yield from unpack_report_dict(v)
+        else:
+            yield v
+def plot_roc_curve(gt, probs):
+    fpr, tpr, _ = roc_curve(gt, probs)
+    print (len(fpr), len(tpr))
+    plt.clf()
+    plt.cla()
+    plt.plot(fpr, tpr, label = "SPG")
+    plt.plot([0, 1], [0, 1], linestyle='--', label='No Skill')
+    plt.xlabel('False Positive Rate')
+    plt.ylabel('True Positive Rate')
+    plt.savefig("ROC curve - Kitti Val Set")
+    plt.legend()
+    return
+def plot_pr_curve(gt, probs):
+    pr, rc, _ = precision_recall_curve(gt, probs)
+    print (len(pr), len(rc))
+    plt.clf()
+    plt.cla()
+    plt.plot(pr, rc, label = "SPG")
+    no_skill = len(gt[gt==1]) / len(gt)
+    plt.plot([0, 1], [no_skill, no_skill], linestyle='--', label='No Skill')
+    plt.xlabel('Recall')
+    plt.ylabel('Precision')
+    plt.savefig("PR ROC curve - Kitti Val Set")
+    plt.legend()
+
+    return
+def calculate_weighted_focal_loss(criterion, pred, gt, weight_mask, threshold, hidden_voxels):
+    loss = criterion(pred, gt)
+    weighted_loss = (weight_mask*loss).sum()
+    probs = copy.deepcopy(pred.detach())
+    pred_detached = pred.detach()
+    pred_detached[pred_detached >= threshold] = 1
+    pred_detached[pred_detached < threshold] = 0
+    hidden = hidden_voxels.long()
+    b,z,y,x = hidden[:,0], hidden[:,1], hidden[:,2], hidden[:,3]
+    gt_cpu_flatten = gt[b,z,y,x].cpu().numpy()
+    pred_detached_cpu = pred_detached[b,z,y,x].cpu().numpy()
+    probs = probs[b,z,y,x].cpu().numpy()
+    #hidden voxel report
+    report = classification_report(gt_cpu_flatten.flatten(), pred_detached_cpu.flatten(), output_dict = True)
+    report = np.asarray(list(unpack_report_dict(report)))
+    return weighted_loss, report, gt_cpu_flatten.flatten(), probs.flatten()
 
 def statistics_info(cfg, ret_dict, metric, disp_dict):
     for cur_thresh in cfg.MODEL.POST_PROCESSING.RECALL_THRESH_LIST:

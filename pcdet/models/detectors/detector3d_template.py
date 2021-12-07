@@ -49,13 +49,12 @@ class Detector3DTemplate(nn.Module):
         return model_info_dict['module_list']
 
     def build_vfe(self, model_info_dict):
-        breakpoint()
         if self.model_cfg.get('VFE', None) is None:
             return None, model_info_dict
 
         vfe_module = vfe.__all__[self.model_cfg.VFE.NAME](
             model_cfg=self.model_cfg.VFE,
-            num_point_features=model_info_dict['num_rawpoint_features'],
+            num_point_features=model_info_dict['num_rawpoint_features'] + 1,
             point_cloud_range=model_info_dict['point_cloud_range'],
             voxel_size=model_info_dict['voxel_size'],
             grid_size=model_info_dict['grid_size'],
@@ -83,7 +82,6 @@ class Detector3DTemplate(nn.Module):
         return backbone_3d_module, model_info_dict
 
     def build_map_to_bev_module(self, model_info_dict):
-        breakpoint()
         
         if self.model_cfg.get('MAP_TO_BEV', None) is None:
             return None, model_info_dict
@@ -97,7 +95,6 @@ class Detector3DTemplate(nn.Module):
         return map_to_bev_module, model_info_dict
 
     def build_backbone_2d(self, model_info_dict):
-        breakpoint()
         
         if self.model_cfg.get('BACKBONE_2D', None) is None:
             return None, model_info_dict
@@ -111,7 +108,6 @@ class Detector3DTemplate(nn.Module):
         return backbone_2d_module, model_info_dict
 
     def build_pfe(self, model_info_dict):
-        breakpoint()
         
         if self.model_cfg.get('PFE', None) is None:
             return None, model_info_dict
@@ -129,7 +125,6 @@ class Detector3DTemplate(nn.Module):
         return pfe_module, model_info_dict
 
     def build_dense_head(self, model_info_dict):
-        breakpoint()
         
         if self.model_cfg.get('DENSE_HEAD', None) is None:
             return None, model_info_dict

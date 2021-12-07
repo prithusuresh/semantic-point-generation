@@ -4,7 +4,9 @@ import glob
 import os
 from pathlib import Path
 import pickle
+from numpy.lib.npyio import save
 from test import repeat_eval_ckpt
+from tqdm import tqdm
 
 import torch
 import torch.distributed as dist
@@ -16,7 +18,7 @@ from pcdet.datasets import build_dataloader
 from pcdet.models import build_network, model_fn_decorator
 from pcdet.utils import common_utils
 from train_utils.optimization import build_optimizer, build_scheduler
-from train_utils.train_utils import train_model
+from train_utils.train_utils import calculate_weighted_focal_loss, checkpoint_state, save_checkpoint, train_model, prepare_ground_truth_and_weight_mask
 from spg_model import SPG_CLASSIFICATION
 
 from eval_utils.eval_utils import load_data_to_gpu
@@ -80,26 +82,26 @@ def main():
     if args.fix_random_seed:
         common_utils.set_random_seed(666)
 
-   # output_dir = cfg.ROOT_DIR / 'output' / cfg.EXP_GROUP_PATH / cfg.TAG / args.extra_tag
-   # ckpt_dir = output_dir / 'ckpt'
-   # output_dir.mkdir(parents=True, exist_ok=True)
-   # ckpt_dir.mkdir(parents=True, exist_ok=True)
+    output_dir = cfg.ROOT_DIR / 'output' / cfg.EXP_GROUP_PATH / cfg.TAG / args.extra_tag
+    ckpt_dir = output_dir / 'ckpt'
+    output_dir.mkdir(parents=True, exist_ok=True)
+    ckpt_dir.mkdir(parents=True, exist_ok=True)
 
-   # log_file = output_dir / ('log_train_%s.txt' % datetime.datetime.now().strftime('%Y%m%d-%H%M%S'))
-   # logger = common_utils.create_logger(log_file, rank=cfg.LOCAL_RANK)
+    log_file = output_dir / ('log_train_%s.txt' % datetime.datetime.now().strftime('%Y%m%d-%H%M%S'))
+    logger = common_utils.create_logger(log_file, rank=cfg.LOCAL_RANK)
 
-   # # log to file
-   # logger.info('**********************Start logging**********************')
-   # gpu_list = os.environ['CUDA_VISIBLE_DEVICES'] if 'CUDA_VISIBLE_DEVICES' in os.environ.keys() else 'ALL'
-   # logger.info('CUDA_VISIBLE_DEVICES=%s' % gpu_list)
+    # log to file
+    logger.info('**********************Start logging**********************')
+    gpu_list = os.environ['CUDA_VISIBLE_DEVICES'] if 'CUDA_VISIBLE_DEVICES' in os.environ.keys() else 'ALL'
+    logger.info('CUDA_VISIBLE_DEVICES=%s' % gpu_list)
 
-   # if dist_train:
-   #     logger.info('total_batch_size: %d' % (total_gpus * args.batch_size))
-   # for key, val in vars(args).items():
-   #     logger.info('{:16} {}'.format(key, val))
-   # log_config_to_file(cfg, logger=logger)
-   # if cfg.LOCAL_RANK == 0:
-   #     os.system('cp %s %s' % (args.cfg_file, output_dir))
+    if dist_train:
+        logger.info('total_batch_size: %d' % (total_gpus * args.batch_size))
+    for key, val in vars(args).items():
+        logger.info('{:16} {}'.format(key, val))
+    log_config_to_file(cfg, logger=logger)
+    if cfg.LOCAL_RANK == 0:
+        os.system('cp %s %s' % (args.cfg_file, output_dir))
 
    # tb_log = SummaryWriter(log_dir=str(output_dir / 'tensorboard')) if cfg.LOCAL_RANK == 0 else None
 
@@ -114,17 +116,63 @@ def main():
         merge_all_iters_to_one_epoch=args.merge_all_iters_to_one_epoch,
         total_epochs=args.epochs
     )
-    from tqdm import tqdm
-    with open("voxelized_train_sample.p", "wb") as f:
-        print (train_set[0]["small_voxels"])
-        for x in tqdm(train_loader):
-            pickle.dump(x, f)
-            break 
-    #model = SPG_CLASSIFICATION()
-    #model.cuda()
+    
+    model = SPG_CLASSIFICATION()
+    model.cuda()
     
     
-    #for epoch
+    from kornia.losses import BinaryFocalLossWithLogits
+    
+    criterion = BinaryFocalLossWithLogits(alpha = 0.25, gamma = 2.0, reduction = "none")
+    optimizer = build_optimizer(model, cfg.OPTIMIZATION)
+    
+    lr_scheduler, lr_warmup_scheduler = build_scheduler(
+        optimizer, total_iters_each_epoch=len(train_loader), total_epochs=args.epochs,
+        last_epoch=-1, optim_cfg=cfg.OPTIMIZATION
+    )
+    accumulated_iter = 0
+    model.train()
+    
+    for epoch in range(cfg.OPTIMIZATION.NUM_EPOCHS):
+        if train_sampler is not None:
+            train_sampler.set_epoch(epoch)
+        pbar = tqdm(enumerate(train_loader), total = len(train_loader))
+        running_loss = 0
+        if lr_warmup_scheduler is not None and cur_epoch < optim_cfg.WARMUP_EPOCH:
+            cur_scheduler = lr_warmup_scheduler
+        else:
+            cur_scheduler = lr_scheduler
+        for i,x in pbar:
+            lr_scheduler.step(accumulated_iter)
+        
+            optimizer.zero_grad()
+        
+            load_data_to_gpu(x)
+            out = model(x)
+            ground_truth, weight_mask = prepare_ground_truth_and_weight_mask(train_sample=out, cfg = cfg.OPTIMIZATION)
+            loss, acc = calculate_weighted_focal_loss(
+                criterion, 
+                out["output_prob"], 
+                ground_truth, 
+                weight_mask, 
+                cfg.OPTIMIZATION.FOREGROUND_THRESHOLD,
+                out["hidden_voxel_coords"])
+        
+            loss.backward()
+            nn.utils.clip_grad_norm_(model.parameters(), cfg.OPTIMIZATION.GRAD_NORM_CLIP)
+            optimizer.step()
+            running_loss += loss.item()
+            pbar.set_description("loss: {:.4f}acc: {:.4f}".format(running_loss/(i + 1), acc))
+            pbar.update()
+            accumulated_iter += 1
+        if epoch > 0 and epoch%cfg.OPTIMIZATION.log_every_n_epochs == 0:
+            state_dict = checkpoint_state(model = model, optimizer = optimizer, epoch=epoch, it = accumulated_iter)
+            fname = ckpt_dir / ('checkpoint_epoch_%d' % epoch)
+            save_checkpoint(state_dict, fname)
+
+        running_loss /= (i+1)
+        logger.info("EPOCH [{}] loss: {:.4f}".format(epoch, running_loss))
+
     #   for x in train_loader
     #for x in train_loader:
     #    load_data_to_gpu(x)
@@ -192,14 +240,21 @@ def main():
    # logger.info('**********************End training %s/%s(%s)**********************\n\n\n'
    #             % (cfg.EXP_GROUP_PATH, cfg.TAG, args.extra_tag))
 
-   # logger.info('**********************Start evaluation %s/%s(%s)**********************' %
-   #             (cfg.EXP_GROUP_PATH, cfg.TAG, args.extra_tag))
-   # test_set, test_loader, sampler = build_dataloader(
-   #     dataset_cfg=cfg.DATA_CONFIG,
-   #     class_names=cfg.CLASS_NAMES,
-   #     batch_size=args.batch_size,
-   #     dist=dist_train, workers=args.workers, logger=logger, training=False
-   # )
+    # logger.info('**********************Start evaluation %s/%s(%s)**********************' %
+    #           (cfg.EXP_GROUP_PATH, cfg.TAG, args.extra_tag))
+    # test_set, test_loader, sampler = build_dataloader(
+    #     dataset_cfg=cfg.DATA_CONFIG,
+    #     class_names=cfg.CLASS_NAMES,
+    #     batch_size=args.batch_size,
+    #     dist=dist_train, workers=args.workers, logger=logger, training=False
+    # )
+
+    # model.eval()
+
+    
+
+
+
    # eval_output_dir = output_dir / 'eval' / 'eval_with_train'
    # eval_output_dir.mkdir(parents=True, exist_ok=True)
    # args.start_epoch = max(args.epochs - 10, 0)  # Only evaluate the last 10 epochs
@@ -209,8 +264,8 @@ def main():
    #     test_loader, args, eval_output_dir, logger, ckpt_dir,
    #     dist_test=dist_train
    # )
-   # logger.info('**********************End evaluation %s/%s(%s)**********************' %
-   #             (cfg.EXP_GROUP_PATH, cfg.TAG, args.extra_tag))
+    logger.info('**********************End evaluation %s/%s(%s)**********************' %
+                (cfg.EXP_GROUP_PATH, cfg.TAG, args.extra_tag))
 
 
 if __name__ == '__main__':

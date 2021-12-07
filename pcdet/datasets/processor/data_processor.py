@@ -13,6 +13,8 @@ class DataProcessor(object):
         self.training = training
         self.mode = 'train' if training else 'test'
         self.grid_size = self.voxel_size = self.small_voxel_size = None
+        self.small_voxel_generator_output = None
+        self.drop_percent = None
         self.data_processor_queue = []
         for cur_cfg in processor_configs:
             cur_processor = getattr(self, cur_cfg.NAME)(config=cur_cfg)
@@ -83,6 +85,8 @@ class DataProcessor(object):
         data_dict['small_voxels'] = voxels.numpy()
         data_dict['small_voxel_coords'] = coordinates.numpy()
         data_dict['small_voxel_num_points'] = num_points.numpy()
+        self.small_voxel_generator_output = (voxels, coordinates, num_points)
+
         return data_dict
     def transform_points_to_voxels(self, data_dict=None, config=None, voxel_generator=None):
         if data_dict is None:
@@ -91,7 +95,7 @@ class DataProcessor(object):
             # except:
             #     from spconv.utils import VoxelGenerator
             from pcdet.ops.voxel import Voxelization as VoxelGenerator
-
+            self.drop_percent = config.DROP_PERCENT
             voxel_generator = VoxelGenerator(
                 voxel_size=config.VOXEL_SIZE,
                 point_cloud_range=self.point_cloud_range,
@@ -104,7 +108,24 @@ class DataProcessor(object):
             return partial(self.transform_points_to_voxels, voxel_generator=voxel_generator)
 
         points = data_dict['points']
+        if (self.drop_percent):
+            small_voxels, small_coordinates, small_num_points = self.small_voxel_generator_output
+            mask = np.full(len(small_voxels), True)
+            num_to_drop = int(self.drop_percent*len(small_voxels)/100)        
+            mask[:num_to_drop] = False
+            np.random.shuffle(mask)
+            remaining_voxels = small_voxels[mask]
+            data_dict["dropped_voxel_mask"] = np.expand_dims(mask, axis = -1)
+            data_dict["hidden_voxel_coords"] = small_coordinates[~mask]
+            points = np.concatenate(remaining_voxels.tolist(), axis = 0)
+            assert len(points.shape) == 2 
+            points = points[points.sum(axis = 1) > 0]
+
         # voxel_output = voxel_generator.generate(points)
+        #generate random boolean mask to drop voxels
+        #actually drop them
+
+
         voxel_output = voxel_generator.forward(torch.tensor(points)) # mmdet's voxelizer uses torch
         if isinstance(voxel_output, dict):
             voxels, coordinates, num_points = \

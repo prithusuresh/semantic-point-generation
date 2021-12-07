@@ -152,7 +152,7 @@ class DatasetTemplate(torch_data.Dataset):
         if self.training and len(data_dict['gt_boxes']) == 0:
             new_index = np.random.randint(self.__len__())
             return self.__getitem__(new_index)
-        if self.training:
+        if True or self.training:
             assert 'gt_boxes' in data_dict, "gt_boxes not in data_dict"
             assert 'small_voxels' in data_dict, "small voxels not in data_dict"
             
@@ -183,7 +183,7 @@ class DatasetTemplate(torch_data.Dataset):
             try:
                 if key in ['voxels', 'voxel_num_points', "small_voxels", "small_voxel_num_points"]:
                     ret[key] = np.concatenate(val, axis=0)
-                elif key in ['points', 'voxel_coords', 'small_voxel_coords','all_voxel_coords']:
+                elif key in ['points', 'voxel_coords', 'small_voxel_coords','all_voxel_coords', "dropped_voxel_mask", "hidden_voxel_coords"]:
                     coors = []
                     for i, coor in enumerate(val):
                         coor_pad = np.pad(coor, ((0, 0), (1, 0)), mode='constant', constant_values=i)

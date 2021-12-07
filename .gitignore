@@ -15,3 +15,7 @@ venv/
 *.bin
 output
 version.py
+tools/*.png 
+tools/*.csv 
+tools/*.p 
+tools/*.npy 

@@ -36,7 +36,10 @@ def calculate_voxel_centers(point_cloud_range, voxel_size):
     centers = []
     coords = []
     for i in range(len(voxel_size)):
-        centers.append([(x+voxel_size[i]/2) for x in np.arange(point_cloud_range[i], point_cloud_range[i+3], voxel_size[i])])
+        num_centers = (point_cloud_range[i+3] - point_cloud_range[i])/voxel_size[i]
+        corners = np.linspace(point_cloud_range[i], point_cloud_range[i+3], num = int(num_centers), endpoint= False)
+        centers.append([(j+voxel_size[i]/2) for j in corners])
+        
         coords.append(np.arange(0, len(centers[-1])).tolist())
     centers = np.stack(np.meshgrid(*centers), -1).reshape(-1,3)
     coords = np.stack(np.meshgrid(*coords), -1).reshape(-1,3)
