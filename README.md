@@ -1,7 +1,7 @@
 # Semantic Point Generation
 
 
-This repo consists of code for running the classification head of the paper [SPG: Unsupervised Domain Adaptation for 3D Object Detection via Semantic Point Generation]{https://arxiv.org/abs/2108.06709}. 
+This repo consists of code for running the classification head of the paper [SPG: Unsupervised Domain Adaptation for 3D Object Detection via Semantic Point Generation](https://arxiv.org/abs/2108.06709). 
 
 All scripts can be found in tools prefixed with spg. 
 
@@ -23,4 +23,4 @@ Note that mmcv, and the mm* packages do not need to be installed.
 
 ## Acknowledgement
 This repository is basically a copy of OpenPCDet, with some elements of mmdetection3d's usage of spconv within it.
-Thanks to [divadi]{https://github.com/Divadi/Spconv-OpenPCDet} for helping us with installation.
+Thanks to [divadi](https://github.com/Divadi/Spconv-OpenPCDet) for helping us with installation.
