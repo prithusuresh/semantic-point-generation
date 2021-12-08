@@ -1,4 +1,4 @@
-#Semantic Point Generation
+# Semantic Point Generation
 
 
 This repo consists of code for running the classification head of the paper [SPG: Unsupervised Domain Adaptation for 3D Object Detection via Semantic Point Generation]{https://arxiv.org/abs/2108.06709}. 
