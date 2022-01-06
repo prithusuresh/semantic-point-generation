@@ -86,29 +86,7 @@ def main():
     if args.fix_random_seed:
         common_utils.set_random_seed(666)
 
-    #output_dir = cfg.ROOT_DIR / 'output' / cfg.EXP_GROUP_PATH / cfg.TAG / args.extra_tag
-    #ckpt_dir = output_dir / 'ckpt'
-    #output_dir.mkdir(parents=True, exist_ok=True)
-    #ckpt_dir.mkdir(parents=True, exist_ok=True)
-
-    #log_file = output_dir / ('log_train_%s.txt' % datetime.datetime.now().strftime('%Y%m%d-%H%M%S'))
-    #logger = common_utils.create_logger(log_file, rank=cfg.LOCAL_RANK)
-
-    # log to file
-    #logger.info('**********************Start logging**********************')
-    #gpu_list = os.environ['CUDA_VISIBLE_DEVICES'] if 'CUDA_VISIBLE_DEVICES' in os.environ.keys() else 'ALL'
-    #logger.info('CUDA_VISIBLE_DEVICES=%s' % gpu_list)
-
-    #if dist_train:
-    #    logger.info('total_batch_size: %d' % (total_gpus * args.batch_size))
-    #for key, val in vars(args).items():
-    #    logger.info('{:16} {}'.format(key, val))
-    #log_config_to_file(cfg, logger=logger)
-    #if cfg.LOCAL_RANK == 0:
-   #     os.system('cp %s %s' % (args.cfg_file, output_dir))
-
-   # tb_log = SummaryWriter(log_dir=str(output_dir / 'tensorboard')) if cfg.LOCAL_RANK == 0 else None
-
+    
     # -----------------------create dataloader & network & optimizer---------------------------
     train_set, train_loader, train_sampler = build_dataloader(
         dataset_cfg=cfg.DATA_CONFIG,
